@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wellness Business Consulting — Mindful Earth</title>
+<link rel="stylesheet" href="../assets/shared.css">
+<style>
+
+  .svc-content { background:var(--white); padding:80px 10vw; }
+  .tiers { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; margin-bottom:64px; }
+  .tier { border:1px solid rgba(191,192,171,0.4); padding:36px 28px; background:var(--off-white); }
+  .tier-head { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:16px; gap:12px; flex-wrap:wrap; }
+  .tier-name { font-family:"Gloock",serif; font-size:18px; color:var(--bark); }
+  .tier-price { font-family:"Jost",sans-serif; font-size:13px; font-weight:500; color:var(--mauve); white-space:nowrap; }
+  .tier-desc { font-size:14px; line-height:1.8; color:var(--forest); }
+  .svc-cta-block { background:var(--parchment); padding:48px; text-align:center; }
+  .svc-cta-block h3 { font-size:clamp(22px,2.5vw,32px); margin-bottom:12px; }
+  .svc-cta-block p { font-size:15px; color:var(--forest); max-width:420px; margin:0 auto 24px; line-height:1.8; }
+  .svc-montana { background:var(--off-white); padding:80px 10vw; border-top:1px solid rgba(191,192,171,0.2); }
+  .svc-montana-inner { display:grid; grid-template-columns:180px 1fr; gap:48px; align-items:center; max-width:680px; }
+  .svc-montana-img { aspect-ratio:1; background:linear-gradient(160deg,var(--sage),var(--parchment)); border-radius:50%; }
+  .svc-montana-inner h3 { font-size:28px; margin-bottom:10px; }
+  .svc-montana-inner p { font-size:14px; line-height:1.8; color:var(--forest); margin-bottom:20px; }
+  @media(max-width:600px) { .svc-montana-inner { grid-template-columns:1fr; } }
+</style>
+</head>
+<body class="page-top">
+<nav id="nav">
+  <a href="../index.html" class="nav-logo">
+    <svg class="nav-logo-mark" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 36 Q14 28 10 21 Q5 13 8 5 Q10.5 0 16 1 Q21.5 0 24 5 Q27 13 22 21 Q18 28 16 36Z" stroke="#5d4133" stroke-width="1.2" fill="none" opacity="0.7"/>
+      <path d="M16 36 Q15 29 12 22 Q8 15 6 8 Q5 3 10 1" stroke="#5d4133" stroke-width="0.9" fill="none" opacity="0.5"/>
+      <path d="M16 36 Q17 29 20 22 Q24 15 26 8 Q27 3 22 1" stroke="#5d4133" stroke-width="0.9" fill="none" opacity="0.5"/>
+      <line x1="16" y1="36" x2="16" y2="40" stroke="#5d4133" stroke-width="1.5"/>
+    </svg>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Mindful Earth</span>
+      <span class="nav-logo-tagline">Return to Self, Community &amp; Nature</span>
+    </div>
+  </a>
+  <ul class="nav-center">
+    <li><a href="our-story.html">About <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="our-story.html">Our Story</a></li>
+        <li><a href="team.html">The Team</a></li>
+        <li><a href="eco-pledge.html">Our Eco Pledge</a></li>
+      </ul>
+    </li>
+    <li><a href="give-back.html">Give Back <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="give-back.html">Make a Difference</a></li>
+        <li><a href="community-access-fund.html">The Community Access Fund</a></li>
+      </ul>
+    </li>
+    <li><a href="practitioners.html">The Ecosystem <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="community.html">The Community</a></li>
+        <li><a href="partnerships.html">Brand Partnerships</a></li>
+        <li><a href="practitioners.html">Practitioners</a></li>
+      </ul>
+    </li>
+    <li><a href="experiences.html">Experiences <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="experiences.html">All Experiences</a></li>
+        <li><a href="upcoming.html">Upcoming Experiences</a></li>
+        <li><a href="past-events.html">Past Events</a></li>
+      </ul>
+    </li>
+    <li><a href="journal.html">Education <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="journal.html">The Journal</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="courses.html">Courses</a></li>
+      </ul>
+    </li>
+    <li><a href="workbooks.html">Resources <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="free-classes.html">Free Classes &amp; Workshops</a></li>
+        <li><a href="workbooks.html">Workbooks</a></li>
+      </ul>
+    </li>
+    <li><a href="event-planning.html">Services <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="event-planning.html">Event Planning</a></li>
+        <li><a href="media-marketing.html">Media &amp; Marketing</a></li>
+        <li><a href="wellness-consulting.html">Wellness Business Consulting</a></li>
+        <li><a href="corporate-wellness.html">Corporate Wellness</a></li>
+      </ul>
+    </li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Work With Us</a>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('about')">About <span>+</span></button>
+    <div class="mobile-sub" id="mob-about"><a href="our-story.html">Our Story</a><a href="team.html">The Team</a><a href="eco-pledge.html">Our Eco Pledge</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('gb')">Give Back <span>+</span></button>
+    <div class="mobile-sub" id="mob-gb"><a href="give-back.html">Make a Difference</a><a href="community-access-fund.html">The Community Access Fund</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('eco')">The Ecosystem <span>+</span></button>
+    <div class="mobile-sub" id="mob-eco"><a href="community.html">The Community</a><a href="partnerships.html">Brand Partnerships</a><a href="practitioners.html">Practitioners</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('exp')">Experiences <span>+</span></button>
+    <div class="mobile-sub" id="mob-exp"><a href="experiences.html">All Experiences</a><a href="upcoming.html">Upcoming</a><a href="past-events.html">Past Events</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('edu')">Education <span>+</span></button>
+    <div class="mobile-sub" id="mob-edu"><a href="journal.html">The Journal</a><a href="podcast.html">Podcast</a><a href="courses.html">Courses</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('res')">Resources <span>+</span></button>
+    <div class="mobile-sub" id="mob-res"><a href="free-classes.html">Free Classes &amp; Workshops</a><a href="workbooks.html">Workbooks</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('svc')">Services <span>+</span></button>
+    <div class="mobile-sub" id="mob-svc"><a href="event-planning.html">Event Planning</a><a href="media-marketing.html">Media &amp; Marketing</a><a href="wellness-consulting.html">Wellness Consulting</a><a href="corporate-wellness.html">Corporate Wellness</a></div></div>
+  <a href="contact.html" class="mobile-cta">Work With Us</a>
+</div>
+
+<section class="inner-hero" style="background:var(--parchment); padding-top:120px;">
+  <span class="eyebrow">Services</span>
+  <h1>Build something that <em>sustains you.</em></h1>
+  <p>For practitioners who are good at their craft but want support building the business around it. Pricing, positioning, operations, growth — the practical architecture that lets you focus on the work you're actually here to do.</p>
+</section>
+<section class="svc-content">
+  <div class="tiers">
+    
+<div class="tier">
+  <div class="tier-head">
+    <span class="tier-name">Single Strategy Session</span>
+    <span class="tier-price">CA$197</span>
+  </div>
+  <p class="tier-desc">90 minutes. You bring the questions, we bring the frameworks and honest perspective. Recorded and followed up with a written summary and prioritised next steps.</p>
+</div>
+<div class="tier">
+  <div class="tier-head">
+    <span class="tier-name">3-Month Engagement</span>
+    <span class="tier-price">CA$1,497</span>
+  </div>
+  <p class="tier-desc">Deep, sustained support for practitioners ready to build with intention. Monthly sessions, email support between calls, and a real partnership in the work of growing your practice sustainably.</p>
+</div>
+  </div>
+  <div class="svc-cta-block">
+    <h3>Ready to begin?</h3>
+    <p>Every engagement starts with a conversation. Get in touch and we'll find the right fit together.</p>
+    <a href="contact.html" class="btn-bark">Start a Conversation</a>
+  </div>
+</section>
+<section class="svc-montana">
+  <div class="svc-montana-inner">
+    <div class="svc-montana-img"></div>
+    <div>
+      <span class="eyebrow">Your Guide</span>
+      <h3>Montana King</h3>
+      <p>Six years of international wellness operations, retreat design, and practitioner support. Based in London. Working globally.</p>
+      <a href="montana.html" class="btn-outline">View Full Profile →</a>
+    </div>
+  </div>
+</section>
+<section class="newsletter">
+  <span class="eyebrow">Stay Rooted</span>
+  <h2>Join the community.</h2>
+  <p>Monthly reflections, practitioner spotlights, upcoming experiences, and resources — delivered with care, never too often.</p>
+  <form class="email-form" onsubmit="return false;">
+    <input type="email" placeholder="Your email address">
+    <button type="submit">Join</button>
+  </form>
+</section>
+<footer>
+  <div class="footer-top">
+    <div>
+      <span class="footer-brand-name">Mindful Earth</span>
+      <span class="footer-tagline">Return to Self, Community &amp; Nature</span>
+      <p class="footer-desc">A wellness ecosystem for those ready to return — to themselves, to each other, and to the earth.</p>
+    </div>
+    <div class="footer-col"><h4>Explore</h4><ul>
+      <li><a href="our-story.html">Our Story</a></li>
+      <li><a href="experiences.html">Experiences</a></li>
+      <li><a href="journal.html">The Journal</a></li>
+      <li><a href="workbooks.html">Workbooks</a></li>
+      <li><a href="podcast.html">Podcast</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Work Together</h4><ul>
+      <li><a href="practitioners.html">Join as Practitioner</a></li>
+      <li><a href="event-planning.html">Event Planning</a></li>
+      <li><a href="media-marketing.html">Media &amp; Marketing</a></li>
+      <li><a href="corporate-wellness.html">Corporate Wellness</a></li>
+      <li><a href="careers.html">Careers</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul>
+      <li><a href="community-access-fund.html">Community Access Fund</a></li>
+      <li><a href="partnerships.html">Brand Partnerships</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="press.html">Press Kit</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      <a href="eco-pledge.html" class="eco">Our Eco Pledge</a>
+      <a href="careers.html">Work With Us</a>
+      <a href="press.html">Press Kit</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="cookies.html">Cookie Policy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <span class="footer-copy">© 2026 Mindful Earth · Made with intention.</span>
+  </div>
+</footer>
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  function toggleMobileSub(id) {
+    const el = document.getElementById('mob-' + id);
+    if (el) el.classList.toggle('open');
+  }
+</script>
+</body>
+</html>

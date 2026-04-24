@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Community Access Fund — Mindful Earth</title>
+<link rel="stylesheet" href="../assets/shared.css">
+<style>
+
+  .scholarship-section { background:var(--off-white); padding:80px 10vw; }
+  .sch-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:72px; align-items:start; }
+  .sch-ethos h2 { font-size:clamp(26px,2.8vw,36px); margin-bottom:14px; }
+  .sch-ethos h2 em { font-style:italic; color:var(--mauve); }
+  .sch-ethos p { font-size:15px; line-height:1.9; color:var(--forest); margin-bottom:14px; }
+  .sch-what { background:var(--parchment); padding:36px; }
+  .sch-what h3 { font-size:20px; margin-bottom:16px; }
+  .sch-list { list-style:none; display:flex; flex-direction:column; gap:12px; }
+  .sch-list li { font-size:14px; line-height:1.7; color:var(--forest); padding-left:20px; position:relative; }
+  .sch-list li::before { content:"✦"; position:absolute; left:0; color:var(--sand); font-size:10px; top:3px; }
+  .sch-apply { background:var(--forest); padding:96px 10vw; }
+  .sch-apply-inner { max-width:580px; }
+  .sch-apply .eyebrow { color:var(--sage); }
+  .sch-apply h2 { font-size:clamp(28px,3vw,42px); color:var(--off-white); margin-bottom:16px; line-height:1.15; }
+  .sch-apply h2 em { font-style:italic; color:var(--sand); }
+  .sch-apply p { font-size:15px; line-height:1.9; color:rgba(239,232,220,0.72); margin-bottom:28px; }
+  .sch-contribute { background:var(--parchment); padding:80px 10vw; text-align:center; }
+  .sch-contribute h2 { font-size:clamp(26px,3vw,38px); margin-bottom:14px; }
+  .sch-contribute h2 em { font-style:italic; color:var(--mauve); }
+  .sch-contribute p { font-size:15px; line-height:1.8; color:var(--forest); max-width:480px; margin:0 auto 28px; }
+  @media(max-width:768px) { .sch-grid { grid-template-columns:1fr; gap:40px; } }
+
+</style>
+</head>
+<body class="page-top">
+<nav id="nav">
+  <a href="../index.html" class="nav-logo">
+    <svg class="nav-logo-mark" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 36 Q14 28 10 21 Q5 13 8 5 Q10.5 0 16 1 Q21.5 0 24 5 Q27 13 22 21 Q18 28 16 36Z" stroke="#5d4133" stroke-width="1.2" fill="none" opacity="0.7"/>
+      <path d="M16 36 Q15 29 12 22 Q8 15 6 8 Q5 3 10 1" stroke="#5d4133" stroke-width="0.9" fill="none" opacity="0.5"/>
+      <path d="M16 36 Q17 29 20 22 Q24 15 26 8 Q27 3 22 1" stroke="#5d4133" stroke-width="0.9" fill="none" opacity="0.5"/>
+      <line x1="16" y1="36" x2="16" y2="40" stroke="#5d4133" stroke-width="1.5"/>
+    </svg>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Mindful Earth</span>
+      <span class="nav-logo-tagline">Return to Self, Community &amp; Nature</span>
+    </div>
+  </a>
+  <ul class="nav-center">
+    <li><a href="our-story.html">About <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="our-story.html">Our Story</a></li>
+        <li><a href="team.html">The Team</a></li>
+        <li><a href="eco-pledge.html">Our Eco Pledge</a></li>
+      </ul>
+    </li>
+    <li><a href="give-back.html">Give Back <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="give-back.html">Make a Difference</a></li>
+        <li><a href="community-access-fund.html">The Community Access Fund</a></li>
+      </ul>
+    </li>
+    <li><a href="practitioners.html">The Ecosystem <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="community.html">The Community</a></li>
+        <li><a href="partnerships.html">Brand Partnerships</a></li>
+        <li><a href="practitioners.html">Practitioners</a></li>
+      </ul>
+    </li>
+    <li><a href="experiences.html">Experiences <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="experiences.html">All Experiences</a></li>
+        <li><a href="upcoming.html">Upcoming Experiences</a></li>
+        <li><a href="past-events.html">Past Events</a></li>
+      </ul>
+    </li>
+    <li><a href="journal.html">Education <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="journal.html">The Journal</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="courses.html">Courses</a></li>
+      </ul>
+    </li>
+    <li><a href="workbooks.html">Resources <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="free-classes.html">Free Classes &amp; Workshops</a></li>
+        <li><a href="workbooks.html">Workbooks</a></li>
+      </ul>
+    </li>
+    <li><a href="event-planning.html">Services <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="event-planning.html">Event Planning</a></li>
+        <li><a href="media-marketing.html">Media &amp; Marketing</a></li>
+        <li><a href="wellness-consulting.html">Wellness Business Consulting</a></li>
+        <li><a href="corporate-wellness.html">Corporate Wellness</a></li>
+      </ul>
+    </li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Work With Us</a>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('about')">About <span>+</span></button>
+    <div class="mobile-sub" id="mob-about"><a href="our-story.html">Our Story</a><a href="team.html">The Team</a><a href="eco-pledge.html">Our Eco Pledge</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('gb')">Give Back <span>+</span></button>
+    <div class="mobile-sub" id="mob-gb"><a href="give-back.html">Make a Difference</a><a href="community-access-fund.html">The Community Access Fund</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('eco')">The Ecosystem <span>+</span></button>
+    <div class="mobile-sub" id="mob-eco"><a href="community.html">The Community</a><a href="partnerships.html">Brand Partnerships</a><a href="practitioners.html">Practitioners</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('exp')">Experiences <span>+</span></button>
+    <div class="mobile-sub" id="mob-exp"><a href="experiences.html">All Experiences</a><a href="upcoming.html">Upcoming</a><a href="past-events.html">Past Events</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('edu')">Education <span>+</span></button>
+    <div class="mobile-sub" id="mob-edu"><a href="journal.html">The Journal</a><a href="podcast.html">Podcast</a><a href="courses.html">Courses</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('res')">Resources <span>+</span></button>
+    <div class="mobile-sub" id="mob-res"><a href="free-classes.html">Free Classes &amp; Workshops</a><a href="workbooks.html">Workbooks</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('svc')">Services <span>+</span></button>
+    <div class="mobile-sub" id="mob-svc"><a href="event-planning.html">Event Planning</a><a href="media-marketing.html">Media &amp; Marketing</a><a href="wellness-consulting.html">Wellness Consulting</a><a href="corporate-wellness.html">Corporate Wellness</a></div></div>
+  <a href="contact.html" class="mobile-cta">Work With Us</a>
+</div>
+
+<section class="inner-hero bark" style="padding-top:120px;">
+  <span class="eyebrow" style="color:var(--sand);">The Mindful Earth Community Access Fund</span>
+  <h1>Healing for those who<br><em>need it most.</em></h1>
+  <p>The Mindful Earth Community Access Fund is being built with intention — a structure that will support practitioners who want to offer subsidised sessions and individuals who need supported access to wellness. The fund is in its early stages. If this resonates with you — as a potential contributor, practitioner, or future recipient — we would love to hear from you.</p>
+  <div style="display:flex; gap:14px; flex-wrap:wrap;">
+    <a href="#apply" class="btn-sand">Register Your Interest</a>
+    <a href="#contribute" class="btn-outline-light">Contribute to the Fund</a>
+  </div>
+</section>
+<section class="scholarship-section">
+  <div class="sch-grid">
+    <div class="sch-ethos">
+      <span class="eyebrow">The Ethos</span>
+      <h2>Why this fund <em>exists.</em></h2>
+      <div class="sand-rule"></div>
+      <p>We have seen, firsthand, how transformative wellness support can be — and how arbitrarily access to it is distributed. A breakthrough breathwork session. A week-long retreat. A somatic session with the right practitioner. These things genuinely change lives.</p>
+      <p>And they are out of reach for too many people.</p>
+      <p>The Community Access Fund is our attempt to address that — not as a side project, but as a core mechanism of how Mindful Earth operates. Every transaction on the platform contributes. Every application is treated with genuine care.</p>
+    </div>
+    <div class="sch-what">
+      <span class="eyebrow">What it covers</span>
+      <h3>Two ways to apply</h3>
+      <ul class="sch-list">
+        <li><strong>For practitioners</strong> — Apply to offer free or subsidised sessions, classes, or retreats through the fund. We cover the gap so you are always paid in full.</li>
+        <li><strong>For individuals</strong> — Apply for supported access to practitioners, retreat experiences, courses, and self-guided resources within the Mindful Earth network.</li>
+        <li><strong>No minimum threshold</strong> — If cost is a genuine barrier, that is enough.</li>
+        <li><strong>Rolling applications</strong> — We review regularly and respond honestly about availability.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="sch-apply" id="apply">
+  <div class="sch-apply-inner">
+    <span class="eyebrow">Register Your Interest</span>
+    <h2>You are worth <em>reaching out for.</em></h2>
+    <p>There is no minimum threshold of "need." If you feel you would benefit and the cost is a genuine barrier, that is enough. Applications are reviewed on a rolling basis — we will always be honest with you about what is available.</p>
+    <a href="contact.html?subject=Community+Access+Fund+Fund+Application" class="btn-bark">Apply Now</a>
+  </div>
+</section>
+<section class="sch-contribute" id="contribute">
+  <span class="eyebrow">Contribute</span>
+  <h2>Give someone else <em>the beginning.</em></h2>
+  <p>If you are in a position to give, even a small contribution goes directly to supporting someone else's access to healing. One hundred percent of donations to the Community Access Fund stay in the fund.</p>
+  <a href="https://paypal.me/mindfuleartheco" target="_blank" class="btn-outline">Make a Contribution via PayPal</a>
+</section>
+<section class="newsletter">
+  <span class="eyebrow">Stay Rooted</span>
+  <h2>Join the community.</h2>
+  <p>Monthly reflections, practitioner spotlights, upcoming experiences, and resources — delivered with care, never too often.</p>
+  <form class="email-form" onsubmit="return false;">
+    <input type="email" placeholder="Your email address">
+    <button type="submit">Join</button>
+  </form>
+</section>
+<footer>
+  <div class="footer-top">
+    <div>
+      <span class="footer-brand-name">Mindful Earth</span>
+      <span class="footer-tagline">Return to Self, Community &amp; Nature</span>
+      <p class="footer-desc">A wellness ecosystem for those ready to return — to themselves, to each other, and to the earth.</p>
+    </div>
+    <div class="footer-col"><h4>Explore</h4><ul>
+      <li><a href="our-story.html">Our Story</a></li>
+      <li><a href="experiences.html">Experiences</a></li>
+      <li><a href="journal.html">The Journal</a></li>
+      <li><a href="workbooks.html">Workbooks</a></li>
+      <li><a href="podcast.html">Podcast</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Work Together</h4><ul>
+      <li><a href="practitioners.html">Join as Practitioner</a></li>
+      <li><a href="event-planning.html">Event Planning</a></li>
+      <li><a href="media-marketing.html">Media &amp; Marketing</a></li>
+      <li><a href="corporate-wellness.html">Corporate Wellness</a></li>
+      <li><a href="careers.html">Careers</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul>
+      <li><a href="community-access-fund.html">Community Access Fund</a></li>
+      <li><a href="partnerships.html">Brand Partnerships</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="press.html">Press Kit</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      <a href="eco-pledge.html" class="eco">Our Eco Pledge</a>
+      <a href="careers.html">Work With Us</a>
+      <a href="press.html">Press Kit</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="cookies.html">Cookie Policy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <span class="footer-copy">© 2026 Mindful Earth · Made with intention.</span>
+  </div>
+</footer>
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  function toggleMobileSub(id) {
+    const el = document.getElementById('mob-' + id);
+    if (el) el.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
