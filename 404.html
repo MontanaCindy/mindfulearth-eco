@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found — Mindful Earth</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/shared.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<style>
+.not-found {
+  min-height:100vh; display:flex; align-items:center; justify-content:center;
+  text-align:center; padding:40px 6vw;
+  background:var(--parchment);
+}
+.not-found-inner { max-width:480px; }
+.not-found-num {
+  font-family:'Gloock',serif; font-size:120px; line-height:1;
+  color:var(--sage); display:block; margin-bottom:8px;
+  letter-spacing:-4px;
+}
+.not-found h1 { font-size:clamp(24px,3vw,36px); margin-bottom:14px; }
+.not-found h1 em { font-style:italic; color:var(--mauve); }
+.not-found p { font-size:15px; line-height:1.8; color:var(--forest); margin-bottom:32px; }
+.not-found-ctas { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+</style>
+</head>
+<body>
+<section class="not-found">
+  <div class="not-found-inner">
+    <span class="not-found-num">404</span>
+    <h1>This page has <em>wandered off.</em></h1>
+    <p>It happens to the best of us. The page you are looking for does not exist — but the ecosystem is still here, waiting for you.</p>
+    <div class="not-found-ctas">
+      <a href="index.html" class="btn-bark">Return Home</a>
+      <a href="pages/contact.html" class="btn-outline">Get in Touch</a>
+    </div>
+  </div>
+</section>
+</body>
+</html>

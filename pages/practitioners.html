@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Practitioners — Mindful Earth</title>
 <link rel="stylesheet" href="../assets/shared.css">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <style>
 
   .practitioners-section { background:var(--off-white); padding:80px 10vw; }
@@ -25,8 +26,22 @@
   .prac-join p { font-size:15px; line-height:1.8; color:var(--forest); max-width:480px; margin:0 auto 24px; }
 
 </style>
+<meta property="og:title" content="Practitioners — Mindful Earth">
+<meta property="og:description" content="A wellness ecosystem built to support the practitioners who make healing possible — and the communities who need it.">
+<meta property="og:image" content="https://mindfulearth.eco/images/og-image.jpg">
+<meta property="og:url" content="https://mindfulearth.eco/pages/practitioners.html">
+<meta property="og:type" content="website">
 </head>
 <body class="page-top">
+<div class="top-bar">
+  <a href="https://instagram.com/mindfulearth.eco" target="_blank">@mindfulearth.eco</a>
+  <span class="top-bar-sep">·</span>
+  <a href="https://instagram.com/mindfulearth.events" target="_blank">@mindfulearth.events</a>
+  <span class="top-bar-sep">·</span>
+  <a href="https://instagram.com/mindfulearth.media" target="_blank">@mindfulearth.media</a>
+  <span class="top-bar-sep">·</span>
+  <a href="https://instagram.com/montanacindy_" target="_blank">@montanacindy_</a>
+</div>
 <nav id="nav">
   <a href="../index.html" class="nav-logo">
     <svg class="nav-logo-mark" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -200,6 +215,39 @@
     const el = document.getElementById('mob-' + id);
     if (el) el.classList.toggle('open');
   }
+</script>
+<div class="mobile-sticky-cta">
+  <a href="https://calendly.com/mindfuleartheco/30min" target="_blank">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Book a Free 30-Min Call
+  </a>
+</div>
+<button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+<div class="cookie-banner" id="cookieBanner">
+  <p>We use cookies to improve your experience on Mindful Earth. By continuing to browse, you agree to our <a href="cookies.html">Cookie Policy</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+  <div class="cookie-banner-btns">
+    <button class="cookie-accept" onclick="acceptCookies()">Accept</button>
+    <button class="cookie-decline" onclick="declineCookies()">Decline</button>
+  </div>
+</div>
+
+<script>
+  // Back to top
+  const btt = document.getElementById('backToTop');
+  if(btt) window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 400));
+
+  // Cookie banner
+  function showCookieBanner() {
+    if(!localStorage.getItem('me_cookies')) {
+      setTimeout(() => { const b = document.getElementById('cookieBanner'); if(b) b.classList.add('visible'); }, 1500);
+    }
+  }
+  function acceptCookies() { localStorage.setItem('me_cookies','accepted'); hideCookieBanner(); }
+  function declineCookies() { localStorage.setItem('me_cookies','declined'); hideCookieBanner(); }
+  function hideCookieBanner() { const b = document.getElementById('cookieBanner'); if(b) b.classList.remove('visible'); }
+  showCookieBanner();
 </script>
 </body>
 </html>

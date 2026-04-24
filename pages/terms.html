@@ -4,169 +4,81 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terms & Conditions — Mindful Earth</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/shared.css">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <style>
-
+.legal-hero { background:var(--parchment); padding:120px 10vw 56px; border-bottom:1px solid rgba(191,192,171,0.25); }
+.legal-hero h1 { font-size:clamp(32px,4vw,52px); margin-bottom:8px; }
+.legal-hero p { font-size:14px; color:var(--sage-mid,#8e988f); font-family:Jost,sans-serif; }
+.legal-body { background:var(--off-white); padding:80px 10vw; max-width:860px; }
+.legal-body h2 { font-size:22px; margin:40px 0 12px; color:var(--bark); }
+.legal-body h2:first-child { margin-top:0; }
+.legal-body p { font-size:14px; line-height:1.9; color:var(--forest); margin-bottom:12px; }
+.legal-body ul { list-style:none; margin:12px 0 16px; display:flex; flex-direction:column; gap:8px; }
+.legal-body ul li { font-size:14px; line-height:1.8; color:var(--forest); padding-left:18px; position:relative; }
+.legal-body ul li::before { content:"–"; position:absolute; left:0; color:var(--sage); }
+.legal-body a { color:var(--bark); }
+@media(max-width:768px) { .legal-hero { padding:100px 6vw 40px; } .legal-body { padding:56px 6vw; } }
 </style>
 </head>
 <body class="page-top">
-<nav id="nav">
-  <a href="../index.html" class="nav-logo">
-    <svg class="nav-logo-mark" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M16 36 Q14 28 10 21 Q5 13 8 5 Q10.5 0 16 1 Q21.5 0 24 5 Q27 13 22 21 Q18 28 16 36Z" stroke="#5d4133" stroke-width="1.2" fill="none" opacity="0.7"/>
-      <path d="M16 36 Q15 29 12 22 Q8 15 6 8 Q5 3 10 1" stroke="#5d4133" stroke-width="0.9" fill="none" opacity="0.5"/>
-      <path d="M16 36 Q17 29 20 22 Q24 15 26 8 Q27 3 22 1" stroke="#5d4133" stroke-width="0.9" fill="none" opacity="0.5"/>
-      <line x1="16" y1="36" x2="16" y2="40" stroke="#5d4133" stroke-width="1.5"/>
-    </svg>
-    <div class="nav-logo-text">
-      <span class="nav-logo-name">Mindful Earth</span>
-      <span class="nav-logo-tagline">Return to Self, Community &amp; Nature</span>
-    </div>
-  </a>
-  <ul class="nav-center">
-    <li><a href="our-story.html">About <span class="nav-arrow">▼</span></a>
-      <ul class="nav-dropdown">
-        <li><a href="our-story.html">Our Story</a></li>
-        <li><a href="team.html">The Team</a></li>
-        <li><a href="eco-pledge.html">Our Eco Pledge</a></li>
-      </ul>
-    </li>
-    <li><a href="give-back.html">Give Back <span class="nav-arrow">▼</span></a>
-      <ul class="nav-dropdown">
-        <li><a href="give-back.html">Make a Difference</a></li>
-        <li><a href="community-access-fund.html">The Community Access Fund</a></li>
-      </ul>
-    </li>
-    <li><a href="practitioners.html">The Ecosystem <span class="nav-arrow">▼</span></a>
-      <ul class="nav-dropdown">
-        <li><a href="community.html">The Community</a></li>
-        <li><a href="partnerships.html">Brand Partnerships</a></li>
-        <li><a href="practitioners.html">Practitioners</a></li>
-      </ul>
-    </li>
-    <li><a href="experiences.html">Experiences <span class="nav-arrow">▼</span></a>
-      <ul class="nav-dropdown">
-        <li><a href="experiences.html">All Experiences</a></li>
-        <li><a href="upcoming.html">Upcoming Experiences</a></li>
-        <li><a href="past-events.html">Past Events</a></li>
-      </ul>
-    </li>
-    <li><a href="journal.html">Education <span class="nav-arrow">▼</span></a>
-      <ul class="nav-dropdown">
-        <li><a href="journal.html">The Journal</a></li>
-        <li><a href="podcast.html">Podcast</a></li>
-        <li><a href="courses.html">Courses</a></li>
-      </ul>
-    </li>
-    <li><a href="workbooks.html">Resources <span class="nav-arrow">▼</span></a>
-      <ul class="nav-dropdown">
-        <li><a href="free-classes.html">Free Classes &amp; Workshops</a></li>
-        <li><a href="workbooks.html">Workbooks</a></li>
-      </ul>
-    </li>
-    <li><a href="event-planning.html">Services <span class="nav-arrow">▼</span></a>
-      <ul class="nav-dropdown">
-        <li><a href="event-planning.html">Event Planning</a></li>
-        <li><a href="media-marketing.html">Media &amp; Marketing</a></li>
-        <li><a href="wellness-consulting.html">Wellness Business Consulting</a></li>
-        <li><a href="corporate-wellness.html">Corporate Wellness</a></li>
-      </ul>
-    </li>
-  </ul>
-  <a href="contact.html" class="nav-cta">Work With Us</a>
-  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
-</nav>
-<div class="mobile-menu" id="mobile-menu">
-  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('about')">About <span>+</span></button>
-    <div class="mobile-sub" id="mob-about"><a href="our-story.html">Our Story</a><a href="team.html">The Team</a><a href="eco-pledge.html">Our Eco Pledge</a></div></div>
-  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('gb')">Give Back <span>+</span></button>
-    <div class="mobile-sub" id="mob-gb"><a href="give-back.html">Make a Difference</a><a href="community-access-fund.html">The Community Access Fund</a></div></div>
-  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('eco')">The Ecosystem <span>+</span></button>
-    <div class="mobile-sub" id="mob-eco"><a href="community.html">The Community</a><a href="partnerships.html">Brand Partnerships</a><a href="practitioners.html">Practitioners</a></div></div>
-  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('exp')">Experiences <span>+</span></button>
-    <div class="mobile-sub" id="mob-exp"><a href="experiences.html">All Experiences</a><a href="upcoming.html">Upcoming</a><a href="past-events.html">Past Events</a></div></div>
-  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('edu')">Education <span>+</span></button>
-    <div class="mobile-sub" id="mob-edu"><a href="journal.html">The Journal</a><a href="podcast.html">Podcast</a><a href="courses.html">Courses</a></div></div>
-  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('res')">Resources <span>+</span></button>
-    <div class="mobile-sub" id="mob-res"><a href="free-classes.html">Free Classes &amp; Workshops</a><a href="workbooks.html">Workbooks</a></div></div>
-  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('svc')">Services <span>+</span></button>
-    <div class="mobile-sub" id="mob-svc"><a href="event-planning.html">Event Planning</a><a href="media-marketing.html">Media &amp; Marketing</a><a href="wellness-consulting.html">Wellness Consulting</a><a href="corporate-wellness.html">Corporate Wellness</a></div></div>
-  <a href="contact.html" class="mobile-cta">Work With Us</a>
-</div>
-
-<section class="inner-hero" style="padding-top:120px;">
+<section class="legal-hero">
   <span class="eyebrow">Legal</span>
-  <h1>Terms & Conditions</h1>
-  <p>Last updated: April 2026</p>
+  <h1>Terms &amp; Conditions</h1>
+  <p>Last updated: April 2026 &nbsp;·&nbsp; Mindful Earth (mindfulearth.eco)</p>
 </section>
-<section style="background:var(--off-white); padding:80px 10vw;">
-  <div style="max-width:720px;">
-    <p style="font-size:15px; line-height:1.9; color:var(--forest); margin-bottom:20px;">These terms govern your use of mindfulearth.eco and any products or services purchased through the platform.</p>
-    <div style="background:var(--parchment); padding:36px; border-left:3px solid var(--sand);">
-      <p style="font-size:14px; line-height:1.85; color:var(--bark);"><em>The full legal text for this page is being finalised. Please contact <a href="mailto:hello@mindfulearth.eco" style="color:var(--bark);">hello@mindfulearth.eco</a> with any questions in the meantime.</em></p>
-    </div>
-  </div>
-</section>
-<section class="newsletter">
-  <span class="eyebrow">Stay Rooted</span>
-  <h2>Join the community.</h2>
-  <p>Monthly reflections, practitioner spotlights, upcoming experiences, and resources — delivered with care, never too often.</p>
-  <form class="email-form" onsubmit="return false;">
-    <input type="email" placeholder="Your email address">
-    <button type="submit">Join</button>
-  </form>
-</section>
-<footer>
-  <div class="footer-top">
-    <div>
-      <span class="footer-brand-name">Mindful Earth</span>
-      <span class="footer-tagline">Return to Self, Community &amp; Nature</span>
-      <p class="footer-desc">A wellness ecosystem for those ready to return — to themselves, to each other, and to the earth.</p>
-    </div>
-    <div class="footer-col"><h4>Explore</h4><ul>
-      <li><a href="our-story.html">Our Story</a></li>
-      <li><a href="experiences.html">Experiences</a></li>
-      <li><a href="journal.html">The Journal</a></li>
-      <li><a href="workbooks.html">Workbooks</a></li>
-      <li><a href="podcast.html">Podcast</a></li>
-    </ul></div>
-    <div class="footer-col"><h4>Work Together</h4><ul>
-      <li><a href="practitioners.html">Join as Practitioner</a></li>
-      <li><a href="event-planning.html">Event Planning</a></li>
-      <li><a href="media-marketing.html">Media &amp; Marketing</a></li>
-      <li><a href="corporate-wellness.html">Corporate Wellness</a></li>
-      <li><a href="careers.html">Careers</a></li>
-    </ul></div>
-    <div class="footer-col"><h4>Connect</h4><ul>
-      <li><a href="community-access-fund.html">Community Access Fund</a></li>
-      <li><a href="partnerships.html">Brand Partnerships</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="press.html">Press Kit</a></li>
-    </ul></div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-legal">
-      <a href="eco-pledge.html" class="eco">Our Eco Pledge</a>
-      <a href="careers.html">Work With Us</a>
-      <a href="press.html">Press Kit</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms &amp; Conditions</a>
-      <a href="cookies.html">Cookie Policy</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <span class="footer-copy">© 2026 Mindful Earth · Made with intention.</span>
-  </div>
-</footer>
-<script>
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
-  document.getElementById('hamburger').addEventListener('click', () => {
-    document.getElementById('mobile-menu').classList.toggle('open');
-  });
-  function toggleMobileSub(id) {
-    const el = document.getElementById('mob-' + id);
-    if (el) el.classList.toggle('open');
-  }
-</script>
+<div class="legal-body">
+  <h2>1. About These Terms</h2>
+  <p>These Terms &amp; Conditions govern your use of mindfulearth.eco and any products or services purchased through the platform. By using our website or purchasing from us, you agree to these terms. Please read them carefully.</p>
+  <p>Mindful Earth is operated by Montana King, London, UK. Contact: <a href="mailto:montana@mindfulearth.eco">montana@mindfulearth.eco</a></p>
+
+  <h2>2. Services</h2>
+  <p>Mindful Earth offers the following services:</p>
+  <ul>
+    <li>Wellness event planning and management</li>
+    <li>Media and marketing support for wellness practitioners</li>
+    <li>Wellness business consulting and mentorship</li>
+    <li>Corporate wellness programmes</li>
+    <li>Personal practitioner services (somatic bodywork, yoga, energy healing, photography)</li>
+    <li>Digital products (workbooks and educational resources)</li>
+  </ul>
+  <p>All service engagements begin with a free 30-minute discovery consultation to ensure alignment before any commitment is made.</p>
+
+  <h2>3. Bookings & Payments</h2>
+  <p>Services are booked via Calendly and confirmed by email. Payment is required before services commence unless otherwise agreed in writing. We accept payment via Stripe, PayPal, and bank transfer.</p>
+  <p>Prices are listed in Canadian Dollars (CAD) unless otherwise stated. International clients are responsible for any currency conversion fees.</p>
+
+  <h2>4. Cancellations & Refunds</h2>
+  <p><strong>Discovery calls:</strong> Free to cancel or reschedule at any time via Calendly.</p>
+  <p><strong>Consulting sessions:</strong> Cancellations with more than 48 hours notice will receive a full refund or reschedule. Cancellations within 48 hours are non-refundable.</p>
+  <p><strong>Retreat & event planning:</strong> Deposits are non-refundable. Full payments may be refunded at our discretion depending on the stage of planning. Specific terms will be outlined in your service agreement.</p>
+  <p><strong>Digital products:</strong> Due to the nature of digital downloads, all sales are final. If you experience a technical issue receiving your product, contact us and we will resolve it promptly.</p>
+
+  <h2>5. Digital Products</h2>
+  <p>Digital products (workbooks, guides, and educational resources) are for personal use only. You may not reproduce, share, resell, or distribute any Mindful Earth digital product without written permission.</p>
+
+  <h2>6. Wellness Disclaimer</h2>
+  <p>Mindful Earth services — including somatic bodywork, yoga, energy healing, and wellness consulting — are not a substitute for professional medical or psychological treatment. We do not diagnose, treat, or cure any medical condition. Please consult a qualified healthcare professional for any medical concerns.</p>
+  <p>By engaging our services, you confirm that you are responsible for your own wellbeing and that you will inform us of any relevant health conditions before sessions begin.</p>
+
+  <h2>7. Intellectual Property</h2>
+  <p>All content on mindfulearth.eco — including text, images, brand assets, workbooks, and digital products — is the intellectual property of Mindful Earth and Montana King. You may not reproduce, distribute, or use our content without prior written permission.</p>
+
+  <h2>8. Limitation of Liability</h2>
+  <p>To the fullest extent permitted by law, Mindful Earth and Montana King shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services or website. Our total liability for any claim shall not exceed the amount paid for the specific service giving rise to the claim.</p>
+
+  <h2>9. Privacy</h2>
+  <p>Our use of your personal data is governed by our <a href="privacy.html">Privacy Policy</a>, which forms part of these Terms &amp; Conditions.</p>
+
+  <h2>10. Governing Law</h2>
+  <p>These Terms are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+
+  <h2>11. Changes to These Terms</h2>
+  <p>We may update these Terms from time to time. Continued use of our website or services after changes constitutes acceptance of the updated Terms.</p>
+
+  <h2>12. Contact</h2>
+  <p>Questions about these Terms? Contact us at <a href="mailto:montana@mindfulearth.eco">montana@mindfulearth.eco</a>.</p>
+</div>
 </body>
 </html>
