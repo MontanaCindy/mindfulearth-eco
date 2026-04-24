@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mindful Earth — Return to Self, Community & Nature</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/shared.css">
+<style>
+
+/* HERO */
+.hero {
+  position:relative; min-height:100vh;
+  display:flex; align-items:flex-end; padding:0 10vw 10vh;
+  background:
+    linear-gradient(160deg,rgba(77,85,76,0.52) 0%,rgba(93,65,51,0.38) 60%,rgba(77,85,76,0.48) 100%),
+    url('images/hero-bg.jpg') center/cover no-repeat;
+  overflow:hidden;
+}
+.hero::after {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:260px;
+  background:linear-gradient(to top,var(--off-white),transparent);
+}
+.hero-content { position:relative; z-index:2; max-width:720px; }
+.hero-eyebrow { font-family:'Jost',sans-serif; font-size:11px; font-weight:400; letter-spacing:0.22em; text-transform:uppercase; color:rgba(191,192,171,0.75); margin-bottom:20px; display:block; }
+.hero h1 { font-size:clamp(44px,6vw,82px); line-height:1.06; color:var(--off-white); margin-bottom:22px; letter-spacing:-0.01em; }
+.hero h1 em { font-style:italic; color:var(--sand); }
+.hero-sub { font-size:16px; line-height:1.8; color:rgba(239,232,220,0.8); max-width:480px; margin-bottom:40px; }
+.hero-ctas { display:flex; gap:14px; flex-wrap:wrap; }
+
+/* ECOSYSTEM */
+.eco-intro { background:var(--forest); text-align:center; padding:80px 10vw 48px; }
+.eco-intro h2 { font-size:clamp(30px,3.8vw,50px); color:var(--off-white); line-height:1.15; margin-bottom:14px; }
+.eco-intro h2 em { font-style:italic; color:var(--sand); }
+.eco-intro p { font-size:15px; color:var(--sage); max-width:520px; margin:0 auto; line-height:1.8; }
+.eco-pillars { background:var(--forest); padding:0 10vw 80px; display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+.pillar { background:rgba(255,255,255,0.06); border:1px solid rgba(191,192,171,0.12); overflow:hidden; text-decoration:none; display:block; transition:background 0.2s; }
+.pillar:hover { background:rgba(255,255,255,0.1); }
+.pillar-img { aspect-ratio:4/3; background:rgba(191,192,171,0.1); background-size:cover; background-position:center; display:flex; align-items:flex-end; padding:10px; }
+.pillar-img span { font-family:'Jost',sans-serif; font-size:8px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.35); }
+.pillar-body { padding:20px 18px; }
+.pillar-body h3 { font-family:'Gloock',serif; font-size:18px; color:var(--off-white); margin-bottom:6px; line-height:1.2; }
+.pillar-body p { font-size:13px; line-height:1.65; color:rgba(239,232,220,0.55); margin-bottom:10px; }
+.pillar-soon { font-family:'Jost',sans-serif; font-size:9px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:rgba(217,179,130,0.5); }
+
+/* SERVICES */
+.services { background:var(--off-white); padding:96px 10vw; }
+.services-head { max-width:640px; margin-bottom:52px; }
+.services-head h2 { font-size:clamp(30px,3.5vw,46px); line-height:1.15; margin-bottom:14px; }
+.services-head h2 em { font-style:italic; color:var(--mauve); }
+.services-head p { font-size:15px; line-height:1.85; color:var(--forest); margin-bottom:8px; }
+.services-note { font-family:'Jost',sans-serif; font-size:12px; color:var(--sage-mid,#8e988f); font-style:italic; display:block; }
+.svc-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-bottom:32px; }
+.svc { background:var(--white); border:1px solid rgba(191,192,171,0.3); padding:32px 28px; border-top:3px solid var(--sage); display:flex; flex-direction:column; transition:border-top-color 0.2s; }
+.svc:hover { border-top-color:var(--mauve); }
+.svc-cat { font-family:'Jost',sans-serif; font-size:9px; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--sage-mid,#8e988f); display:block; margin-bottom:8px; }
+.svc h3 { font-size:20px; color:var(--bark); margin-bottom:10px; line-height:1.25; }
+.svc p { font-size:14px; line-height:1.8; color:var(--forest); flex:1; margin-bottom:16px; }
+.svc-price { font-family:'Jost',sans-serif; font-size:12px; font-weight:500; color:var(--mauve); margin-bottom:18px; display:block; }
+.svc-links { display:flex; gap:12px; flex-wrap:wrap; }
+.svc-link { font-family:'Jost',sans-serif; font-size:10px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; padding-bottom:2px; transition:color 0.2s,border-color 0.2s; }
+.svc-link.primary { color:var(--bark); border-bottom:1px solid var(--sage); }
+.svc-link.primary:hover { color:var(--mauve); border-color:var(--mauve); }
+.svc-link.secondary { color:var(--sage-mid,#8e988f); border-bottom:1px solid rgba(191,192,171,0.4); }
+.svc-link.secondary:hover { color:var(--forest); }
+.svc-cta { background:var(--parchment); border:1px solid rgba(191,192,171,0.3); padding:36px 40px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+.svc-cta p { font-size:15px; color:var(--forest); line-height:1.7; max-width:480px; }
+
+/* WHY WE EXIST */
+.why { background:var(--parchment); padding:96px 10vw; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; border-top:1px solid rgba(191,192,171,0.25); }
+.why-img { aspect-ratio:4/5; background:var(--sage); background-image:url('images/mission-photo.jpg'); background-size:cover; background-position:center; border-radius:2px; }
+.why-content h2 { font-size:clamp(28px,3vw,42px); line-height:1.15; margin-bottom:18px; }
+.why-content h2 em { font-style:italic; color:var(--mauve); }
+.why-content p { font-size:15px; line-height:1.9; color:var(--forest); margin-bottom:14px; }
+.why-content p strong { font-weight:500; color:var(--bark); }
+
+/* FOUNDER */
+.founder { background:var(--white); padding:96px 10vw; display:grid; grid-template-columns:320px 1fr; gap:72px; align-items:start; border-top:1px solid rgba(191,192,171,0.15); }
+.founder-img { aspect-ratio:3/4; background:linear-gradient(160deg,var(--sage) 0%,var(--blush) 60%,var(--parchment) 100%); background-image:url('images/founder-photo.jpg'); background-size:cover; background-position:center top; border-radius:2px; }
+.founder-caption { font-family:'Jost',sans-serif; font-size:10px; font-weight:300; letter-spacing:0.1em; color:var(--clay); text-align:center; margin-top:10px; }
+.founder-content h2 { font-size:clamp(28px,3vw,44px); line-height:1.1; margin-bottom:4px; }
+.founder-content h2 em { font-style:italic; color:var(--mauve); }
+.founder-subtitle { font-family:'Jost',sans-serif; font-size:12px; font-weight:300; letter-spacing:0.1em; color:var(--clay); display:block; margin-bottom:22px; }
+.founder-content p { font-size:15px; line-height:1.9; color:var(--forest); margin-bottom:14px; }
+.founder-creds { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 24px; }
+.founder-cred { font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.08em; padding:5px 12px; border:1px solid rgba(191,192,171,0.5); color:var(--forest); background:var(--off-white); }
+
+/* GINKGO */
+.ginkgo { background:var(--off-white); padding:80px 10vw; display:grid; grid-template-columns:180px 1fr; gap:64px; align-items:center; border-top:1px solid rgba(191,192,171,0.2); border-bottom:1px solid rgba(191,192,171,0.2); }
+.ginkgo-mark { display:flex; flex-direction:column; align-items:center; gap:12px; }
+.ginkgo-ring { width:148px; height:148px; border-radius:50%; border:1px solid rgba(217,179,130,0.4); background:var(--parchment); display:flex; align-items:center; justify-content:center; }
+.ginkgo-label { font-family:'Jost',sans-serif; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:var(--sand); }
+.ginkgo-text h2 { font-size:clamp(24px,2.5vw,34px); font-style:italic; line-height:1.2; margin-bottom:14px; }
+.ginkgo-text p { font-size:15px; line-height:1.9; color:var(--forest); margin-bottom:12px; }
+
+/* MECA */
+.meca { background:var(--bark); padding:96px 10vw; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+.meca h2 { font-size:clamp(28px,3.2vw,44px); color:var(--off-white); line-height:1.15; margin-bottom:18px; }
+.meca h2 em { font-style:italic; color:var(--sand); }
+.meca p { font-size:15px; line-height:1.9; color:rgba(239,232,220,0.72); margin-bottom:14px; }
+.meca-ctas { display:flex; gap:14px; flex-wrap:wrap; margin-top:8px; }
+.meca-quote { border-left:1px solid rgba(217,179,130,0.3); padding-left:32px; }
+.meca-quote blockquote { font-family:'Gloock',serif; font-style:italic; font-size:clamp(16px,1.8vw,21px); color:var(--off-white); line-height:1.6; margin-bottom:12px; }
+.meca-quote cite { font-family:'Jost',sans-serif; font-size:11px; letter-spacing:0.1em; color:var(--sand); font-style:normal; }
+
+/* NEWSLETTER */
+.newsletter { background:rgba(142,152,143,0.12); padding:80px 10vw; text-align:center; border-top:1px solid rgba(191,192,171,0.25); }
+.newsletter h2 { font-size:clamp(24px,2.8vw,36px); margin-bottom:12px; }
+.newsletter h2 em { font-style:italic; color:var(--mauve); }
+.newsletter p { font-size:15px; line-height:1.8; color:var(--forest); max-width:440px; margin:0 auto 28px; }
+.email-form { display:flex; max-width:400px; margin:0 auto; }
+.email-form input { flex:1; padding:14px 18px; font-family:'Lora',serif; font-size:14px; border:1px solid var(--sage); border-right:none; background:var(--white); color:var(--bark); outline:none; border-radius:2px 0 0 2px; }
+.email-form input::placeholder { color:var(--sage); }
+.email-form button { font-family:'Jost',sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; padding:14px 22px; background:var(--forest); color:var(--white); border:none; cursor:pointer; border-radius:0 2px 2px 0; transition:background 0.2s; white-space:nowrap; }
+.email-form button:hover { background:var(--bark); }
+
+/* RESPONSIVE */
+@media(max-width:1024px) { .eco-pillars { grid-template-columns:repeat(2,1fr); } }
+@media(max-width:900px) { .svc-grid { grid-template-columns:1fr; } .why { grid-template-columns:1fr; gap:40px; } .meca { grid-template-columns:1fr; gap:48px; } .founder { grid-template-columns:1fr; gap:40px; } }
+@media(max-width:768px) {
+  .hero { padding:0 6vw 8vh; }
+  .eco-intro { padding:64px 6vw 40px; }
+  .eco-pillars { grid-template-columns:1fr 1fr; padding:0 6vw 64px; }
+  .services { padding:64px 6vw; }
+  .svc-cta { flex-direction:column; padding:28px 24px; }
+  .why { padding:64px 6vw; }
+  .founder { padding:64px 6vw; }
+  .founder-img { aspect-ratio:4/3; }
+  .ginkgo { grid-template-columns:1fr; gap:32px; padding:64px 6vw; }
+  .ginkgo-mark { flex-direction:row; }
+  .meca { padding:64px 6vw; }
+  .newsletter { padding:64px 6vw; }
+}
+@media(max-width:480px) { .eco-pillars { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <svg class="nav-logo-mark" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 36 Q14 28 10 21 Q5 13 8 5 Q10.5 0 16 1 Q21.5 0 24 5 Q27 13 22 21 Q18 28 16 36Z" stroke="#5d4133" stroke-width="1.2" fill="none" opacity="0.7"/>
+      <path d="M16 36 Q15 29 12 22 Q8 15 6 8 Q5 3 10 1" stroke="#5d4133" stroke-width="0.9" fill="none" opacity="0.5"/>
+      <path d="M16 36 Q17 29 20 22 Q24 15 26 8 Q27 3 22 1" stroke="#5d4133" stroke-width="0.9" fill="none" opacity="0.5"/>
+      <line x1="16" y1="36" x2="16" y2="40" stroke="#5d4133" stroke-width="1.5"/>
+    </svg>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Mindful Earth</span>
+      <span class="nav-logo-tagline">Return to Self, Community &amp; Nature</span>
+    </div>
+  </a>
+  <ul class="nav-center">
+    <li><a href="pages/our-story.html">About <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="pages/our-story.html">Our Story</a></li>
+        <li><a href="pages/team.html">The Team</a></li>
+        <li><a href="pages/eco-pledge.html">Our Eco Pledge</a></li>
+      </ul>
+    </li>
+    <li><a href="pages/community.html">Community <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="pages/community.html">The Community</a></li>
+        <li><a href="pages/practitioners.html">Practitioners</a></li>
+        <li><a href="pages/partnerships.html">Brand Partnerships</a></li>
+      </ul>
+    </li>
+    <li><a href="pages/experiences.html">Experiences <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="pages/experiences.html">All Experiences</a></li>
+        <li><a href="pages/upcoming.html">Upcoming</a></li>
+        <li><a href="pages/past-events.html">Past Events</a></li>
+      </ul>
+    </li>
+    <li><a href="pages/journal.html">Learn <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="pages/journal.html">The Journal</a></li>
+        <li><a href="pages/podcast.html">Podcast</a></li>
+        <li><a href="pages/courses.html">Courses</a></li>
+      </ul>
+    </li>
+    <li><a href="pages/event-planning.html">Services <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="pages/event-planning.html">Event Planning</a></li>
+        <li><a href="pages/media-marketing.html">Media &amp; Marketing</a></li>
+        <li><a href="pages/wellness-consulting.html">Wellness Consulting</a></li>
+        <li><a href="pages/corporate-wellness.html">Corporate Wellness</a></li>
+        <li><a href="pages/montana.html">Work with Montana</a></li>
+      </ul>
+    </li>
+    <li><a href="pages/give-back.html">Give Back <span class="nav-arrow">▼</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="pages/give-back.html">Make a Difference</a></li>
+        <li><a href="pages/community-access-fund.html">Community Access Fund</a></li>
+      </ul>
+    </li>
+  </ul>
+  <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" class="nav-cta">Book a Free Call</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('about')">About <span>+</span></button>
+    <div class="mobile-sub" id="mob-about"><a href="pages/our-story.html">Our Story</a><a href="pages/team.html">The Team</a><a href="pages/eco-pledge.html">Our Eco Pledge</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('com')">Community <span>+</span></button>
+    <div class="mobile-sub" id="mob-com"><a href="pages/community.html">The Community</a><a href="pages/practitioners.html">Practitioners</a><a href="pages/partnerships.html">Brand Partnerships</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('exp')">Experiences <span>+</span></button>
+    <div class="mobile-sub" id="mob-exp"><a href="pages/experiences.html">All Experiences</a><a href="pages/upcoming.html">Upcoming</a><a href="pages/past-events.html">Past Events</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('learn')">Learn <span>+</span></button>
+    <div class="mobile-sub" id="mob-learn"><a href="pages/journal.html">The Journal</a><a href="pages/podcast.html">Podcast</a><a href="pages/courses.html">Courses</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('svc')">Services <span>+</span></button>
+    <div class="mobile-sub" id="mob-svc"><a href="pages/event-planning.html">Event Planning</a><a href="pages/media-marketing.html">Media &amp; Marketing</a><a href="pages/wellness-consulting.html">Wellness Consulting</a><a href="pages/corporate-wellness.html">Corporate Wellness</a><a href="pages/montana.html">Work with Montana</a></div></div>
+  <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('gb')">Give Back <span>+</span></button>
+    <div class="mobile-sub" id="mob-gb"><a href="pages/give-back.html">Make a Difference</a><a href="pages/community-access-fund.html">Community Access Fund</a></div></div>
+  <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" class="mobile-cta">Book a Free 30-Min Call</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="hero-eyebrow">Return to Self, Community &amp; Nature</span>
+    <h1>You were not meant<br>to carry this <em>alone.</em></h1>
+    <p class="hero-sub">A wellness ecosystem built to support the practitioners who make healing possible — and the communities who need it.</p>
+    <div class="hero-ctas">
+      <a href="#ecosystem" class="btn-sand">Explore the Ecosystem</a>
+      <a href="pages/our-story.html" class="btn-ghost">Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM -->
+<section id="ecosystem">
+  <div class="eco-intro">
+    <span class="eyebrow" style="color:rgba(191,192,171,0.55);">The Ecosystem</span>
+    <h2>A place to heal. A place to grow.<br>A place to learn. A place to <em>belong.</em></h2>
+    <p>Whether you are seeking healing, offering it, or wanting to amplify it — there is a place for you here.</p>
+  </div>
+  <div class="eco-pillars">
+    <a href="pages/community.html" class="pillar">
+      <div class="pillar-img" style="background-image:url('images/ecosystem-community.jpg');">
+        <span>Community</span>
+      </div>
+      <div class="pillar-body">
+        <h3>Community</h3>
+        <p>A growing network of practitioners, venues, creatives, and seekers — held together.</p>
+        <span class="pillar-soon">Join the WhatsApp →</span>
+      </div>
+    </a>
+    <a href="pages/journal.html" class="pillar">
+      <div class="pillar-img" style="background-image:url('images/ecosystem-education.jpg');">
+        <span>Education</span>
+      </div>
+      <div class="pillar-body">
+        <h3>Education</h3>
+        <p>The Journal, the podcast, free resources, and courses to deepen your practice.</p>
+        <span class="pillar-soon">Coming soon</span>
+      </div>
+    </a>
+    <a href="pages/experiences.html" class="pillar">
+      <div class="pillar-img" style="background-image:url('images/ecosystem-experiences.jpg');">
+        <span>Experiences</span>
+      </div>
+      <div class="pillar-body">
+        <h3>Experiences</h3>
+        <p>Retreats, workshops, and gatherings designed to create lasting transformation.</p>
+        <span class="pillar-soon">Coming soon</span>
+      </div>
+    </a>
+    <a href="pages/media-marketing.html" class="pillar">
+      <div class="pillar-img" style="background-image:url('images/ecosystem-media.jpg');">
+        <span>Media</span>
+      </div>
+      <div class="pillar-body">
+        <h3>Media</h3>
+        <p>Wellness branding, retreat marketing, and visibility support for practitioners.</p>
+        <span class="pillar-soon">Book a call →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-head">
+    <span class="eyebrow">How We Can Help</span>
+    <h2>Mindful Earth <em>services.</em></h2>
+    <p>We work directly with wellness practitioners, brands, and organisations through four core service areas. Every engagement begins with a free 30-minute conversation.</p>
+    <span class="services-note">All enquiries start with a call — no pressure, just an honest conversation.</span>
+  </div>
+  <div class="svc-grid">
+    <div class="svc">
+      <span class="svc-cat">Events</span>
+      <h3>Event Planning &amp; Management</h3>
+      <p>End-to-end planning for wellness retreats, workshops, and events. Concept, venue sourcing, logistics, marketing, and on-site delivery — so you can focus on your craft, not the coordination.</p>
+      <span class="svc-price">Discovery CA$497 &middot; Full CA$1,497&ndash;2,497 &middot; Corporate CA$2,997+</span>
+      <div class="svc-links">
+        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" class="svc-link primary">Book a Free Call &rarr;</a>
+        <a href="pages/event-planning.html" class="svc-link secondary">Learn more</a>
+      </div>
+    </div>
+    <div class="svc">
+      <span class="svc-cat">Media</span>
+      <h3>Wellness Marketing</h3>
+      <p>Brand audits, retreat launch campaigns, content strategy, and ongoing marketing support — built on your authentic voice, not the algorithm's demands.</p>
+      <span class="svc-price">Brand audit CA$297 &middot; Launch CA$797 &middot; Retainer CA$597/mo</span>
+      <div class="svc-links">
+        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" class="svc-link primary">Book a Free Call &rarr;</a>
+        <a href="pages/media-marketing.html" class="svc-link secondary">Learn more</a>
+      </div>
+    </div>
+    <div class="svc">
+      <span class="svc-cat">Consulting</span>
+      <h3>Wellness Business Consulting</h3>
+      <p>Strategy, structure, and honest guidance for practitioners and founders building something real — without losing themselves in the process of building it.</p>
+      <span class="svc-price">Single session CA$197 &middot; 3-month CA$1,497</span>
+      <div class="svc-links">
+        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" class="svc-link primary">Book a Free Call &rarr;</a>
+        <a href="pages/wellness-consulting.html" class="svc-link secondary">Learn more</a>
+      </div>
+    </div>
+    <div class="svc">
+      <span class="svc-cat">Corporate</span>
+      <h3>Corporate Wellness Services</h3>
+      <p>Team retreats, workplace workshops, and wellness strategy for organisations who take their people seriously. A genuine investment in the humans doing the work.</p>
+      <span class="svc-price">Enquiry-based &middot; Tailored proposals</span>
+      <div class="svc-links">
+        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" class="svc-link primary">Book a Free Call &rarr;</a>
+        <a href="pages/corporate-wellness.html" class="svc-link secondary">Learn more</a>
+      </div>
+    </div>
+  </div>
+  <div class="svc-cta">
+    <p>Looking for something more personal? Montana also works one-to-one as a somatic practitioner, yoga teacher, energy healer, and wellness business mentor.</p>
+    <a href="pages/montana.html" class="btn-bark">Work with Montana &rarr;</a>
+  </div>
+</section>
+
+<!-- WHY WE EXIST -->
+<section class="why" id="why">
+  <div class="why-img">
+    <!-- images/mission-photo.jpg — nature, earth, roots, forest floor -->
+  </div>
+  <div class="why-content">
+    <span class="eyebrow">Why We Exist</span>
+    <h2>When practitioners<br>thrive, <em>everyone benefits.</em></h2>
+    <div class="sand-rule"></div>
+    <p>Wellness is not easy to access, nor affordable for many. But the solution is not to ask practitioners to work for less — it is to <strong>give them better infrastructure, so they can build more sustainably and give back more naturally.</strong></p>
+    <p>When a practitioner has the tools, the community, and the financial stability they need — they show up differently. For their clients, their community, and the planet.</p>
+    <p>That is the ripple Mindful Earth is building. One practitioner at a time.</p>
+    <a href="pages/our-story.html" class="btn-outline" style="display:inline-block;margin-top:8px;">Read Our Story</a>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder" id="founder">
+  <div>
+    <div class="founder-img"></div>
+    <!-- images/founder-photo.jpg — your portrait, warm, personal -->
+    <p class="founder-caption">Montana King &middot; London, UK</p>
+  </div>
+  <div class="founder-content">
+    <span class="eyebrow">Meet the Founder</span>
+    <h2>Montana <em>King</em></h2>
+    <span class="founder-subtitle">Founder &middot; Somatic Practitioner &middot; Yoga Teacher &middot; Wellness Consultant</span>
+    <div class="sand-rule"></div>
+    <p>I built Mindful Earth because I needed it to exist. I have lived on both sides of the problem — as someone who couldn't always afford healing, and as a practitioner trying to build sustainably in a fragmented landscape.</p>
+    <p>With a background in life sciences, somatic practice, and six years of international retreat hosting, I bring both the operational rigour and the personal understanding that this work requires.</p>
+    <div class="founder-creds">
+      <span class="founder-cred">BSc Life Sciences</span>
+      <span class="founder-cred">200hr Yoga Teaching</span>
+      <span class="founder-cred">300hr Somatic Bodywork</span>
+      <span class="founder-cred">6 Years Retreat Hosting</span>
+    </div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="pages/montana.html" class="btn-bark">Work with Montana</a>
+      <a href="pages/our-story.html" class="btn-outline">Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- GINKGO -->
+<section class="ginkgo">
+  <div class="ginkgo-mark">
+    <div class="ginkgo-ring">
+      <svg viewBox="0 0 80 100" width="72" height="90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 90 Q36 70 28 55 Q18 38 22 20 Q26 8 40 10 Q54 8 58 20 Q62 38 52 55 Q44 70 40 90Z" stroke="#d9b382" stroke-width="1" fill="none" opacity="0.6"/>
+        <path d="M40 90 Q38 72 32 58 Q24 42 20 26 Q18 14 30 8 Q36 5 40 10" stroke="#d9b382" stroke-width="1" fill="none" opacity="0.4"/>
+        <path d="M40 90 Q42 72 48 58 Q56 42 60 26 Q62 14 50 8 Q44 5 40 10" stroke="#d9b382" stroke-width="1" fill="none" opacity="0.4"/>
+        <line x1="40" y1="90" x2="40" y2="98" stroke="#d9b382" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <span class="ginkgo-label">The Ginkgo</span>
+  </div>
+  <div class="ginkgo-text">
+    <span class="eyebrow">Our Symbol</span>
+    <h2>Ancient. Resilient. Returning.</h2>
+    <div class="sand-rule"></div>
+    <p>The Ginkgo is one of the oldest living tree species on earth — unchanged for over 200 million years, and one of the first trees to regrow after Hiroshima. It survives because of the depth of its roots, not the speed of its growth.</p>
+    <p>Mindful Earth is being built the same way. Slowly, intentionally, and with the firm belief that what is rooted deeply enough will always return.</p>
+  </div>
+</section>
+
+<!-- MECA -->
+<section class="meca">
+  <div>
+    <span class="eyebrow" style="color:var(--sand);">The Mindful Earth Community Access Fund</span>
+    <h2>The ripple<br>goes <em>outward.</em></h2>
+    <p>When practitioners are financially stable and professionally supported, something beautiful happens — they naturally have more to give. The MECA exists for that moment.</p>
+    <p>For practitioners who want to offer subsidised sessions, and for individuals for whom cost is a genuine barrier. Not charity bolted on — the natural outcome of a thriving ecosystem.</p>
+    <p>We are building the fund as the platform grows. Register your interest below.</p>
+    <div class="meca-ctas">
+      <a href="pages/community-access-fund.html" class="btn-sand">Learn About MECA</a>
+      <a href="https://paypal.me/mindfuleartheco" target="_blank" class="btn-outline-light">Contribute to the Fund</a>
+    </div>
+  </div>
+  <div class="meca-quote">
+    <blockquote>"Wellness practitioners deserve to be paid what they are worth. And wellness should be within reach for everyone. These two things are not in conflict — they are the mission."</blockquote>
+    <cite>&mdash; Montana King, Founder</cite>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter" id="newsletter">
+  <span class="eyebrow">Stay Connected</span>
+  <h2>Join the <em>community.</em></h2>
+  <p>Reflections, resources, and invitations to gather — delivered gently, never too often.</p>
+  <form class="email-form" action="mailto:montana@mindfulearth.eco" method="POST">
+    <input type="email" name="email" placeholder="Your email address" required>
+    <button type="submit">Join</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <span class="footer-brand-name">Mindful Earth</span>
+      <span class="footer-tagline">Return to Self, Community &amp; Nature</span>
+      <p class="footer-desc">A wellness ecosystem being built for practitioners and the communities they serve. Based in London, growing globally.</p>
+    </div>
+    <div class="footer-col"><h4>Explore</h4><ul>
+      <li><a href="pages/our-story.html">Our Story</a></li>
+      <li><a href="pages/experiences.html">Experiences</a></li>
+      <li><a href="pages/journal.html">The Journal</a></li>
+      <li><a href="pages/podcast.html">Podcast</a></li>
+      <li><a href="pages/courses.html">Courses</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="pages/event-planning.html">Event Planning</a></li>
+      <li><a href="pages/media-marketing.html">Wellness Marketing</a></li>
+      <li><a href="pages/wellness-consulting.html">Business Consulting</a></li>
+      <li><a href="pages/corporate-wellness.html">Corporate Wellness</a></li>
+      <li><a href="pages/montana.html">Work with Montana</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul>
+      <li><a href="pages/community.html">The Community</a></li>
+      <li><a href="pages/community-access-fund.html">Community Access Fund</a></li>
+      <li><a href="pages/partnerships.html">Brand Partnerships</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+      <li><a href="https://instagram.com/mindfulearth.eco" target="_blank">Instagram</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      <a href="pages/eco-pledge.html" class="eco">Our Eco Pledge</a>
+      <a href="pages/careers.html">Work With Us</a>
+      <a href="pages/press.html">Press Kit</a>
+      <a href="pages/privacy.html">Privacy Policy</a>
+      <a href="pages/terms.html">Terms &amp; Conditions</a>
+      <a href="pages/cookies.html">Cookie Policy</a>
+      <a href="pages/contact.html">Contact</a>
+    </div>
+    <span class="footer-copy">&copy; 2019&ndash;2026 Mindful Earth &middot; Made with intention.</span>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
+  document.getElementById('hamburger').addEventListener('click', () => { document.getElementById('mobile-menu').classList.toggle('open'); });
+  function toggleMobileSub(id) { const el = document.getElementById('mob-' + id); if(el) el.classList.toggle('open'); }
+</script>
+</body>
+</html>
