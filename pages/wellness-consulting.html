@@ -38,16 +38,14 @@
   <a href="https://instagram.com/mindfulearth.events" target="_blank">@mindfulearth.events</a>
   <span class="top-bar-sep">·</span>
   <a href="https://instagram.com/mindfulearth.media" target="_blank">@mindfulearth.media</a>
-  <span class="top-bar-sep">·</span>
-  <a href="https://instagram.com/montanacindy_" target="_blank">@montanacindy_</a>
 </div>
 <nav id="nav">
   <a href="../index.html" class="nav-logo">
     <svg class="nav-logo-mark" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M16 36 Q14 28 10 21 Q5 13 8 5 Q10.5 0 16 1 Q21.5 0 24 5 Q27 13 22 21 Q18 28 16 36Z" stroke="#5d4133" stroke-width="1.2" fill="none" opacity="0.7"/>
-      <path d="M16 36 Q15 29 12 22 Q8 15 6 8 Q5 3 10 1" stroke="#5d4133" stroke-width="0.9" fill="none" opacity="0.5"/>
-      <path d="M16 36 Q17 29 20 22 Q24 15 26 8 Q27 3 22 1" stroke="#5d4133" stroke-width="0.9" fill="none" opacity="0.5"/>
-      <line x1="16" y1="36" x2="16" y2="40" stroke="#5d4133" stroke-width="1.5"/>
+      <path d="M16 36 Q14 28 10 21 Q5 13 8 5 Q10.5 0 16 1 Q21.5 0 24 5 Q27 13 22 21 Q18 28 16 36Z" stroke="#efe8dc" stroke-width="1.2" fill="none" opacity="0.8"/>
+      <path d="M16 36 Q15 29 12 22 Q8 15 6 8 Q5 3 10 1" stroke="#efe8dc" stroke-width="0.9" fill="none" opacity="0.5"/>
+      <path d="M16 36 Q17 29 20 22 Q24 15 26 8 Q27 3 22 1" stroke="#efe8dc" stroke-width="0.9" fill="none" opacity="0.5"/>
+      <line x1="16" y1="36" x2="16" y2="40" stroke="#d9b382" stroke-width="1.5"/>
     </svg>
     <div class="nav-logo-text">
       <span class="nav-logo-name">Mindful Earth</span>
@@ -125,7 +123,8 @@
   <a href="contact.html" class="mobile-cta">Work With Us</a>
 </div>
 
-<section class="inner-hero" style="background:var(--parchment); padding-top:120px;">
+<!-- Photo: images/wellness-consulting-hero.jpg — atmospheric wellness/nature image -->
+<section class="inner-hero" style="background-image:url('../images/wellness-consulting-hero.jpg');background-size:cover;background-position:center;" style="background:var(--parchment); padding-top:120px;">
   <span class="eyebrow">Services</span>
   <h1>Build something that <em>sustains you.</em></h1>
   <p>For practitioners who are good at their craft but want support building the business around it. Pricing, positioning, operations, growth — the practical architecture that lets you focus on the work you're actually here to do.</p>
@@ -136,9 +135,9 @@
 <div class="tier">
   <div class="tier-head">
     <span class="tier-name">Single Strategy Session</span>
-    <span class="tier-price">CA$197</span>
+    <span class="tier-price">CA$100</span>
   </div>
-  <p class="tier-desc">90 minutes. You bring the questions, we bring the frameworks and honest perspective. Recorded and followed up with a written summary and prioritised next steps.</p>
+  <p class="tier-desc">60–90 minutes. You bring the questions, we bring the frameworks and honest perspective. Recorded and followed up with a written summary and prioritised next steps.</p>
 </div>
 <div class="tier">
   <div class="tier-head">
@@ -163,6 +162,159 @@
 .philosophy-inner p { font-size:15px; line-height:1.9; color:var(--forest); margin-bottom:16px; }
 .philosophy-inner p strong { font-weight:500; color:var(--bark); }
 </style>
+
+<style>
+.who-this-for { background:var(--sage-light,#f0f1eb); padding:72px 10vw; border-top:1px solid rgba(191,192,171,0.25); }
+.who-this-for h2 { font-size:clamp(24px,2.5vw,34px); margin-bottom:14px; }
+.who-this-for h2 em { font-style:italic; color:var(--mauve); }
+.who-this-for > p { font-size:15px; line-height:1.85; color:var(--forest); max-width:580px; margin-bottom:32px; }
+.who-list { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+.who-item { background:var(--white); border:1px solid rgba(191,192,171,0.3); padding:16px 18px; font-size:13.5px; line-height:1.7; color:var(--forest); display:flex; gap:10px; align-items:flex-start; }
+.who-item::before { content:"✓"; color:var(--forest); font-family:Jost,sans-serif; font-weight:500; flex-shrink:0; margin-top:1px; }
+
+.svc-process { background:var(--white); padding:72px 10vw; border-top:1px solid rgba(191,192,171,0.15); }
+.svc-process h2 { font-size:clamp(24px,2.5vw,34px); margin-bottom:14px; }
+.svc-process h2 em { font-style:italic; color:var(--mauve); }
+.svc-process > p { font-size:15px; line-height:1.85; color:var(--forest); max-width:560px; margin-bottom:40px; }
+.process-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:0; position:relative; margin-bottom:48px; }
+.process-steps::before { content:''; position:absolute; top:20px; left:10%; right:10%; height:1px; background:var(--sage); z-index:0; }
+.process-step { text-align:center; padding:0 16px; position:relative; z-index:1; }
+.process-step-dot { width:40px; height:40px; border-radius:50%; background:var(--sage); display:flex; align-items:center; justify-content:center; margin:0 auto 16px; }
+.process-step-dot span { font-family:"Gloock",serif; font-size:14px; color:var(--bark); }
+.process-step h4 { font-family:"Gloock",serif; font-size:15px; color:var(--bark); margin-bottom:6px; }
+.process-step p { font-size:12px; line-height:1.7; color:var(--forest); }
+
+.svc-results { background:var(--parchment); padding:72px 10vw; border-top:1px solid rgba(191,192,171,0.25); }
+.svc-results h2 { font-size:clamp(24px,2.5vw,34px); margin-bottom:36px; }
+.svc-results h2 em { font-style:italic; color:var(--mauve); }
+.results-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.result-card { background:var(--white); border:1px solid rgba(191,192,171,0.3); padding:24px; border-left:3px solid var(--sand); }
+.result-card h4 { font-family:"Gloock",serif; font-size:16px; color:var(--bark); margin-bottom:6px; }
+.result-card p { font-size:13px; line-height:1.75; color:var(--forest); }
+
+.svc-faq { background:var(--off-white); padding:72px 10vw; border-top:1px solid rgba(191,192,171,0.15); }
+.svc-faq h2 { font-size:clamp(24px,2.5vw,34px); margin-bottom:36px; }
+.svc-faq h2 em { font-style:italic; color:var(--mauve); }
+.faq-list { display:flex; flex-direction:column; gap:0; max-width:720px; }
+.faq-item { padding:20px 0; border-bottom:1px solid rgba(191,192,171,0.25); }
+.faq-item:last-child { border-bottom:none; }
+.faq-q { font-family:"Gloock",serif; font-size:17px; color:var(--bark); margin-bottom:8px; }
+.faq-a { font-size:14px; line-height:1.85; color:var(--forest); }
+
+.svc-final-cta { background:var(--forest); padding:72px 10vw; text-align:center; }
+.svc-final-cta h2 { font-size:clamp(24px,2.8vw,36px); color:var(--off-white); margin-bottom:12px; }
+.svc-final-cta h2 em { font-style:italic; color:var(--sand); }
+.svc-final-cta p { font-size:15px; color:rgba(239,232,220,0.72); max-width:480px; margin:0 auto 28px; line-height:1.8; }
+.svc-final-cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+@media(max-width:768px) {
+  .who-this-for { padding:56px 6vw; }
+  .who-list { grid-template-columns:1fr; }
+  .svc-process { padding:56px 6vw; }
+  .process-steps { grid-template-columns:repeat(2,1fr); gap:24px; }
+  .process-steps::before { display:none; }
+  .svc-results { padding:56px 6vw; }
+  .results-grid { grid-template-columns:1fr; }
+  .svc-faq { padding:56px 6vw; }
+  .svc-final-cta { padding:56px 6vw; }
+}
+</style>
+
+<section class="who-this-for">
+  <span class="eyebrow">Is This For You?</span>
+  <h2>This service is right for you <em>if...</em></h2>
+  <p>Business consulting for wellness practitioners is very different to generic business coaching. Here's who this is built for.</p>
+  <div class="who-list">
+    <div class="who-item">You're a practitioner who is good at your craft but unclear on your business structure</div>
+    <div class="who-item">You've invested in other programmes and still feel stuck or overwhelmed</div>
+    <div class="who-item">You want honest guidance — not hype, not a formula, not a 12-week programme that doesn't fit your life</div>
+    <div class="who-item">You want to build a practice that is financially sustainable</div>
+    <div class="who-item">You're not sure what to charge, how to position yourself, or where to focus first</div>
+    <div class="who-item">You want to grow without burning out in the process</div>
+    <div class="who-item">You want to give back — once you've built the foundation to do it from</div>
+    <div class="who-item">You want a genuine partner, not just a service provider</div>
+  </div>
+</section>
+
+<section class="svc-process">
+  <span class="eyebrow">How It Works</span>
+  <h2>Strategy that starts<br>with <em>where you are.</em></h2>
+  <p>We don't apply a template. We start with your specific situation, your goals, and your constraints — and build from there.</p>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="process-step-dot"><span>01</span></div>
+      <h4>Discovery Call</h4>
+      <p>Free, 30 mins. We understand where you are, what's working, and where you're stuck.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-step-dot"><span>02</span></div>
+      <h4>Strategy Session</h4>
+      <p>Deep dive into your practice, your offers, your pricing, and your goals. Recorded and followed up with written action steps.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-step-dot"><span>03</span></div>
+      <h4>Implementation</h4>
+      <p>You implement with clarity and confidence. We're available between sessions for questions and check-ins.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-step-dot"><span>04</span></div>
+      <h4>Review &amp; Adjust</h4>
+      <p>We review what's working, refine the strategy, and keep building. The goal is momentum — not dependency.</p>
+    </div>
+  </div>
+</section>
+
+<section class="svc-results">
+  <span class="eyebrow">What You Get</span>
+  <h2>Clarity, structure,<br>and the confidence to <em>build.</em></h2>
+  <div class="results-grid">
+    <div class="result-card">
+      <h4>A practice that makes sense</h4>
+      <p>Clear pricing, clear positioning, clear offers. You'll know exactly what you're selling, who it's for, and what to say about it.</p>
+    </div>
+    <div class="result-card">
+      <h4>Financial stability</h4>
+      <p>A sustainable income model — one that lets you do your best work without financial anxiety running in the background of every session.</p>
+    </div>
+    <div class="result-card">
+      <h4>The ability to give back</h4>
+      <p>When your practice is stable, you have real capacity to offer accessible pricing, community access, and genuine generosity. That's the goal.</p>
+    </div>
+  </div>
+</section>
+
+<section class="svc-faq">
+  <span class="eyebrow">Common Questions</span>
+  <h2>Before you <em>reach out.</em></h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">How is this different from other business coaching?</p>
+      <p class="faq-a">Most business coaching applies a generic framework regardless of industry. This is built specifically for wellness practitioners — by someone who has been one. We understand the real tensions: wanting to be accessible, needing to be sustainable, not wanting to feel like you're selling.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">I'm just starting out. Is this for me?</p>
+      <p class="faq-a">Yes — and honestly, starting with the right structure is much easier than fixing a broken one later. A single strategy session early in your journey can save months of confusion.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What's the difference between a single session and the 3-month engagement?</p>
+      <p class="faq-a">A single session gives you clarity and a roadmap. The 3-month engagement is for practitioners who want sustained support as they implement — regular sessions, ongoing accountability, and a genuine partner in the process.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Do you only work with yoga teachers?</p>
+      <p class="faq-a">Not at all. We work with somatic practitioners, breathwork facilitators, coaches, energy healers, retreat hosts, wellness brands — anyone building in the wellness space.</p>
+    </div>
+  </div>
+</section>
+
+<section class="svc-final-cta">
+  <h2>Ready to build with<br><em>clarity?</em></h2>
+  <p>Start with a free 30-minute call. We'll be honest about what's possible and whether we're the right fit — no pressure, no obligation.</p>
+  <div class="svc-final-cta-btns">
+    <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" class="btn-sand">Book a Free Call</a>
+    <a href="mailto:montana@mindfulearth.eco?subject=Consulting%20Enquiry" class="btn-outline-light">Send an Email</a>
+  </div>
+</section>
+
 <section class="svc-philosophy">
   <div class="philosophy-inner">
     <span class="eyebrow">The Philosophy Behind the Work</span>
@@ -221,7 +373,6 @@
       <li><a href="community-access-fund.html">Community Access Fund</a></li>
       <li><a href="partnerships.html">Brand Partnerships</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="press.html">Press Kit</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom">
