@@ -2,17 +2,36 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="description" content="A wellness ecosystem built for practitioners — event planning, wellness marketing, business consulting, and community. Supporting the people who make he...">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Montana King, Mindful Earth">
+<meta name="keywords" content="wellness retreat planning, wellness marketing, wellness practitioner support, retreat facilitation, mindful earth, yoga retreat, corporate wellness">
+<!-- Open Graph -->
+<meta property="og:title" content="Mindful Earth — Return to Self, Community & Nature">
+<meta property="og:description" content="A wellness ecosystem built for practitioners — event planning, wellness marketing, business consulting, and community. Supporting the people who make healing possible.">
+<meta property="og:image" content="https://mindfulearth.eco/assets/logo2.png">
+<meta property="og:url" content="https://mindfulearth.eco">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mindful Earth">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mindful Earth — Return to Self, Community & Nature">
+<meta name="twitter:description" content="A wellness ecosystem built for practitioners — event planning, wellness marketing, business consulting, and community. Supporting the people who make healing possible.">
+<meta name="twitter:image" content="https://mindfulearth.eco/assets/logo2.png">
+<!-- Google Analytics — replace G-F8YGS4RXM5 with your actual GA4 measurement ID -->
+<!-- Sign up free at analytics.google.com, create a property, get your ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F8YGS4RXM5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F8YGS4RXM5');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mindful Earth — Return to Self, Community & Nature</title>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/shared.css">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<meta property="og:title" content="Mindful Earth — Return to Self, Community & Nature">
-<meta property="og:description" content="A wellness ecosystem built to support the practitioners who make healing possible — and the communities who need it.">
-<meta property="og:image" content="https://mindfulearth.eco/images/og-image.jpg">
-<meta property="og:url" content="https://mindfulearth.eco">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
 <style>
 
 /* HERO */
@@ -20,7 +39,7 @@
   position:relative; min-height:100vh;
   display:flex; align-items:flex-end; padding:0 10vw 10vh;
   background:
-    linear-gradient(160deg,rgba(77,85,76,0.52) 0%,rgba(93,65,51,0.38) 60%,rgba(77,85,76,0.48) 100%),
+    linear-gradient(160deg,rgba(77,85,76,0.75) 0%,rgba(77,85,76,0.65) 60%,rgba(93,65,51,0.6) 100%),
     url('images/hero-bg.jpg') center/cover no-repeat;
   overflow:hidden;
 }
@@ -154,14 +173,14 @@
 .pain-text p { font-size:13.5px; line-height:1.75; color:var(--forest); }
 
 /* SOCIAL PROOF STRIP */
-.proof-strip { background:var(--sage-light,#f0f1eb); padding:40px 10vw; border-top:1px solid rgba(191,192,171,0.25); border-bottom:1px solid rgba(191,192,171,0.25); }
+.proof-strip { background:var(--forest); padding:20px 10vw 48px; }
 .proof-strip-inner { display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; }
-.proof-eyebrow { font-family:"Jost",sans-serif; font-size:10px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--sage-mid,#8e988f); white-space:nowrap; }
+.proof-eyebrow { font-family:"Jost",sans-serif; font-size:10px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--sage); white-space:nowrap; }
 .proof-items { display:flex; gap:40px; flex-wrap:wrap; align-items:center; flex:1; justify-content:center; }
 .proof-item { text-align:center; }
-.proof-num { font-family:"Gloock",serif; font-size:32px; color:var(--bark); display:flex; align-items:center; justify-content:center; line-height:1; margin-bottom:4px; min-height:40px; }
+.proof-num { font-family:"Gloock",serif; font-size:32px; color:var(--off-white); display:flex; align-items:center; justify-content:center; line-height:1; margin-bottom:4px; min-height:40px; }
 .proof-num svg { width:36px; height:36px; }
-.proof-label { font-family:"Jost",sans-serif; font-size:11px; font-weight:300; letter-spacing:0.08em; color:var(--forest); }
+.proof-label { font-family:"Jost",sans-serif; font-size:11px; font-weight:300; letter-spacing:0.08em; color:var(--sage); }
 
 /* HOW IT WORKS */
 .how-it-works { background:var(--white); padding:96px 10vw; border-top:1px solid rgba(191,192,171,0.15); }
@@ -239,30 +258,44 @@
 }
 
 </style>
+  <link rel="canonical" href="https://mindfulearth.eco/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Mindful Earth",
+  "url": "https://mindfulearth.eco",
+  "logo": "https://mindfulearth.eco/assets/logo2.png",
+  "description": "A wellness ecosystem built for practitioners — event planning, wellness marketing, business consulting, and community.",
+  "email": "montana@mindfulearth.eco",
+  "sameAs": [
+    "https://instagram.com/mindfulearth.eco",
+    "https://instagram.com/mindfulearth.events",
+    "https://instagram.com/mindfulearth.media"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Montana King",
+    "jobTitle": "Founder",
+    "url": "https://mindfulearth.eco/pages/montana.html"
+  }
+}
+</script>
 </head>
 <body>
 <div class="top-bar">
-  <a href="https://instagram.com/mindfulearth.eco" target="_blank">@mindfulearth.eco</a>
+  <a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer">@mindfulearth.eco</a>
   <span class="top-bar-sep">·</span>
-  <a href="https://instagram.com/mindfulearth.events" target="_blank">@mindfulearth.events</a>
+  <a href="https://instagram.com/mindfulearth.events" target="_blank" rel="noopener noreferrer">@mindfulearth.events</a>
   <span class="top-bar-sep">·</span>
-  <a href="https://instagram.com/mindfulearth.media" target="_blank">@mindfulearth.media</a>
+  <a href="https://instagram.com/mindfulearth.media" target="_blank" rel="noopener noreferrer">@mindfulearth.media</a>
 </div>
 
 <!-- NAV -->
 <nav id="nav">
   <a href="index.html" class="nav-logo">
-    <svg class="nav-logo-mark" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M16 36 Q14 28 10 21 Q5 13 8 5 Q10.5 0 16 1 Q21.5 0 24 5 Q27 13 22 21 Q18 28 16 36Z" stroke="#efe8dc" stroke-width="1.2" fill="none" opacity="0.8"/>
-      <path d="M16 36 Q15 29 12 22 Q8 15 6 8 Q5 3 10 1" stroke="#efe8dc" stroke-width="0.9" fill="none" opacity="0.5"/>
-      <path d="M16 36 Q17 29 20 22 Q24 15 26 8 Q27 3 22 1" stroke="#efe8dc" stroke-width="0.9" fill="none" opacity="0.5"/>
-      <line x1="16" y1="36" x2="16" y2="40" stroke="#d9b382" stroke-width="1.5"/>
-    </svg>
-    <div class="nav-logo-text">
-      <span class="nav-logo-name">Mindful Earth</span>
-      <span class="nav-logo-tagline">Return to Self, Community &amp; Nature</span>
-    </div>
-  </a>
+  <img src="assets/logo.png" alt="Mindful Earth" style="height:38px;width:auto;">
+</a>
   <ul class="nav-center">
     <li><a href="pages/our-story.html">About <span class="nav-arrow">▼</span></a>
       <ul class="nav-dropdown">
@@ -308,7 +341,7 @@
       </ul>
     </li>
   </ul>
-  <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" class="nav-cta">Book a Free Call</a>
+  <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Call</a>
   <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
@@ -326,7 +359,7 @@
     <div class="mobile-sub" id="mob-svc"><a href="pages/event-planning.html">Event Planning</a><a href="pages/media-marketing.html">Media &amp; Marketing</a><a href="pages/wellness-consulting.html">Wellness Consulting</a><a href="pages/corporate-wellness.html">Corporate Wellness</a><a href="pages/montana.html">Work with Montana</a></div></div>
   <div class="mobile-nav-item"><button class="mobile-nav-link" onclick="toggleMobileSub('gb')">Give Back <span>+</span></button>
     <div class="mobile-sub" id="mob-gb"><a href="pages/give-back.html">Make a Difference</a><a href="pages/community-access-fund.html">Community Access Fund</a></div></div>
-  <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" class="mobile-cta">Book a Free 30-Min Call</a>
+  <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="mobile-cta">Book a Free 30-Min Call</a>
 </div>
 
 <!-- HERO -->
@@ -334,7 +367,7 @@
   <div class="hero-content">
     <span class="hero-eyebrow">Return to Self, Community &amp; Nature</span>
     <h1>You were not meant<br>to carry this <em>alone.</em></h1>
-    <p class="hero-sub">A wellness ecosystem built to support the practitioners who make healing possible — and the communities who need it.</p>
+    <p class="hero-sub">A home for the practitioners, the seekers, the venues, and the creatives building a more conscious world — together.</p>
     <div class="hero-ctas">
       <a href="#ecosystem" class="btn-sand">Explore the Ecosystem</a>
       <a href="pages/our-story.html" class="btn-ghost">Our Story</a>
@@ -343,10 +376,17 @@
 </section>
 
 
+
+<!-- LOGO ABOVE STATS -->
+<div style="background:var(--forest);padding:48px 10vw 0;text-align:center;">
+  <img src="images/logo2.png" alt="Mindful Earth"
+    style="width:clamp(280px,60vw,680px);max-width:100%;height:auto;display:block;margin:0 auto;opacity:0.95;">
+</div>
+
 <!-- SOCIAL PROOF STRIP -->
 <section class="proof-strip">
   <div class="proof-strip-inner">
-    <span class="proof-eyebrow" style="color:var(--bark);">Mindful Earth</span>
+    
     <div class="proof-items">
       <div class="proof-item">
         <span class="proof-num">6+</span>
@@ -354,11 +394,11 @@
       </div>
       <div class="proof-item">
         <span class="proof-num">2019</span>
-        <span class="proof-label">Founded with purpose</span>
+        <span class="proof-label">Built from the beginning with intention</span>
       </div>
       <div class="proof-item">
         <span class="proof-num">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#5d4133" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#bfc0ab" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"/>
             <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
             <path d="M12 2a15.3 15.3 0 0 1 4 10M12 2a15.3 15.3 0 0 0-4 10"/>
@@ -368,7 +408,7 @@
       </div>
       <div class="proof-item">
         <span class="proof-num">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#5d4133" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#bfc0ab" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
             <circle cx="9" cy="7" r="4"/>
             <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
@@ -382,9 +422,7 @@
 
 <!-- WHY WE EXIST -->
 <section class="why" id="why">
-  <div class="why-img">
-    <!-- images/mission-photo.jpg — nature, earth, roots, forest floor -->
-  </div>
+  <div class="why-img" style="background-image:url('images/mission-photo.jpg');"></div>
   <div class="why-content">
     <span class="eyebrow" style="color:var(--sage-mid,#8e988f);">Why We Exist</span>
     <h2>When practitioners<br>thrive, <em>everyone benefits.</em></h2>
@@ -508,7 +546,7 @@
       <p style="font-size:13px;line-height:1.7;color:var(--sage-mid,#8e988f);margin-top:8px;">Retreats &middot; Workshops &middot; Community Events &middot; Corporate Wellness &middot; Festivals</p>
       <span class="svc-price">Starting at CA$300 &middot; Pricing based on scope</span>
       <div class="svc-links">
-        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" class="svc-link primary">Book a Free Call &rarr;</a>
+        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="svc-link primary">Book a Free Call &rarr;</a>
         <a href="mailto:montana@mindfulearth.eco?subject=Event%20Planning%20Enquiry" class="svc-link secondary">Send an email</a>
         <a href="pages/event-planning.html" class="svc-link secondary">Learn more</a>
       </div>
@@ -519,7 +557,7 @@
       <p>Brand audits, retreat launch campaigns, content strategy, and ongoing marketing support — built on your authentic voice, not the algorithm's demands.</p>
       <span class="svc-price">Brand audit from CA$300 &middot; Enquiry-based</span>
       <div class="svc-links">
-        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" class="svc-link primary">Book a Free Call &rarr;</a>
+        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="svc-link primary">Book a Free Call &rarr;</a>
         <a href="mailto:montana@mindfulearth.eco?subject=Wellness%20Marketing%20Enquiry" class="svc-link secondary">Send an email</a>
         <a href="pages/media-marketing.html" class="svc-link secondary">Learn more</a>
       </div>
@@ -530,7 +568,7 @@
       <p>Strategy, structure, and honest guidance for practitioners and founders building something real — without losing themselves in the process of building it.</p>
       <span class="svc-price">Single session CA$100 &middot; Packages available</span>
       <div class="svc-links">
-        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" class="svc-link primary">Book a Free Call &rarr;</a>
+        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="svc-link primary">Book a Free Call &rarr;</a>
         <a href="mailto:montana@mindfulearth.eco?subject=Consulting%20Enquiry" class="svc-link secondary">Send an email</a>
         <a href="pages/wellness-consulting.html" class="svc-link secondary">Learn more</a>
       </div>
@@ -541,7 +579,7 @@
       <p>Team retreats, workplace workshops, and wellness strategy for organisations who take their people seriously. A genuine investment in the humans doing the work.</p>
       <span class="svc-price">Enquiry-based &middot; Tailored proposals</span>
       <div class="svc-links">
-        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" class="svc-link primary">Book a Free Call &rarr;</a>
+        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="svc-link primary">Book a Free Call &rarr;</a>
         <a href="mailto:montana@mindfulearth.eco?subject=Corporate%20Wellness%20Enquiry" class="svc-link secondary">Send an email</a>
         <a href="pages/corporate-wellness.html" class="svc-link secondary">Learn more</a>
       </div>
@@ -550,7 +588,7 @@
   <div class="svc-cta">
     <p>Not sure which service is right for you? Every engagement starts with a free 30-minute call — and if we're not the right fit, we'll say so honestly.</p>
     <div style="display:flex;gap:12px;flex-wrap:wrap;">
-      <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" class="btn-bark">Book a Free Call</a>
+      <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="btn-bark">Book a Free Call</a>
       <a href="pages/practitioners.html" class="btn-outline">Explore Our Practitioners &rarr;</a>
     </div>
   </div>
@@ -589,7 +627,7 @@
   <div class="how-cta">
     <p>Ready to start the conversation? Book a free 30-minute call — and if we're not the right fit, we'll say so honestly and point you somewhere better.</p>
     <div style="display:flex;gap:12px;flex-wrap:wrap;">
-      <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" class="btn-bark">Book a Free Call</a>
+      <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="btn-bark">Book a Free Call</a>
       <a href="mailto:montana@mindfulearth.eco?subject=General%20Enquiry" class="btn-outline">Send an Email</a>
     </div>
   </div>
@@ -628,7 +666,7 @@
         <li>You want genuine wellness programming, not a box-tick exercise</li>
         <li>You're looking for vetted practitioners and aligned partners</li>
         <li>You want to support your team's wellbeing in a real way</li>
-        <li>You care about how your brand shows up in the wellness space</li>
+        <li>You care about how your brand shows up in wellness</li>
         <li>You want to work with someone who lives this work</li>
       </ul>
     </div>
@@ -637,7 +675,7 @@
 
 
 <!-- TESTIMONIALS -->
-<section class="testimonials">
+<section class="testimonials" data-component="testimonials">
   <div class="testimonials-head">
     <span class="eyebrow" style="color:rgba(191,192,171,0.55);">What People Say</span>
     <h2>From the people<br>we've worked <em>with.</em></h2>
@@ -672,8 +710,7 @@
 <!-- FOUNDER -->
 <section class="founder" id="founder">
   <div>
-    <div class="founder-img"></div>
-    <!-- images/founder-photo.jpg — your portrait, warm, personal -->
+    <div class="founder-img" style="background-image:url('images/founder-photo.jpg');"></div>
     <p class="founder-caption">Montana King &middot; London, UK</p>
   </div>
   <div class="founder-content">
@@ -682,7 +719,7 @@
     <span class="founder-subtitle">Founder &middot; Somatic Practitioner &middot; Yoga Teacher &middot; Wellness Consultant</span>
     <div class="sand-rule"></div>
     <p>I built Mindful Earth because I needed it to exist. I have lived on both sides of the problem — as someone who couldn't always afford healing, and as a practitioner trying to build sustainably in a fragmented landscape.</p>
-    <p>With a background in life sciences, somatic practice, and six years of international retreat hosting, I bring both the operational rigour and the personal understanding that this work requires.</p>
+    <p>Six years of international retreat hosting, somatic practice, and business development — brought together in one ecosystem.</p>
     <div class="founder-creds">
       <span class="founder-cred">BSc Life Sciences</span>
       <span class="founder-cred">200hr Yoga Teaching</span>
@@ -767,7 +804,7 @@
     <p>We are building the fund as the platform grows. Register your interest below.</p>
     <div class="meca-ctas">
       <a href="pages/community-access-fund.html" class="btn-sand">Learn About Community Access Fund</a>
-      <a href="https://paypal.me/mindfuleartheco" target="_blank" class="btn-outline-light">Contribute to the Fund</a>
+      <a href="https://paypal.me/mindfuleartheco" target="_blank" rel="noopener noreferrer" class="btn-outline-light">Contribute to the Fund</a>
     </div>
   </div>
   <div class="meca-quote">
@@ -781,7 +818,7 @@
   <span class="eyebrow" style="color:var(--sage-mid,#8e988f);">Stay Connected</span>
   <h2>Join the Mindful Earth <em>newsletter.</em></h2>
   <p>Sign up for reflections, resources, practitioner spotlights, and invitations to gather — delivered gently, never too often.</p>
-  <form class="email-form" action="mailto:montana@mindfulearth.eco" method="POST">
+  <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
     <input type="email" name="email" placeholder="Your email address" required>
     <button type="submit">Join</button>
   </form>
@@ -814,7 +851,7 @@
       <li><a href="pages/community-access-fund.html">Community Access Fund</a></li>
       <li><a href="pages/partnerships.html">Brand Partnerships</a></li>
       <li><a href="pages/contact.html">Contact</a></li>
-      <li><a href="https://instagram.com/mindfulearth.eco" target="_blank">@mindfulearth.eco</a></li>
+      <li><a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer">@mindfulearth.eco</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom">
@@ -838,7 +875,7 @@
   function toggleMobileSub(id) { const el = document.getElementById('mob-' + id); if(el) el.classList.toggle('open'); }
 </script>
 <div class="mobile-sticky-cta">
-  <a href="https://calendly.com/mindfuleartheco/30min" target="_blank">
+  <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
     Book a Free 30-Min Call
   </a>
