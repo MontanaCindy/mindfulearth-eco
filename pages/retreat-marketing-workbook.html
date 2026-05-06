@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event & Retreat Marketing Workbook — Mindful Earth</title>
+<meta name="description" content="For wellness practitioners whose work is transformational but sign-ups don't reflect it. Positioning clarity, simple marketing workflows, and a clear sign-up pathway. CA$22.">
+<meta property="og:title" content="Event & Retreat Marketing Workbook — Mindful Earth">
+<meta property="og:description" content="Clarity over tactics. A grounded workbook for wellness practitioners, facilitators, and retreat hosts.">
+<meta property="og:image" content="https://mindfulearth.eco/assets/logo2.png">
+<link href="https://fonts.googleapis.com/css2?display=swap&family=Gloock&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/shared.css">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<style>
+.lp-hero { background:var(--forest); padding:120px 10vw 80px; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+.lp-hero-text { }
+.lp-hero-text .eyebrow { color:rgba(191,192,171,0.55); }
+.lp-hero-text h1 { font-size:clamp(32px,4vw,52px); color:var(--off-white); line-height:1.1; margin-bottom:16px; }
+.lp-hero-text h1 em { font-style:italic; color:var(--sand); }
+.lp-hero-text p { font-size:16px; color:rgba(239,232,220,0.72); line-height:1.9; margin-bottom:28px; max-width:480px; }
+.lp-hero-card { background:var(--parchment); padding:40px; border-radius:2px; text-align:center; }
+.lp-price { font-family:Gloock,serif; font-size:48px; color:var(--bark); line-height:1; margin-bottom:4px; }
+.lp-price-note { font-family:Jost,sans-serif; font-size:11px; color:var(--sage-mid,#8e988f); letter-spacing:0.1em; margin-bottom:24px; display:block; }
+.lp-buy { display:block; background:var(--bark); color:var(--off-white); font-family:Jost,sans-serif; font-size:12px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; padding:16px 32px; text-decoration:none; border-radius:2px; margin-bottom:12px; transition:opacity 0.2s; }
+.lp-buy:hover { opacity:0.88; }
+.lp-buy.secondary { background:transparent; border:1px solid var(--sage); color:var(--forest); }
+.lp-card-note { font-size:12px; color:var(--sage-mid,#8e988f); line-height:1.7; margin-top:14px; }
+
+.lp-intro { padding:72px 10vw; background:var(--off-white); max-width:100%; }
+.lp-intro-inner { max-width:680px; margin:0 auto; text-align:center; }
+.lp-intro h2 { font-size:clamp(24px,3vw,36px); margin-bottom:16px; color:var(--bark); }
+.lp-intro h2 em { font-style:italic; color:var(--mauve); }
+.lp-intro p { font-size:15px; line-height:1.9; color:var(--forest); margin-bottom:14px; }
+
+.lp-for { padding:72px 10vw; background:var(--white); }
+.lp-for h2 { font-size:clamp(24px,3vw,36px); margin-bottom:40px; text-align:center; }
+.lp-for h2 em { font-style:italic; color:var(--mauve); }
+.lp-for-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; max-width:720px; margin:0 auto; }
+.lp-for-item { background:var(--parchment); padding:20px 24px; border-left:3px solid var(--sage); }
+.lp-for-item p { font-size:14px; line-height:1.75; color:var(--forest); }
+
+.lp-not-for { padding:40px 10vw; background:var(--off-white); }
+.lp-not-for-inner { max-width:680px; margin:0 auto; }
+.lp-not-for h3 { font-family:Gloock,serif; font-size:20px; color:var(--bark); margin-bottom:14px; }
+.lp-not-for p { font-size:14px; line-height:1.8; color:var(--forest); }
+
+.lp-sections { padding:72px 10vw; background:var(--white); }
+.lp-sections h2 { font-size:clamp(24px,3vw,36px); margin-bottom:40px; text-align:center; }
+.lp-sections h2 em { font-style:italic; color:var(--mauve); }
+.lp-sections-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.lp-section-card { background:var(--off-white); border:1px solid rgba(191,192,171,0.3); padding:24px; }
+.lp-section-num { font-family:Gloock,serif; font-style:italic; font-size:32px; color:var(--sand); display:block; margin-bottom:8px; }
+.lp-section-card h3 { font-size:16px; color:var(--bark); margin-bottom:8px; line-height:1.3; }
+.lp-section-card p { font-size:13px; line-height:1.75; color:var(--forest); }
+
+.lp-pull { background:var(--bark); padding:64px 10vw; text-align:center; }
+.lp-pull blockquote { font-family:Gloock,serif; font-style:italic; font-size:clamp(20px,2.5vw,28px); color:var(--off-white); line-height:1.5; max-width:640px; margin:0 auto 24px; }
+.lp-pull blockquote em { color:var(--sand); }
+.lp-pull p { font-size:14px; color:rgba(239,232,220,0.6); }
+
+.lp-funnel { padding:72px 10vw; background:var(--parchment); }
+.lp-funnel h2 { font-size:clamp(22px,2.5vw,32px); margin-bottom:12px; text-align:center; }
+.lp-funnel > p { font-size:15px; line-height:1.9; color:var(--forest); text-align:center; max-width:560px; margin:0 auto 40px; }
+.lp-funnel-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:4px; max-width:760px; margin:0 auto 32px; }
+.lp-step { background:var(--white); border:1px solid rgba(191,192,171,0.3); padding:24px; text-align:center; position:relative; }
+.lp-step-num { font-family:Gloock,serif; font-style:italic; font-size:28px; color:var(--sand); display:block; margin-bottom:6px; }
+.lp-step h3 { font-size:14px; color:var(--bark); margin-bottom:6px; }
+.lp-step p { font-size:12px; color:var(--forest); line-height:1.6; }
+.lp-step .price { font-family:Gloock,serif; font-size:18px; color:var(--mauve); display:block; margin-top:8px; }
+
+.lp-final { padding:72px 10vw; background:var(--forest); text-align:center; }
+.lp-final h2 { font-size:clamp(26px,3vw,38px); color:var(--off-white); margin-bottom:12px; }
+.lp-final h2 em { font-style:italic; color:var(--sand); }
+.lp-final p { font-size:15px; color:rgba(239,232,220,0.72); max-width:480px; margin:0 auto 28px; line-height:1.8; }
+.lp-final-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+@media(max-width:900px) {
+  .lp-hero { grid-template-columns:1fr; padding:100px 6vw 56px; }
+  .lp-sections-grid { grid-template-columns:repeat(2,1fr); }
+  .lp-funnel-steps { grid-template-columns:1fr; }
+  .lp-for-grid { grid-template-columns:1fr; }
+}
+@media(max-width:600px) {
+  .lp-sections-grid { grid-template-columns:1fr; }
+  .lp-intro, .lp-for, .lp-sections, .lp-funnel, .lp-final, .lp-pull, .lp-not-for { padding:56px 6vw; }
+}
+</style>
+</head>
+<body class="page-top">
+
+<div class="top-bar">
+  <a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer">@mindfulearth.eco</a>
+  <span class="top-bar-sep">·</span>
+  <a href="https://instagram.com/mindfulearth.events" target="_blank" rel="noopener noreferrer">@mindfulearth.events</a>
+  <span class="top-bar-sep">·</span>
+  <a href="https://instagram.com/mindfulearth.media" target="_blank" rel="noopener noreferrer">@mindfulearth.media</a>
+</div>
+
+<nav id="nav">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/logo.png" alt="Mindful Earth" style="height:48px;width:auto;">
+  </a>
+  <ul class="nav-center">
+    <li><a href="../pages/our-story.html">About</a></li>
+    <li><a href="../pages/event-planning.html">Services <span class="nav-arrow">&#9660;</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="../pages/event-planning.html">Event Planning</a></li>
+        <li><a href="../pages/media-marketing.html">Media &amp; Marketing</a></li>
+        <li><a href="../pages/wellness-consulting.html">Consulting</a></li>
+        <li><a href="../pages/corporate-wellness.html">Corporate Wellness</a></li>
+        <li><a href="../pages/montana.html">Work with Montana Cindy</a></li>
+      </ul>
+    </li>
+    <li><a href="../pages/experiences.html">Experiences <span class="nav-arrow">&#9660;</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="../pages/upcoming.html">Upcoming</a></li>
+        <li><a href="../pages/past-events.html">Past Events</a></li>
+      </ul>
+    </li>
+    <li><a href="../pages/journal.html">Journal</a></li>
+    <li><a href="../pages/community.html">Community</a></li>
+  </ul>
+  <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Call</a>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="lp-hero">
+  <div class="lp-hero-text">
+    <span class="eyebrow">Mindful Earth · Workbook</span>
+    <h1>Your work is meaningful.<br><em>Let's make it easier to fill.</em></h1>
+    <p>A simple, grounded workbook for wellness practitioners, facilitators, and retreat hosts who feel like their work is meaningful — but not always landing clearly when shared online.</p>
+    <p style="font-size:14px;color:rgba(239,232,220,0.55);">Includes simple workflows you can set up in an afternoon — no tech overwhelm, no expensive tools, no guesswork.</p>
+  </div>
+  <div class="lp-hero-card">
+    <span class="lp-price">CA$22</span>
+    <span class="lp-price-note">One-time · Instant PDF download</span>
+    <!-- Replace https://mindfulearth.eco/pages/workbooks.html with your actual Square product link -->
+    <a href="https://mindfulearth.eco/pages/workbooks.html" class="lp-buy">Get the Workbook — CA$22</a>
+    <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="lp-buy secondary">Book a Free Discovery Call</a>
+    <p class="lp-card-note">Instant download. No fluff. Designed to be completed in one focused sitting.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="lp-intro">
+  <div class="lp-intro-inner">
+    <span class="eyebrow" style="color:var(--sage-mid,#8e988f);">The honest truth</span>
+    <h2>The problem usually isn't your content.<br>It's your <em>positioning.</em></h2>
+    <p>You're posting. You're showing up. People seem interested — but they're not signing up. The instinct is to post more, try different platforms, or change your content style. Usually that's not the problem.</p>
+    <p>The problem is that your offer, your message, or your sign-up pathway isn't clear enough yet. This workbook works through all three — with simple, practical frameworks you can apply to your retreat, workshop, or event the same day.</p>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="lp-for">
+  <h2>This workbook is for <em>you</em> if...</h2>
+  <div class="lp-for-grid">
+    <div class="lp-for-item"><p>You're a yoga teacher, somatic practitioner, breathwork facilitator, or energy healer whose sessions and events aren't filling consistently despite real interest</p></div>
+    <div class="lp-for-item"><p>You're a retreat host who knows the experience is transformational — but struggle to communicate that in a way that converts</p></div>
+    <div class="lp-for-item"><p>You have an offering but feel like your message isn't landing with the right people</p></div>
+    <div class="lp-for-item"><p>You're tired of posting content that gets engagement but no sign-ups — and you want to understand the gap</p></div>
+  </div>
+</section>
+
+<!-- NOT FOR -->
+<section class="lp-not-for">
+  <div class="lp-not-for-inner">
+    <h3>Positioning first. Marketing second.</h3>
+    <p>This workbook starts with your offer and your message — because no amount of content strategy fixes unclear positioning. Once you've worked through the foundational sections, it moves into simple, practical marketing workflows: the kind you can set up in an afternoon, that run on their own, and that are designed specifically for events and retreats rather than generic product businesses.</p>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="lp-sections">
+  <h2>What's <em>inside</em></h2>
+  <div class="lp-sections-grid">
+    <div class="lp-section-card">
+      <span class="lp-section-num">01</span>
+      <h3>Your Offering — Clarity First</h3>
+      <p>Before marketing anything, we need clarity on the work itself. What are you actually offering and what transformation does it create?</p>
+    </div>
+    <div class="lp-section-card">
+      <span class="lp-section-num">02</span>
+      <h3>Who It's For</h3>
+      <p>Many offerings struggle because they're too broad. Clarity comes from specificity — who benefits most from this work, and what are they currently struggling with?</p>
+    </div>
+    <div class="lp-section-card">
+      <span class="lp-section-num">03</span>
+      <h3>How You're Currently Communicating</h3>
+      <p>An honest audit of your website, social posts, and event descriptions. Would someone unfamiliar understand within 5–10 seconds?</p>
+    </div>
+    <div class="lp-section-card">
+      <span class="lp-section-num">04</span>
+      <h3>Simplifying Your Message</h3>
+      <p>What is it? Who is it for? Why does it matter? Often less is more effective. This section helps you distil your message to its most powerful form.</p>
+    </div>
+    <div class="lp-section-card">
+      <span class="lp-section-num">05</span>
+      <h3>Structuring Your Offer for Bookings</h3>
+      <p>Most practitioners don't have a clear pathway from interest to booking. Map your client journey and remove the friction that's costing you bookings.</p>
+    </div>
+    <div class="lp-section-card">
+      <span class="lp-section-num">06</span>
+      <h3>Next Steps — One Focus</h3>
+      <p>Clarity without action changes nothing. This section helps you identify the one thing to focus on first — and actually do it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<section class="lp-pull">
+  <blockquote>"The goal is not more content. It's a clearer offer, a clearer message, and a path that makes it <em>easy to say yes.</em>"</blockquote>
+  <p>— Mindful Earth</p>
+</section>
+
+<!-- FUNNEL / WHAT'S NEXT -->
+<section class="lp-funnel">
+  <h2>Where this fits in your journey</h2>
+  <p>The workbook is the beginning, not the end. Here's how it connects to deeper support if you want it.</p>
+  <div class="lp-funnel-steps">
+    <div class="lp-step">
+      <span class="lp-step-num">01</span>
+      <h3>The Workbook</h3>
+      <p>Clarity on your offering, your message, and your client pathway. Do this first.</p>
+      <span class="price">CA$22</span>
+    </div>
+    <div class="lp-step">
+      <span class="lp-step-num">02</span>
+      <h3>1:1 Strategy Session</h3>
+      <p>Apply the workbook to your specific situation with direct support. 60 minutes, custom plan delivered.</p>
+      <span class="price">CA$100</span>
+    </div>
+    <div class="lp-step">
+      <span class="lp-step-num">03</span>
+      <h3>Retreat Marketing Package</h3>
+      <p>Full launch support for your retreat or event. Strategy, content, and execution.</p>
+      <span class="price">Enquiry-based</span>
+    </div>
+  </div>
+  <p style="text-align:center;font-size:13px;color:var(--sage-mid,#8e988f);font-style:italic;">Start with the workbook. See how far clarity alone takes you.</p>
+</section>
+
+<!-- FINAL CTA -->
+<section class="lp-final">
+  <h2>Ready to get <em>clear?</em></h2>
+  <p>CA$22. Instant download. Designed to be completed in one focused sitting. No fluff, no filler.</p>
+  <div class="lp-final-btns">
+    <a href="https://mindfulearth.eco/pages/workbooks.html" class="btn-sand">Get the Workbook — CA$22</a>
+    <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="btn-outline-light">Book a Free Call First</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <span class="footer-brand-name">Mindful Earth</span>
+      <span class="footer-tagline">Return to Self, Community &amp; Nature</span>
+      <p class="footer-desc">A wellness ecosystem being built for practitioners and the communities they serve.</p>
+    </div>
+    <div class="footer-col"><h4>Workbooks</h4><ul>
+      <li><a href="workbooks.html">All Workbooks</a></li>
+      <li><a href="retreat-marketing-workbook.html">Retreat Marketing Workbook</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="event-planning.html">Event Planning</a></li>
+      <li><a href="media-marketing.html">Wellness Marketing</a></li>
+      <li><a href="wellness-consulting.html">Consulting</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul>
+      <li><a href="community.html">The Community</a></li>
+      <li><a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer">@mindfulearth.eco</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <span class="footer-copy">&copy; 2019&ndash;2026 Mindful Earth &middot; Made with intention.</span>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  if(nav) window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+  document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobile-menu')?.classList.toggle('open'));
+</script>
+</body>
+</html>
