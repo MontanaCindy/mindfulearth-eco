@@ -370,3 +370,27 @@ footer { background:var(--forest); padding:64px 10vw 32px; }
 .faq-item.open .faq-icon { transform:rotate(45deg); background:var(--forest); border-color:var(--forest); color:var(--off-white); }
 .faq-answer { display:none; padding:0 0 20px; font-size:14.5px; line-height:1.9; color:var(--forest); }
 .faq-item.open .faq-answer { display:block; }
+
+/* NEWSLETTER — definitive mauve styles */
+section.newsletter,
+.newsletter {
+  background: var(--mauve) !important;
+}
+.newsletter h2,
+.newsletter h2 em {
+  color: #f8f6f1 !important;
+}
+.newsletter p {
+  color: rgba(239,232,220,0.85) !important;
+}
+.newsletter .eyebrow {
+  color: rgba(191,192,171,0.65) !important;
+}
+.newsletter input[type="email"] {
+  background: rgba(255,255,255,0.12) !important;
+  border-color: rgba(191,192,171,0.3) !important;
+  color: #f8f6f1 !important;
+}
+.newsletter input[type="email"]::placeholder {
+  color: rgba(191,192,171,0.55) !important;
+}

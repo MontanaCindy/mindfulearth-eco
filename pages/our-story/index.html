@@ -34,9 +34,9 @@
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <style>
 .story-hero { background:var(--parchment); padding:120px 10vw 80px; border-bottom:1px solid rgba(191,192,171,0.25); }
-.story-hero h1 { font-size:clamp(40px,5vw,68px); line-height:1.08; margin-bottom:14px; }
-.story-hero h1 em { font-style:italic; color:var(--mauve); }
-.story-hero p { font-size:16px; line-height:1.85; max-width:580px; color:var(--forest); }
+.story-hero h1 { font-size:clamp(40px,5vw,68px); line-height:1.08; margin-bottom:14px; color:var(--off-white); }
+.story-hero h1 em { font-style:italic; color:var(--sand); }
+.story-hero p { font-size:16px; line-height:1.85; max-width:580px; color:rgba(239,232,220,0.8); }
 
 .story-origin { background:var(--off-white); padding:96px 10vw; display:grid; grid-template-columns:1fr 1fr; gap:80px; }
 .story-origin h2 { font-size:clamp(28px,3vw,40px); line-height:1.15; margin-bottom:18px; }
@@ -170,11 +170,13 @@
 </div>
 
 <!-- Photo: images/our-story-hero.jpg — nature, roots, the earth -->
-<section class="story-hero" style="background-image:url('../../images/our-story-hero.jpg');background-size:cover;background-position:center;">
+<section class="story-hero" style="background-image:url('../../images/our-story-hero.jpg');background-size:cover;background-position:center;position:relative;">
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(25,35,25,0.62) 0%,rgba(25,35,25,0.45) 100%);z-index:0;pointer-events:none;"></div>
+  <div style="position:relative;z-index:1;">
   <span class="eyebrow">About Mindful Earth</span>
   <h1>People, practitioners,<br>and the <em>planet.</em></h1>
   <p>Mindful Earth started in 2019 with handmade jewellery and a simple belief: that caring for people and caring for the planet are the same work. Everything since has grown from that.</p>
-</div></section>
+</div></div></section>
 
 <section class="story-origin">
   <div>
@@ -261,6 +263,17 @@
 
 
 
+<section style="background:var(--sage-light);padding:48px 10vw;border-top:1px solid rgba(191,192,171,0.15);">
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;max-width:800px;">
+    <div>
+      <span class="eyebrow">From the Founder</span>
+      <h3 style="font-family:'Gloock',serif;font-size:20px;color:var(--bark);margin-bottom:6px;">A personal note on building Mindful Earth</h3>
+      <p style="font-size:14px;line-height:1.75;color:var(--forest);">Montana is writing a personal journal entry about this journey. It will live here before launch — honest, unpolished, and real.</p>
+    </div>
+    <span style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage-mid);border:1px solid rgba(191,192,171,0.4);padding:6px 14px;white-space:nowrap;">Coming Soon</span>
+  </div>
+</section>
+
 <section class="story-vision">
   <div>
     <span class="eyebrow" style="color:var(--sand);">Where We're Going</span>
@@ -285,8 +298,8 @@
   <h2 style="font-size:clamp(26px,3vw,38px);color:var(--off-white);margin-bottom:14px;">Join the <em style="font-style:italic;color:var(--sand);">community.</em></h2>
   <p style="font-size:15px;line-height:1.8;color:rgba(239,232,220,0.72);max-width:480px;margin:0 auto 30px;">Reflections, resources, and invitations to gather — delivered gently, never too often.</p>
   <!-- MAILERLITE EMBED: replace with your MailerLite embedded form code -->
-  <form style="display:flex;max-width:400px;margin:0 auto;" action="YOUR_MAILERLITE_ACTION" method="POST">
-    <input type="email" name="fields[email]" placeholder="Your email address" required style="flex:1;padding:14px 18px;font-family:Lora,serif;font-size:14px;border:1px solid rgba(191,192,171,0.3);border-right:none;background:rgba(255,255,255,0.1);color:var(--off-white);outline:none;border-radius:2px 0 0 2px;">
+  <form style="display:flex;max-width:400px;margin:0 auto;" action="https://formspree.io/f/xpqbrera" method="POST">
+    <input type="hidden" name="_subject" value="Newsletter Signup"><input type="email" name="email" placeholder="Your email address" required style="flex:1;padding:14px 18px;font-family:Lora,serif;font-size:14px;border:1px solid rgba(191,192,171,0.3);border-right:none;background:rgba(255,255,255,0.1);color:var(--off-white);outline:none;border-radius:2px 0 0 2px;">
     <button type="submit" style="font-family:Jost,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:14px 22px;background:var(--sand);color:var(--bark);border:none;cursor:pointer;border-radius:0 2px 2px 0;">Join</button>
   </form>
 </section>
@@ -302,29 +315,30 @@
       <li><a href="../experiences/">Experiences</a></li>
       <li><a href="../journal/">The Journal</a></li>
       <li><a href="../workbooks/">Guides &amp; Workbooks</a></li>
+      <li><a href="../grounded-growth/">Event Planning Guide</a></li>
+      <li><a href="../genuine-reach/">Marketing Guide</a></li>
+          <li><a href="../retreat-marketing-workbook/">Retreat Marketing Guide</a></li>
       <li><a href="../podcast/">Podcast</a></li>
+      <li><a href="../eco-pledge/">Eco Pledge</a></li>
     </ul></div>
     <div class="footer-col"><h4>Work Together</h4><ul>
       <li><a href="../event-planning/">Event Planning</a></li>
-      <li><a href="../media-marketing/">Wellness Business Marketing</a></li>
+      <li><a href="../media-marketing/">Wellness Marketing</a></li>
       <li><a href="../wellness-consulting/">Business Consulting</a></li>
       <li><a href="../corporate-wellness/">Corporate Wellness</a></li>
-      
+      <li><a href="../contact/">Work With Us</a></li>
     </ul></div>
     <div class="footer-col"><h4>Connect</h4><ul>
       <li><a href="../community/">The Community</a></li>
       <li><a href="../partnerships/">Brand Partnerships</a></li>
       <li><a href="../practitioner-survey/">Join the Network</a></li>
-      <li><a href="../contact/">Work With Us</a></li>
       <li><a href="../contact/">Contact</a></li>
-      <li><a href="../eco-pledge/">Our Eco Pledge</a></li>
     </ul></div>
   </div>
-  <div style="border-top:1px solid rgba(191,192,171,0.12);padding-top:24px;margin-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+  <div style="border-top:1px solid rgba(191,192,171,0.12);padding-top:20px;margin-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;">
     <span style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-mid);">Follow Us</span>
     <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
-      <a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;">@mindfulearth.eco</a>
-      <a href="https://instagram.com/montanacindy_" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;">@montanacindy_</a>
+      <a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;transition:color 0.2s;">@mindfulearth.eco</a>
       <a href="https://www.facebook.com/mindfuleartheco" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;">Facebook</a>
       <a href="https://linkedin.com/company/mindful-earth-eco" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;">LinkedIn</a>
       <a href="https://chat.whatsapp.com/GzOQyhpVlbS50fCpybsFGp" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;">WhatsApp Community</a>
@@ -336,7 +350,7 @@
       <a href="../terms/">Terms</a>
       <a href="../cookies/">Cookies</a>
     </div>
-    <span class="footer-copy">&copy; 2019&ndash;2026 Mindful Earth &middot; Made with intention.</span>
+    <span class="footer-copy">&copy; 2019&ndash;2026 Mindful Earth. All rights reserved.</span>
   </div>
 </footer>
 <script>
