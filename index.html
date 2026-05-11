@@ -178,9 +178,9 @@
 .proof-eyebrow { font-family:"Jost",sans-serif; font-size:10px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--sage); white-space:nowrap; }
 .proof-items { display:flex; gap:40px; flex-wrap:wrap; align-items:center; flex:1; justify-content:center; }
 .proof-item { text-align:center; }
-.proof-num { font-family:"Gloock",serif; font-size:32px; color:rgba(239,232,220,0.85); display:flex; align-items:center; justify-content:center; line-height:1; margin-bottom:4px; min-height:40px; }
+.proof-num { font-family:"Gloock",serif; font-size:32px; color:var(--bark); display:flex; align-items:center; justify-content:center; line-height:1; margin-bottom:4px; min-height:40px; }
 .proof-num svg { width:36px; height:36px; }
-.proof-label { font-family:"Jost",sans-serif; font-size:11px; font-weight:300; letter-spacing:0.08em; color:var(--sage); }
+.proof-label { font-family:"Jost",sans-serif; font-size:11px; font-weight:300; letter-spacing:0.08em; color:var(--forest); }
 
 /* HOW IT WORKS */
 .how-it-works { background:var(--white); padding:96px 10vw; border-top:1px solid rgba(191,192,171,0.15); }
@@ -399,7 +399,7 @@
       </div>
       <div class="proof-item">
         <span class="proof-num">
-          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(239,232,220,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--forest)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"/>
             <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
             <path d="M12 2a15.3 15.3 0 0 1 4 10M12 2a15.3 15.3 0 0 0-4 10"/>
@@ -409,7 +409,7 @@
       </div>
       <div class="proof-item">
         <span class="proof-num">
-          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(239,232,220,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--forest)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
             <circle cx="9" cy="7" r="4"/>
             <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
@@ -427,7 +427,7 @@
   <h2>You might be exactly<br>who we're <em>looking for.</em></h2>
   <p>Mindful Earth is for everyone who contributes to the wellness experience — not just yoga teachers. If any of these sound like you, let's talk.</p>
   <div class="who-grid">
-    <div class="who-card" style="border-top-color:var(--sage);">
+    <div class="who-card" style="border-top-color:var(--sage);overflow:hidden;"><div style="aspect-ratio:3/2;background:var(--sage-light);background-image:url('images/who-practitioners.jpg');background-size:cover;background-position:center;margin:-28px -28px 20px;"></div>
       <h4>You're a wellness practitioner</h4>
       <ul>
         <li>You're good at your craft but exhausted by the business side</li>
@@ -437,7 +437,7 @@
         <li>You want to give back but need to be stable first</li>
       </ul>
     </div>
-    <div class="who-card" style="border-top-color:var(--sand);">
+    <div class="who-card" style="border-top-color:var(--sand);overflow:hidden;"><div style="aspect-ratio:3/2;background:var(--parchment);background-image:url('images/who-seekers.jpg');background-size:cover;background-position:center;margin:-28px -28px 20px;"></div>
       <h4>You're planning a retreat or event</h4>
       <ul>
         <li>You have a vision but don't know where to start</li>
@@ -447,7 +447,7 @@
         <li>You want to focus on facilitation, not logistics</li>
       </ul>
     </div>
-    <div class="who-card" style="border-top-color:var(--mauve);">
+    <div class="who-card" style="border-top-color:var(--mauve);overflow:hidden;"><div style="aspect-ratio:3/2;background:var(--mauve-light);background-image:url('images/who-venues.jpg');background-size:cover;background-position:center;margin:-28px -28px 20px;"></div>
       <h4>You're a brand or organisation</h4>
       <ul>
         <li>You want genuine wellness programming, not a box-tick exercise</li>
@@ -457,6 +457,58 @@
         <li>You want to work with someone who lives this work</li>
       </ul>
     </div>
+  </div>
+</section>
+
+
+<!-- ECOSYSTEM -->
+<section id="ecosystem">
+  <div class="eco-intro">
+    <span class="eyebrow" style="color:rgba(191,192,171,0.55);">The Ecosystem</span>
+    <h2>One place for people, practitioners,<br>and the <em>planet.</em></h2>
+    <p>Community, education, experiences, and media — for everyone who is part of the wellness world, whatever side of it you're on.</p>
+  </div>
+  <div class="eco-pillars">
+    <a href="pages/community/" class="pillar">
+      <div class="pillar-img" style="background-image:url('images/ecosystem-community.jpg');">
+        <span>Community</span>
+      </div>
+      <div class="pillar-body">
+        <h3>Community</h3>
+        <p>A growing network of practitioners, venues, creatives, and seekers — held together.</p>
+        <span class="pillar-soon">Join the WhatsApp →</span>
+      </div>
+    </a>
+    <a href="pages/journal/" class="pillar">
+      <div class="pillar-img" style="background-image:url('images/ecosystem-education.jpg');">
+        <span>Education</span>
+      </div>
+      <div class="pillar-body">
+        <h3>Education</h3>
+        <p>The Journal, the podcast, free resources, and courses to deepen your practice.</p>
+        <span class="pillar-soon">Coming soon</span>
+      </div>
+    </a>
+    <a href="pages/experiences/" class="pillar">
+      <div class="pillar-img" style="background-image:url('images/ecosystem-experiences.jpg');">
+        <span>Experiences</span>
+      </div>
+      <div class="pillar-body">
+        <h3>Experiences</h3>
+        <p>Retreats, workshops, and gatherings designed to create lasting transformation.</p>
+        <span class="pillar-soon">Coming soon</span>
+      </div>
+    </a>
+    <a href="pages/media-marketing/" class="pillar">
+      <div class="pillar-img" style="background-image:url('images/ecosystem-media.jpg');">
+        <span>Media</span>
+      </div>
+      <div class="pillar-body">
+        <h3>Media</h3>
+        <p>Wellness branding, retreat marketing, and visibility support for practitioners.</p>
+        <span class="pillar-soon">Book a call →</span>
+      </div>
+    </a>
   </div>
 </section>
 
@@ -524,56 +576,28 @@
 
 
 
-<!-- ECOSYSTEM -->
-<section id="ecosystem">
-  <div class="eco-intro">
-    <span class="eyebrow" style="color:rgba(191,192,171,0.55);">The Ecosystem</span>
-    <h2>One place for people, practitioners,<br>and the <em>planet.</em></h2>
-    <p>Community, education, experiences, and media — for everyone who is part of the wellness world, whatever side of it you're on.</p>
+<!-- GINKGO -->
+<section class="ginkgo">
+  <div class="ginkgo-mark">
+    <div class="ginkgo-ring">
+      <svg viewBox="0 0 80 100" width="72" height="90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 90 Q36 70 28 55 Q18 38 22 20 Q26 8 40 10 Q54 8 58 20 Q62 38 52 55 Q44 70 40 90Z" stroke="#d9b382" stroke-width="1" fill="none" opacity="0.6"/>
+        <path d="M40 90 Q38 72 32 58 Q24 42 20 26 Q18 14 30 8 Q36 5 40 10" stroke="#d9b382" stroke-width="1" fill="none" opacity="0.4"/>
+        <path d="M40 90 Q42 72 48 58 Q56 42 60 26 Q62 14 50 8 Q44 5 40 10" stroke="#d9b382" stroke-width="1" fill="none" opacity="0.4"/>
+        <line x1="40" y1="90" x2="40" y2="98" stroke="#d9b382" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <span class="ginkgo-label">The Ginkgo</span>
   </div>
-  <div class="eco-pillars">
-    <a href="pages/community/" class="pillar">
-      <div class="pillar-img" style="background-image:url('images/ecosystem-community.jpg');">
-        <span>Community</span>
-      </div>
-      <div class="pillar-body">
-        <h3>Community</h3>
-        <p>A growing network of practitioners, venues, creatives, and seekers — held together.</p>
-        <span class="pillar-soon">Join the WhatsApp →</span>
-      </div>
-    </a>
-    <a href="pages/journal/" class="pillar">
-      <div class="pillar-img" style="background-image:url('images/ecosystem-education.jpg');">
-        <span>Education</span>
-      </div>
-      <div class="pillar-body">
-        <h3>Education</h3>
-        <p>The Journal, the podcast, free resources, and courses to deepen your practice.</p>
-        <span class="pillar-soon">Coming soon</span>
-      </div>
-    </a>
-    <a href="pages/experiences/" class="pillar">
-      <div class="pillar-img" style="background-image:url('images/ecosystem-experiences.jpg');">
-        <span>Experiences</span>
-      </div>
-      <div class="pillar-body">
-        <h3>Experiences</h3>
-        <p>Retreats, workshops, and gatherings designed to create lasting transformation.</p>
-        <span class="pillar-soon">Coming soon</span>
-      </div>
-    </a>
-    <a href="pages/media-marketing/" class="pillar">
-      <div class="pillar-img" style="background-image:url('images/ecosystem-media.jpg');">
-        <span>Media</span>
-      </div>
-      <div class="pillar-body">
-        <h3>Media</h3>
-        <p>Wellness branding, retreat marketing, and visibility support for practitioners.</p>
-        <span class="pillar-soon">Book a call →</span>
-      </div>
-    </a>
+  <div class="ginkgo-text">
+    <span class="eyebrow" style="color:var(--sage-mid,#8e988f);">Our Symbol</span>
+    <h2>Ancient. Resilient. Returning.</h2>
+    <div class="sand-rule"></div>
+    <p>The Ginkgo is one of the oldest living tree species on earth — unchanged for over 200 million years, and one of the first trees to regrow after Hiroshima. It survives because of the depth of its roots, not the speed of its growth.</p>
+    <p>Mindful Earth is being built the same way. Slowly, intentionally, and with the firm belief that what is rooted deeply enough will always return.</p>
   </div>
 </section>
+
 
 
 <!-- COMMUNITY -->
@@ -745,30 +769,6 @@
     </div>
   </div>
 </section>
-
-
-<!-- GINKGO -->
-<section class="ginkgo">
-  <div class="ginkgo-mark">
-    <div class="ginkgo-ring">
-      <svg viewBox="0 0 80 100" width="72" height="90" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M40 90 Q36 70 28 55 Q18 38 22 20 Q26 8 40 10 Q54 8 58 20 Q62 38 52 55 Q44 70 40 90Z" stroke="#d9b382" stroke-width="1" fill="none" opacity="0.6"/>
-        <path d="M40 90 Q38 72 32 58 Q24 42 20 26 Q18 14 30 8 Q36 5 40 10" stroke="#d9b382" stroke-width="1" fill="none" opacity="0.4"/>
-        <path d="M40 90 Q42 72 48 58 Q56 42 60 26 Q62 14 50 8 Q44 5 40 10" stroke="#d9b382" stroke-width="1" fill="none" opacity="0.4"/>
-        <line x1="40" y1="90" x2="40" y2="98" stroke="#d9b382" stroke-width="1.5"/>
-      </svg>
-    </div>
-    <span class="ginkgo-label">The Ginkgo</span>
-  </div>
-  <div class="ginkgo-text">
-    <span class="eyebrow" style="color:var(--sage-mid,#8e988f);">Our Symbol</span>
-    <h2>Ancient. Resilient. Returning.</h2>
-    <div class="sand-rule"></div>
-    <p>The Ginkgo is one of the oldest living tree species on earth — unchanged for over 200 million years, and one of the first trees to regrow after Hiroshima. It survives because of the depth of its roots, not the speed of its growth.</p>
-    <p>Mindful Earth is being built the same way. Slowly, intentionally, and with the firm belief that what is rooted deeply enough will always return.</p>
-  </div>
-</section>
-
 
 
 <!-- Community Access Fund -->
