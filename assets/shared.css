@@ -394,3 +394,17 @@ section.newsletter,
 .newsletter input[type="email"]::placeholder {
   color: rgba(191,192,171,0.55) !important;
 }
+
+/* EYEBROW RESET — prevent square box rendering */
+.eyebrow {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin-bottom: 18px !important;
+}
+
+@media(max-width:768px) {
+  .hide-on-mobile { display:none !important; }
+}

@@ -274,7 +274,7 @@
   ],
   "founder": {
     "@type": "Person",
-    "name": "Montana King",
+    "name": "Montana Cindy",
     "jobTitle": "Founder",
     "url": "https://mindfulearth.eco/pages/montana.html"
   }
@@ -378,13 +378,13 @@
 
 
 <!-- LOGO ABOVE STATS -->
-<div style="background:var(--forest);padding:48px 10vw 0;text-align:center;">
+<div class="hide-on-mobile" style="background:var(--forest);padding:48px 10vw 0;text-align:center;">
   <img src="assets/logo2.png" alt="Mindful Earth"
     style="width:clamp(160px,50vw,580px);max-width:90%;height:auto;display:block;margin:0 auto;mix-blend-mode:screen;filter:brightness(1.5);">
 </div>
 
 <!-- SOCIAL PROOF STRIP -->
-<section class="proof-strip" style="background:var(--forest);border-top:none;">
+<section class="proof-strip hide-on-mobile" style="background:var(--forest);border-top:none;">
   <div class="proof-strip-inner" style="background:var(--forest);">
     
     <div class="proof-items">
@@ -651,7 +651,7 @@
       <h3>Event Planning &amp; Business Growth</h3>
       <p>Events are one of the most powerful ways to grow a wellness practice — building community, creating visibility, and generating income all at once. We handle the planning, logistics, and marketing so you can show up fully and let the experience speak for itself.</p>
       <p style="font-size:13px;line-height:1.7;color:var(--sage-mid,#8e988f);margin-top:8px;">Retreats &middot; Workshops &middot; Community Events &middot; Corporate Wellness &middot; Festivals</p>
-      <span class="svc-price">Starting at CA$300 &middot; Pricing based on scope</span>
+      <span class="svc-price">Strategy Session CA$111 &middot; Full Planning from CA$1,000</span>
       <div class="svc-links">
         <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="svc-link primary">Book a Free Call &rarr;</a>
         <a href="mailto:connect@mindfulearth.eco?subject=Event%20Planning%20Enquiry" class="svc-link secondary">Send an email</a>
@@ -662,7 +662,8 @@
       <span class="svc-cat">Media</span>
       <h3>Wellness Business Marketing</h3>
       <p>Brand audits, retreat launch campaigns, content strategy, and ongoing marketing support — built on your authentic voice, not the algorithm's demands.</p>
-      <span class="svc-price">Brand audit from CA$300 &middot; Enquiry-based</span>
+      <p style="font-size:13px;line-height:1.7;color:var(--sage-mid);margin-top:8px;">Brand Positioning &middot; Content Strategy &middot; Retreat Launch &middot; Social Media &middot; Email Marketing</p>
+      <span class="svc-price">Strategy Session CA$111 &middot; Brand Audit CA$188</span>
       <div class="svc-links">
         <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="svc-link primary">Book a Free Call &rarr;</a>
         <a href="mailto:connect@mindfulearth.eco?subject=Wellness%20Marketing%20Enquiry" class="svc-link secondary">Send an email</a>
@@ -673,7 +674,8 @@
       <span class="svc-cat">Consulting</span>
       <h3>Wellness Business Consulting</h3>
       <p>Strategy, structure, and honest guidance for practitioners and founders building something real — without losing themselves in the process of building it.</p>
-      <span class="svc-price">Single session CA$100 &middot; Packages available</span>
+      <p style="font-size:13px;line-height:1.7;color:var(--sage-mid);margin-top:8px;">Business Strategy &middot; Pricing &middot; Offers &middot; Growth Planning &middot; Income Structure</p>
+      <span class="svc-price">Single Session CA$111 &middot; Packages available</span>
       <div class="svc-links">
         <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="svc-link primary">Book a Free Call &rarr;</a>
         <a href="mailto:connect@mindfulearth.eco?subject=Consulting%20Enquiry" class="svc-link secondary">Send an email</a>
@@ -684,7 +686,8 @@
       <span class="svc-cat">Corporate</span>
       <h3>Corporate Wellness Services</h3>
       <p>Team retreats, workplace workshops, and wellness strategy for organisations who take their people seriously. A genuine investment in the humans doing the work.</p>
-      <span class="svc-price">Enquiry-based &middot; Tailored proposals</span>
+      <p style="font-size:13px;line-height:1.7;color:var(--sage-mid);margin-top:8px;">Team Workshops &middot; Wellbeing Programmes &middot; Leadership Retreats &middot; Speaker Events</p>
+      <span class="svc-price">Starting at CA$1,000 &middot; Individualised</span>
       <div class="svc-links">
         <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="svc-link primary">Book a Free Call &rarr;</a>
         <a href="mailto:connect@mindfulearth.eco?subject=Corporate%20Wellness%20Enquiry" class="svc-link secondary">Send an email</a>
@@ -837,10 +840,23 @@
   <h2>Join the Mindful Earth <em>newsletter.</em></h2>
   <p>Sign up for reflections, resources, practitioner spotlights, and invitations to gather — delivered gently, never too often.</p>
   <!-- MAILERLITE EMBED: replace this comment with your MailerLite embedded form code -->
-  <form class="email-form" action="https://formspree.io/f/xpqbrera" method="POST">
-    <input type="hidden" name="_subject" value="Newsletter Signup"><input type="email" name="email" placeholder="Your email address" required>
-    <button type="submit">Join</button>
-  </form>
+  <div id="mlb2-41150854" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41150854" style="width:100%;max-width:480px;margin:0 auto;">
+  <div class="ml-form-embedWrapper embedForm">
+    <div class="ml-form-embedBody row-form">
+      <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2322992/forms/187189264408118723/subscribe" method="post" target="_blank" style="display:flex;max-width:480px;margin:0 auto;">
+        <input type="email" name="fields[email]" placeholder="Your email address" required aria-label="email" style="flex:1;padding:14px 18px;font-family:'Lora',serif;font-size:14px;border:1px solid rgba(191,192,171,0.3);border-right:none;background:rgba(255,255,255,0.1);color:var(--off-white);outline:none;border-radius:2px 0 0 2px;">
+        <input type="hidden" name="ml-submit" value="1">
+        <input type="hidden" name="anticsrf" value="true">
+        <button type="submit" style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:14px 22px;background:var(--sand);color:var(--bark);border:none;cursor:pointer;border-radius:0 2px 2px 0;">Join</button>
+      </form>
+    </div>
+    <div class="row-success" style="display:none;text-align:center;padding:16px 0;">
+      <p style="color:var(--sand);font-family:'Gloock',serif;font-size:18px;font-style:italic;">You are in. Welcome. 🌿</p>
+    </div>
+  </div>
+</div>
+<script>function ml_webform_success_41150854(){var el=document.querySelector('.ml-subscribe-form-41150854');if(el){el.querySelector('.row-success').style.display='block';el.querySelector('.row-form').style.display='none';}}</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
 </section>
 
 <!-- FOOTER -->
@@ -854,10 +870,8 @@
     <div class="footer-col"><h4>Explore</h4><ul>
       <li><a href="pages/our-story/">Our Story</a></li>
       <li><a href="pages/experiences/">Experiences</a></li>
+      <li><a href="pages/past-events/">Past Events</a></li>
       <li><a href="pages/journal/">The Journal</a></li>
-      <li><a href="pages/workbooks/">Guides &amp; Workbooks</a></li>
-          <li><a href="pages/retreat-marketing-workbook/">Retreat Marketing Guide</a></li>
-      <li><a href="pages/podcast/">Podcast</a></li>
       <li><a href="pages/eco-pledge/">Eco Pledge</a></li>
     </ul></div>
     <div class="footer-col"><h4>Work Together</h4><ul>
@@ -866,6 +880,12 @@
       <li><a href="pages/wellness-consulting/">Business Consulting</a></li>
       <li><a href="pages/corporate-wellness/">Corporate Wellness</a></li>
       <li><a href="pages/contact/">Work With Us</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Education</h4><ul>
+      <li><a href="pages/workbooks/">Guides &amp; Workbooks</a></li>
+      <li><a href="pages/grounded-growth/">Event Planning Guide</a></li>
+      <li><a href="pages/genuine-reach/">Marketing Guide</a></li>
+      <li><a href="pages/podcast/">Podcast</a></li>
     </ul></div>
     <div class="footer-col"><h4>Connect</h4><ul>
       <li><a href="pages/community/">The Community</a></li>
@@ -877,7 +897,7 @@
   <div style="border-top:1px solid rgba(191,192,171,0.12);padding-top:20px;margin-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;">
     <span style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-mid);">Follow Us</span>
     <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
-      <a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;transition:color 0.2s;">@mindfulearth.eco</a>
+      <a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;">@mindfulearth.eco</a>
       <a href="https://www.facebook.com/mindfuleartheco" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;">Facebook</a>
       <a href="https://linkedin.com/company/mindful-earth-eco" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;">LinkedIn</a>
       <a href="https://chat.whatsapp.com/GzOQyhpVlbS50fCpybsFGp" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;">WhatsApp Community</a>
