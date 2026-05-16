@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Journal — Montana Cindy · Mindful Earth</title>
+<meta name="description" content="A visual journal of places, retreats, and moments from Montana Cindy's travels hosting wellness experiences around the world.">
+<link href="https://fonts.googleapis.com/css2?display=swap&family=Gloock&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/shared.css">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<style>
+.tj-hero {
+  min-height:55vh; background:url('../../images/montana-travel-1.jpg') center/cover no-repeat;
+  display:flex; align-items:flex-end; padding:0 10vw 64px; position:relative;
+}
+.tj-hero::before { content:''; position:absolute; inset:0; background:rgba(35,44,35,0.55); z-index:1; }
+.tj-hero > * { position:relative; z-index:2; }
+
+/* INSTAGRAM-STYLE FEED */
+.feed { max-width:680px; margin:0 auto; padding:80px 40px; }
+.feed-item { margin-bottom:72px; }
+.feed-img {
+  width:100%; aspect-ratio:4/5;
+  background:var(--sage-light); background-size:cover; background-position:center;
+  margin-bottom:18px; display:block;
+}
+.feed-img.landscape { aspect-ratio:4/3; }
+.feed-img.square { aspect-ratio:1; }
+.feed-pair { display:grid; grid-template-columns:1fr 1fr; gap:3px; margin-bottom:18px; }
+.feed-pair .feed-img { margin-bottom:0; }
+.feed-location {
+  font-family:"Jost",sans-serif; font-size:10px; font-weight:500;
+  letter-spacing:0.16em; text-transform:uppercase; color:var(--sage-mid);
+  display:block; margin-bottom:8px;
+}
+.feed-caption {
+  font-size:15px; line-height:1.85; color:var(--forest); margin-bottom:8px;
+}
+.feed-date {
+  font-family:"Jost",sans-serif; font-size:11px; color:rgba(142,152,143,0.7);
+}
+.feed-divider {
+  border:none; border-top:1px solid rgba(191,192,171,0.25); margin:72px 0;
+}
+
+@media(max-width:768px) {
+  .feed { padding:60px 24px; }
+  .tj-hero { padding:0 6vw 48px; }
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer">@mindfulearth.eco</a>
+  <span class="top-bar-sep">·</span>
+  <a href="https://instagram.com/montanacindy_" target="_blank" rel="noopener noreferrer">@montanacindy_</a>
+</div>
+
+<nav id="nav">
+  <a href="../../" class="nav-logo"><img src="../../assets/logo.png" alt="Mindful Earth" style="height:60px;width:auto;"></a>
+  <ul class="nav-center">
+    <li><a href="../our-story/">About</a></li>
+    <li><a href="../experiences/">Experiences</a></li>
+    <li><a href="../journal/">Learn</a></li>
+    <li><a href="../photography/">Photography</a></li>
+    <li><a href="../montana/">Montana Cindy</a></li>
+  </ul>
+  <a href="https://cal.com/montana-king-mrfkvt/clarity-call" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Call</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="tj-hero">
+  <div>
+    <span class="eyebrow" style="color:rgba(191,192,171,0.65);">Montana Cindy</span>
+    <h1 style="font-size:clamp(38px,5vw,68px);color:var(--off-white);line-height:1.05;margin-bottom:14px;">A travel <em style="font-style:italic;color:var(--sand);">journal.</em></h1>
+    <p style="font-size:15px;color:rgba(239,232,220,0.7);max-width:460px;line-height:1.8;">Places, retreats, moments. An honest record of where the work has taken me and what I have found along the way.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section style="background:var(--parchment);padding:64px 10vw;border-bottom:1px solid rgba(191,192,171,0.2);">
+  <div style="max-width:640px;margin:0 auto;text-align:center;">
+    <p style="font-family:'Gloock',serif;font-style:italic;font-size:clamp(18px,2vw,24px);color:var(--bark);line-height:1.6;margin-bottom:0;">"One of my biggest dreams is to have retreat venues in different countries. Places I have been to enough times to know — and love enough to want to share. This journal is the beginning of that map."</p>
+    <span style="font-family:'Jost',sans-serif;font-size:11px;color:var(--sage-mid);display:block;margin-top:14px;letter-spacing:0.08em;">— Montana Cindy</span>
+  </div>
+</section>
+
+<!-- FEED -->
+<section style="background:var(--white);">
+  <div class="feed">
+
+    <!-- ENTRY 1 — Nicaragua -->
+    <div class="feed-item">
+      <span class="feed-location">Nicaragua · February 2025</span>
+      <div class="feed-pair">
+        <div class="feed-img" style="background-image:url('../../images/nicaragua-hero.jpg');"></div>
+        <div class="feed-img" style="background-image:url('../../images/montana-retreat-1.jpg');"></div>
+      </div>
+      <p class="feed-caption">San Juan del Sur. The kind of place that gets into you. We arrived as strangers and left as something more — the particular closeness that only forms when people are willing to be real with each other for a week straight. There was surf and yoga and late dinners and something that felt like ceremony. I have been hosting retreats for years and this one reminded me exactly why I started.</p>
+      <span class="feed-date">Cedar Mindful Retreat · 7 days · Sold out</span>
+    </div>
+
+    <hr class="feed-divider">
+
+    <!-- ENTRY 2 — Canada -->
+    <div class="feed-item">
+      <span class="feed-location">Canmore, Alberta · Canada</span>
+      <div class="feed-img landscape" style="background-image:url('../../images/montana-travel-1.jpg');"></div>
+      <p class="feed-caption" style="margin-top:18px;">Home, in a different sense than London. The Rockies are where I learned to breathe again — literally. There is something about being small inside something that enormous that puts everything in perspective. I grew up with anxiety and mountains were always where it quietened. Canmore holds a lot of my history. I am still figuring out what to do with all of it.</p>
+      <span class="feed-date">Alberta, Canada</span>
+    </div>
+
+    <hr class="feed-divider">
+
+    <!-- ENTRY 3 — London -->
+    <div class="feed-item">
+      <span class="feed-location">London · 2025 — present</span>
+      <div class="feed-img square" style="background-image:url('../../images/montana-moment-1.jpg');"></div>
+      <p class="feed-caption" style="margin-top:18px;">I moved here not entirely knowing why — only that something needed to shift, and sometimes you have to change the backdrop before you can change anything else. London has been hard and rich and full in the way that cities that don't care about you can be. I have found pockets of stillness in it. I am still finding them. My dog helps.</p>
+      <span class="feed-date">North London</span>
+    </div>
+
+    <hr class="feed-divider">
+
+    <!-- ENTRY 4 — Ibiza coming soon -->
+    <div class="feed-item">
+      <span class="feed-location">Ibiza · Coming 2026</span>
+      <div style="background:var(--forest);padding:48px 32px;display:flex;align-items:center;justify-content:center;min-height:280px;margin-bottom:18px;">
+        <div style="text-align:center;">
+          <span style="font-family:'Gloock',serif;font-style:italic;font-size:28px;color:rgba(248,246,241,0.4);display:block;margin-bottom:12px;">coming soon</span>
+          <p style="font-size:13px;color:rgba(191,192,171,0.5);font-family:'Jost',sans-serif;letter-spacing:0.1em;text-transform:uppercase;">Ibiza 2026</p>
+        </div>
+      </div>
+      <p class="feed-caption">Next chapter. More to come.</p>
+      <span class="feed-date">Summer 2026</span>
+    </div>
+
+    <hr class="feed-divider">
+
+    <!-- CTA -->
+    <div style="text-align:center;padding:20px 0 40px;">
+      <p style="font-size:15px;color:var(--forest);line-height:1.8;margin-bottom:24px;">More entries coming — this journal grows with every trip. Follow along on Instagram for real-time updates.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://instagram.com/montanacindy_" target="_blank" rel="noopener noreferrer" class="btn-forest">Follow on Instagram</a>
+        <a href="../photography/" class="btn-outline">View Photography Gallery</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="footer-brand-name">Mindful Earth</span>
+      <span class="footer-tagline">Return to Self, Community &amp; Nature</span>
+    </div>
+    <div class="footer-col"><h4>Montana</h4><ul>
+      <li><a href="../montana/">Work with Montana</a></li>
+      <li><a href="../photography/">Photography</a></li>
+      <li><a href="../past-events/">Past Events</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Learn</h4><ul>
+      <li><a href="../workbooks/">All Guides</a></li>
+      <li><a href="../journal/">The Journal</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul>
+      <li><a href="../community/">The Community</a></li>
+      <li><a href="../contact/">Contact</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; 2019&ndash;2026 Mindful Earth. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+document.getElementById('hamburger').addEventListener('click',function(){
+  document.getElementById('mobile-menu')?.classList.toggle('open');
+  this.classList.toggle('open');
+});
+</script>
+</body>
+</html>

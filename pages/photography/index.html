@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retreat Photography — Montana Cindy · Mindful Earth</title>
+<meta name="description" content="Intentional wellness and retreat photography by Montana Cindy. Based in London, working globally. Book an enquiry call.">
+<link href="https://fonts.googleapis.com/css2?display=swap&family=Gloock&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/shared.css">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<style>
+.photo-hero {
+  min-height:65vh; background:url('../../images/montana-hero.jpg') center/cover no-repeat;
+  display:flex; align-items:flex-end; padding:0 10vw 72px;
+  position:relative;
+}
+.photo-hero::before { content:''; position:absolute; inset:0; background:rgba(35,44,35,0.58); z-index:1; }
+.photo-hero > * { position:relative; z-index:2; }
+
+/* GALLERY GRID */
+.gallery-grid {
+  columns: 3; column-gap: 12px;
+  padding: 0 10vw;
+}
+.gallery-grid a { display:block; margin-bottom:12px; break-inside:avoid; }
+.gallery-grid img {
+  width:100%; display:block;
+  transition:opacity 0.3s;
+}
+.gallery-grid a:hover img { opacity:0.88; }
+
+/* PLACEHOLDER GRID (before photos uploaded) */
+.gallery-placeholder {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:3px;
+  padding:0;
+}
+.gp-item {
+  aspect-ratio:1; background:var(--sage-light);
+  display:flex; align-items:center; justify-content:center;
+  background-size:cover; background-position:center;
+}
+.gp-item.tall { aspect-ratio:2/3; }
+.gp-item.wide { aspect-ratio:4/3; }
+
+@media(max-width:768px) {
+  .gallery-grid { columns:2; padding:0 6vw; }
+  .photo-hero { padding:0 6vw 56px; }
+}
+@media(max-width:480px) {
+  .gallery-grid { columns:1; }
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer">@mindfulearth.eco</a>
+  <span class="top-bar-sep">·</span>
+  <a href="https://instagram.com/montanacindy_" target="_blank" rel="noopener noreferrer">@montanacindy_</a>
+</div>
+
+<nav id="nav">
+  <a href="../../" class="nav-logo"><img src="../../assets/logo.png" alt="Mindful Earth" style="height:60px;width:auto;"></a>
+  <ul class="nav-center">
+    <li><a href="../our-story/">About</a></li>
+    <li><a href="../community/">Community</a></li>
+    <li><a href="../experiences/">Experiences</a></li>
+    <li><a href="../journal/">Learn</a></li>
+    <li><a href="../services/">Services</a></li>
+    <li><a href="../montana/">Montana Cindy</a></li>
+  </ul>
+  <a href="https://cal.com/montana-king-mrfkvt/photography-enquiry-call" target="_blank" rel="noopener noreferrer" class="nav-cta">Book Photography Enquiry</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="photo-hero">
+  <div>
+    <span class="eyebrow" style="color:rgba(191,192,171,0.65);">Retreat &amp; Wellness Photography</span>
+    <h1 style="font-size:clamp(40px,5vw,72px);color:var(--off-white);line-height:1.05;margin-bottom:16px;">Photography by<br><em style="font-style:italic;color:var(--sand);">Montana Cindy.</em></h1>
+    <p style="font-size:16px;color:rgba(239,232,220,0.75);max-width:520px;line-height:1.8;margin-bottom:28px;">Intentional photography for wellness retreats, events, and hospitality venues — by someone who understands what is happening in the room. Based in London. Working globally.</p>
+    <a href="https://cal.com/montana-king-mrfkvt/photography-enquiry-call" target="_blank" rel="noopener noreferrer" class="btn-sand">Book a Photography Enquiry Call</a>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section style="background:var(--parchment);padding:72px 10vw;border-bottom:1px solid rgba(191,192,171,0.2);">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1100px;">
+    <div>
+      <span class="eyebrow">The approach</span>
+      <h2 style="font-family:'Gloock',serif;font-size:clamp(28px,3vw,42px);color:var(--bark);line-height:1.1;margin-bottom:18px;">Photos that hold<br><em style="font-style:italic;color:var(--mauve);">the feeling.</em></h2>
+      <p style="font-size:15px;line-height:1.9;color:var(--forest);margin-bottom:14px;">The best retreat photos are not posed. They are the moment someone closes their eyes and exhales for the first time in weeks. The laughing over dinner. The quiet in the morning. The circle that forms without being asked.</p>
+      <p style="font-size:15px;line-height:1.9;color:var(--forest);margin-bottom:14px;">I shoot retreats the way I experience them — as a practitioner who knows what it costs to create something like this, and who understands the atmosphere you have worked so hard to hold.</p>
+      <p style="font-size:15px;line-height:1.9;color:var(--forest);">Includes edited photos, short-form reels, and raw footage. Available in London, EU, and internationally.</p>
+    </div>
+    <div style="background:var(--sage-light);padding:32px;border-left:3px solid var(--sand);">
+      <span style="font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--sage-mid);display:block;margin-bottom:16px;">Pricing</span>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="border-bottom:1px solid rgba(191,192,171,0.3);padding-bottom:14px;">
+          <span style="font-family:'Gloock',serif;font-size:17px;color:var(--bark);display:block;margin-bottom:4px;">Half Day</span>
+          <span style="font-family:'Jost',sans-serif;font-size:13px;color:var(--mauve);font-weight:500;">£350</span>
+          <p style="font-size:13px;color:var(--forest);margin:4px 0 0;line-height:1.6;">Up to 4 hours · edited photos · London-based</p>
+        </div>
+        <div style="border-bottom:1px solid rgba(191,192,171,0.3);padding-bottom:14px;">
+          <span style="font-family:'Gloock',serif;font-size:17px;color:var(--bark);display:block;margin-bottom:4px;">Full Day</span>
+          <span style="font-family:'Jost',sans-serif;font-size:13px;color:var(--mauve);font-weight:500;">£600</span>
+          <p style="font-size:13px;color:var(--forest);margin:4px 0 0;line-height:1.6;">Full event day · edited photos + reels · London-based</p>
+        </div>
+        <div>
+          <span style="font-family:'Gloock',serif;font-size:17px;color:var(--bark);display:block;margin-bottom:4px;">Multi-Day / International</span>
+          <span style="font-family:'Jost',sans-serif;font-size:13px;color:var(--mauve);font-weight:500;">£450/day + travel</span>
+          <p style="font-size:13px;color:var(--forest);margin:4px 0 0;line-height:1.6;">Retreats, multi-day events · EU and globally</p>
+        </div>
+      </div>
+      <a href="https://cal.com/montana-king-mrfkvt/photography-enquiry-call" target="_blank" rel="noopener noreferrer" class="btn-bark" style="display:inline-block;margin-top:24px;">Book a Photography Enquiry Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section style="background:var(--white);padding:80px 0;">
+  <div style="padding:0 10vw;margin-bottom:48px;">
+    <span class="eyebrow">Gallery</span>
+    <h2 style="font-family:'Gloock',serif;font-size:clamp(28px,3vw,40px);color:var(--bark);line-height:1.1;margin-bottom:12px;">Wellness, retreats,<br><em style="font-style:italic;color:var(--mauve);">and the spaces between.</em></h2>
+    <p style="font-size:15px;color:var(--forest);max-width:540px;line-height:1.8;">More coming after Ibiza 2026. In the meantime — a selection of wellness and venue photography from retreat hosting across Nicaragua, Canada, London, and Europe.</p>
+  </div>
+
+  <!-- Gallery grid — add images here: src="../../images/photo-gallery-01.jpg" etc -->
+  <div class="gallery-grid" id="galleryGrid">
+    <!-- Upload your photos as photo-gallery-01.jpg through photo-gallery-20.jpg into /images/ -->
+    <!-- Each will appear here automatically once uploaded -->
+    <a href="../../images/photo-gallery-01.jpg" target="_blank"><img src="../../images/photo-gallery-01.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-02.jpg" target="_blank"><img src="../../images/photo-gallery-02.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-03.jpg" target="_blank"><img src="../../images/photo-gallery-03.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-04.jpg" target="_blank"><img src="../../images/photo-gallery-04.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-05.jpg" target="_blank"><img src="../../images/photo-gallery-05.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-06.jpg" target="_blank"><img src="../../images/photo-gallery-06.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-07.jpg" target="_blank"><img src="../../images/photo-gallery-07.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-08.jpg" target="_blank"><img src="../../images/photo-gallery-08.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-09.jpg" target="_blank"><img src="../../images/photo-gallery-09.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-10.jpg" target="_blank"><img src="../../images/photo-gallery-10.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-11.jpg" target="_blank"><img src="../../images/photo-gallery-11.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-12.jpg" target="_blank"><img src="../../images/photo-gallery-12.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-13.jpg" target="_blank"><img src="../../images/photo-gallery-13.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-14.jpg" target="_blank"><img src="../../images/photo-gallery-14.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-15.jpg" target="_blank"><img src="../../images/photo-gallery-15.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-16.jpg" target="_blank"><img src="../../images/photo-gallery-16.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-17.jpg" target="_blank"><img src="../../images/photo-gallery-17.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-18.jpg" target="_blank"><img src="../../images/photo-gallery-18.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-19.jpg" target="_blank"><img src="../../images/photo-gallery-19.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+    <a href="../../images/photo-gallery-20.jpg" target="_blank"><img src="../../images/photo-gallery-20.jpg" alt="Retreat photography" loading="lazy" onerror="this.closest('a').style.display='none'"></a>
+  </div>
+
+  <!-- Shown when no photos have loaded yet -->
+  <div id="emptyGallery" style="padding:0 10vw;display:none;">
+    <p style="font-size:15px;color:var(--sage-mid);font-style:italic;">Gallery coming soon — check back after Ibiza 2026. In the meantime, <a href="https://instagram.com/montanacindy_" target="_blank" rel="noopener noreferrer" style="color:var(--forest);border-bottom:1px solid var(--sage);text-decoration:none;">visit Instagram</a> to see recent work.</p>
+  </div>
+</section>
+
+<!-- ALSO AVAILABLE -->
+<section style="background:var(--parchment);padding:72px 10vw;border-top:1px solid rgba(191,192,171,0.2);">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:900px;">
+    <div>
+      <span class="eyebrow">Also available</span>
+      <h3 style="font-family:'Gloock',serif;font-size:clamp(22px,2.5vw,32px);color:var(--bark);margin-bottom:12px;line-height:1.2;">Venue &amp; hospitality<br><em style="font-style:italic;color:var(--mauve);">marketing support.</em></h3>
+      <p style="font-size:15px;line-height:1.85;color:var(--forest);margin-bottom:14px;">Wellness venues, retreat centres, and hospitality spaces — I can help with both the photography and the marketing strategy to attract the right guests. If you are building something beautiful and want people to find it, let's talk.</p>
+      <a href="mailto:connect@mindfulearth.eco?subject=Venue%20Photography%20%26%20Marketing%20Enquiry" style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest);text-decoration:none;border-bottom:1px solid var(--sage);padding-bottom:2px;">Send an enquiry →</a>
+    </div>
+    <div>
+      <a href="../montana/" style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest);text-decoration:none;display:block;margin-bottom:20px;border-bottom:1px solid var(--sage);padding-bottom:2px;width:fit-content;">← Back to Montana Cindy</a>
+      <a href="../travel-journal/" style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest);text-decoration:none;display:block;margin-bottom:20px;border-bottom:1px solid var(--sage);padding-bottom:2px;width:fit-content;">View travel journal →</a>
+      <a href="https://cal.com/montana-king-mrfkvt/photography-enquiry-call" target="_blank" rel="noopener noreferrer" class="btn-bark" style="display:inline-block;">Book Photography Enquiry Call</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="footer-brand-name">Mindful Earth</span>
+      <span class="footer-tagline">Return to Self, Community &amp; Nature</span>
+      <p class="footer-desc">A wellness ecosystem for practitioners, seekers, and the people building something meaningful.</p>
+    </div>
+    <div class="footer-col"><h4>Explore</h4><ul>
+      <li><a href="../our-story/">Our Story</a></li>
+      <li><a href="../experiences/">Experiences</a></li>
+      <li><a href="../journal/">The Journal</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Work Together</h4><ul>
+      <li><a href="../event-planning/">Event Planning</a></li>
+      <li><a href="../media-marketing/">Wellness Marketing</a></li>
+      <li><a href="../wellness-consulting/">Business Consulting</a></li>
+      <li><a href="../montana/">Work with Montana</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Education</h4><ul>
+      <li><a href="../workbooks/">All Guides</a></li>
+      <li><a href="../grounded-growth/">Event Planning Guide</a></li>
+      <li><a href="../genuine-reach/">Marketing Guide</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul>
+      <li><a href="../community/">The Community</a></li>
+      <li><a href="../contact/">Contact</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      <a href="../privacy/">Privacy</a>
+      <a href="../terms/">Terms</a>
+    </div>
+    <span class="footer-copy">&copy; 2019&ndash;2026 Mindful Earth. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+document.getElementById('hamburger').addEventListener('click', function(){
+  document.getElementById('mobile-menu')?.classList.toggle('open');
+  this.classList.toggle('open');
+});
+// Show empty state if no images loaded
+window.addEventListener('load', () => {
+  const imgs = document.querySelectorAll('.gallery-grid a');
+  const visible = [...imgs].filter(a => a.style.display !== 'none');
+  if (visible.length === 0) {
+    document.getElementById('emptyGallery').style.display = 'block';
+  }
+});
+</script>
+</body>
+</html>

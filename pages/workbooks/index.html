@@ -30,7 +30,7 @@
   .wb-cards { display:flex; flex-direction:column; gap:28px; }
   .wb-full-card { display:grid; grid-template-columns:200px 1fr; gap:36px; align-items:start; background:var(--white); border:1px solid rgba(191,192,171,0.3); padding:36px; }
   .wb-section.alt .wb-full-card { background:var(--white); }
-  .wb-cover { aspect-ratio:3/4; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; padding:20px; }
+  .wb-cover { aspect-ratio:3/4; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; padding:20px; background-size:cover; background-position:center; position:relative; overflow:hidden; }
   .wb-cover span { font-family:"Gloock",serif; font-size:16px; text-align:center; line-height:1.3; }
   .wb-cover.grounded { background:var(--sage); }
   .wb-cover.grounded span { color:white; }
@@ -156,7 +156,7 @@
     <div class="wb-cards">
       <div class="wb-full-card">
         <div class="wb-card-left">
-          <div class="wb-cover grounded">
+          <div class="wb-cover grounded" style="background-image:url('../../images/guide-grounded-growth.jpg');background-size:cover;background-position:center;">
             <span>Grounded</span>
             <span>Growth</span>
           </div>
@@ -174,7 +174,7 @@
       </div>
       <div class="wb-full-card">
         <div class="wb-card-left">
-          <div class="wb-cover genuine">
+          <div class="wb-cover genuine" style="background-image:url('../../images/guide-genuine-reach.jpg');background-size:cover;background-position:center;">
             <span>Genuine</span>
             <span>Reach</span>
           </div>
@@ -198,7 +198,7 @@
     <div class="wb-cards">
       <div class="wb-full-card">
         <div class="wb-card-left">
-          <div class="wb-cover nervous">
+          <div class="wb-cover nervous" style="background-image:url('../../images/guide-nervous-system.jpg');background-size:cover;background-position:center;">
             <span>Nervous System</span>
             <span>Nourishment</span>
           </div>
@@ -216,7 +216,7 @@
       </div>
       <div class="wb-full-card">
         <div class="wb-card-left">
-          <div class="wb-cover selflove">
+          <div class="wb-cover selflove" style="background-image:url('../../images/guide-self-love.jpg');background-size:cover;background-position:center;">
             <span>Self Love</span>
             <span>Handbook</span>
           </div>

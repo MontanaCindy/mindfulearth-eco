@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cultivating Self-Love — Mindful Earth</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Jost:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --rose:#c17a8a; --rose-light:#f9f0f2; --rose-mid:#e8c4cc;
+  --bark:#5d4133; --forest:#4d554c; --sage:#bfc0ab; --sage-light:#f0f1eb;
+  --sand:#d9b382; --parchment:#f5f0e8; --off-white:#f8f6f1; --white:#ffffff;
+  --mauve:#754b4d;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lora',serif;background:var(--rose-light);color:var(--bark);line-height:1.75;}
+h1,h2,h3,h4{font-family:'Gloock',serif;font-weight:400;}
+
+/* DESKTOP WARNING */
+.desktop-warn{display:none;position:fixed;inset:0;background:var(--rose);z-index:9999;padding:40px;text-align:center;align-items:center;justify-content:center;flex-direction:column;gap:16px;}
+.desktop-warn h2{font-family:'Gloock',serif;font-size:24px;color:var(--off-white);}
+.desktop-warn p{font-size:15px;color:rgba(248,246,241,0.8);max-width:360px;line-height:1.7;}
+@media(max-width:900px){.desktop-warn{display:flex;}}
+
+/* COVER */
+.cover{background:var(--rose);min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:60px 80px;}
+.cover-top{display:flex;justify-content:space-between;align-items:flex-start;}
+.brand-name{font-family:'Gloock',serif;font-size:20px;color:var(--off-white);}
+.brand-sub{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(248,246,241,0.55);margin-top:4px;}
+.cover-mid{max-width:640px;}
+.cover-eyebrow{font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,246,241,0.6);display:block;margin-bottom:18px;}
+.cover-title{font-size:clamp(52px,7vw,88px);color:var(--off-white);line-height:0.95;margin-bottom:14px;}
+.cover-title em{font-style:italic;color:var(--rose-mid);}
+.cover-sub{font-size:16px;color:rgba(248,246,241,0.7);line-height:1.8;max-width:480px;margin-bottom:28px;}
+.cover-authors{font-family:'Jost',sans-serif;font-size:12px;color:rgba(248,246,241,0.5);letter-spacing:0.08em;}
+.cover-quote{font-family:'Gloock',serif;font-style:italic;font-size:15px;color:rgba(248,246,241,0.65);line-height:1.7;border-left:2px solid rgba(248,246,241,0.25);padding-left:18px;max-width:480px;}
+.cover-bottom{display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(248,246,241,0.12);padding-top:24px;}
+.designed-by{font-family:'Jost',sans-serif;font-size:11px;color:rgba(248,246,241,0.35);}
+
+/* PROGRESS */
+.progress-bar{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid rgba(193,122,138,0.2);padding:12px 80px;display:flex;align-items:center;gap:20px;}
+.progress-label{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--rose);white-space:nowrap;}
+.progress-track{flex:1;height:3px;background:var(--rose-light);border-radius:2px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--rose);border-radius:2px;transition:width 0.4s ease;}
+.progress-pct{font-family:'Jost',sans-serif;font-size:11px;font-weight:500;color:var(--rose);min-width:42px;text-align:right;}
+
+/* CHAPTER NAV */
+.chapter-nav{display:flex;gap:0;background:var(--white);border-bottom:2px solid var(--rose-light);position:sticky;top:52px;z-index:90;overflow-x:auto;}
+.cnav-item{padding:13px 20px;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);text-decoration:none;border-bottom:2px solid transparent;margin-bottom:-2px;transition:color 0.2s,border-color 0.2s;white-space:nowrap;}
+.cnav-item:hover,.cnav-item.active{color:var(--rose);border-bottom-color:var(--rose);}
+
+/* DISCLAIMER */
+.disclaimer{background:var(--parchment);padding:48px 80px;border-bottom:1px solid rgba(193,122,138,0.12);}
+.disclaimer h3{font-family:'Gloock',serif;font-size:20px;color:var(--bark);margin-bottom:14px;}
+.disclaimer p{font-size:13.5px;line-height:1.85;color:var(--bark);margin-bottom:10px;}
+.disclaimer p:last-child{margin-bottom:0;}
+
+/* CHAPTER HEADER */
+.chapter-header{padding:56px 80px;position:relative;}
+.chapter-header.rose{background:var(--rose);}
+.chapter-header.bark{background:var(--bark);}
+.chapter-header.forest{background:var(--forest);}
+.chapter-header.mauve{background:var(--mauve);}
+.chapter-header.sand{background:#8a6a48;}
+.chapter-header.dark-rose{background:#7a3a4a;}
+.chapter-num{font-family:'Gloock',serif;font-style:italic;font-size:64px;color:rgba(248,246,241,0.25);display:block;line-height:1;margin-bottom:6px;}
+.chapter-title{font-size:clamp(28px,3.5vw,44px);color:var(--off-white);line-height:1.1;margin-bottom:10px;}
+.chapter-title em{font-style:italic;color:var(--rose-mid);}
+.chapter-desc{font-size:15px;color:rgba(248,246,241,0.65);line-height:1.8;max-width:560px;}
+
+/* SECTIONS */
+.section{padding:48px 80px;background:var(--white);border-bottom:1px solid rgba(193,122,138,0.1);}
+.section:nth-child(even){background:var(--off-white);}
+.section.rose-bg{background:var(--rose-light);}
+.section-title{font-size:22px;color:var(--bark);margin-bottom:8px;}
+.section-intro{font-size:14px;color:var(--rose);font-style:italic;margin-bottom:24px;line-height:1.7;}
+.section-body p{font-size:14.5px;line-height:1.9;color:var(--bark);margin-bottom:14px;}
+.section-body p:last-child{margin-bottom:0;}
+
+/* INPUTS */
+.field-group{margin-bottom:22px;}
+.field-label{font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--bark);display:block;margin-bottom:8px;}
+.field-hint{font-family:'Lora',serif;font-size:12px;font-style:italic;color:var(--rose);display:block;margin-bottom:8px;line-height:1.6;}
+textarea,input[type=text]{width:100%;font-family:'Lora',serif;font-size:14px;color:var(--bark);background:var(--rose-light);border:1px solid rgba(193,122,138,0.35);padding:12px 16px;border-radius:2px;outline:none;transition:border-color 0.2s;resize:vertical;min-height:90px;}
+textarea:focus,input[type=text]:focus{border-color:var(--rose);background:var(--white);}
+
+/* CHECKLIST */
+.checklist{display:flex;flex-direction:column;gap:0;}
+.check-item{display:grid;grid-template-columns:24px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid rgba(193,122,138,0.1);align-items:start;}
+.check-item:last-child{border-bottom:none;}
+.check-item input[type=checkbox]{width:17px;height:17px;accent-color:var(--rose);margin-top:3px;cursor:pointer;}
+.check-item label{font-size:14px;line-height:1.65;color:var(--bark);cursor:pointer;}
+.check-item label small{display:block;font-size:12px;color:var(--rose);font-style:italic;margin-top:2px;}
+.check-item.done label{text-decoration:line-through;color:var(--sage);}
+
+/* CALLOUT */
+.callout{background:rgba(193,122,138,0.08);border-left:3px solid var(--rose);padding:18px 22px;margin:20px 0;}
+.callout p{font-size:14px;line-height:1.85;color:var(--bark);}
+.callout strong{color:var(--rose);}
+.callout.dark{background:var(--bark);border-left-color:var(--rose-mid);}
+.callout.dark p{color:rgba(248,246,241,0.8);}
+.callout.dark strong{color:var(--rose-mid);}
+.callout.sand{background:rgba(217,179,130,0.1);border-left-color:var(--sand);}
+
+/* PRACTICE CARD */
+.practice-card{background:var(--white);border:1px solid rgba(193,122,138,0.2);padding:28px 32px;margin-bottom:16px;}
+.practice-card h4{font-family:'Gloock',serif;font-size:18px;color:var(--bark);margin-bottom:8px;}
+.practice-card p{font-size:14px;line-height:1.85;color:var(--bark);margin-bottom:12px;}
+.practice-card ol,.practice-card ul{padding-left:20px;font-size:14px;line-height:1.9;color:var(--bark);}
+
+/* QUOTE */
+.quote-block{padding:32px 48px;text-align:center;background:var(--rose);margin:0;}
+.quote-block blockquote{font-family:'Gloock',serif;font-style:italic;font-size:clamp(18px,2.5vw,26px);color:var(--off-white);line-height:1.5;margin-bottom:12px;}
+.quote-block cite{font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(248,246,241,0.55);}
+
+/* AFFIRMATIONS */
+.affirmation-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
+.affirmation{background:var(--white);border:1px solid rgba(193,122,138,0.2);border-left:3px solid var(--rose);padding:14px 16px;font-family:'Gloock',serif;font-style:italic;font-size:14px;color:var(--bark);line-height:1.5;}
+
+/* BODY SCAN */
+.body-scan{background:var(--bark);padding:32px 40px;margin:20px 0;}
+.body-scan h4{font-family:'Gloock',serif;font-size:18px;color:var(--rose-mid);margin-bottom:12px;}
+.body-scan p{font-size:14px;line-height:1.85;color:rgba(248,246,241,0.75);margin-bottom:10px;}
+.body-scan p:last-child{margin-bottom:0;}
+
+/* BREATH PRACTICE */
+.breath-card{background:linear-gradient(135deg,#7a3a4a 0%,#5d4133 100%);padding:36px 40px;margin:20px 0;}
+.breath-card h4{font-family:'Gloock',serif;font-size:20px;color:var(--rose-mid);margin-bottom:16px;}
+.breath-step{display:grid;grid-template-columns:32px 1fr;gap:14px;margin-bottom:16px;align-items:start;}
+.breath-num{font-family:'Gloock',serif;font-style:italic;font-size:24px;color:var(--rose-mid);line-height:1;}
+.breath-text{font-size:14px;line-height:1.8;color:rgba(248,246,241,0.85);}
+
+/* FOOTER */
+.guide-footer{background:var(--bark);padding:48px 80px;}
+.gf-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+.gf-brand h3{font-family:'Gloock',serif;font-size:20px;color:var(--off-white);margin-bottom:6px;}
+.gf-brand p{font-size:13px;color:rgba(248,246,241,0.5);line-height:1.8;margin-top:8px;max-width:320px;}
+.gf-credit{font-family:'Jost',sans-serif;font-size:10px;color:rgba(248,246,241,0.3);margin-top:16px;}
+.gf-cta{background:rgba(255,255,255,0.06);border:1px solid rgba(193,122,138,0.2);padding:22px 24px;}
+.gf-cta h4{font-family:'Gloock',serif;font-size:16px;color:var(--rose-mid);margin-bottom:8px;}
+.gf-cta p{font-size:13px;color:rgba(248,246,241,0.55);line-height:1.7;margin-bottom:12px;}
+.gf-cta a{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);text-decoration:none;}
+
+/* SAVE */
+.save-btn{position:fixed;bottom:32px;right:32px;background:var(--rose);color:var(--off-white);border:none;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:12px 22px;cursor:pointer;border-radius:2px;box-shadow:0 4px 20px rgba(0,0,0,0.2);z-index:50;transition:background 0.2s;}
+.save-btn:hover{background:var(--bark);}
+.save-confirm{position:fixed;bottom:32px;right:32px;background:var(--sand);color:var(--bark);font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:12px 22px;border-radius:2px;z-index:50;display:none;}
+</style>
+</head>
+<body>
+
+<div class="desktop-warn">
+  <h2>Best on desktop</h2>
+  <p>This interactive guide is designed for desktop use. Please open it on a laptop or desktop computer in Chrome.</p>
+</div>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-top">
+    <div><div class="brand-name">Mindful Earth</div><div class="brand-sub">Return to Self, Community &amp; Nature</div></div>
+    <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(248,246,241,0.45);border:1px solid rgba(248,246,241,0.2);padding:6px 14px;">CA$37</div>
+  </div>
+  <div class="cover-mid">
+    <span class="cover-eyebrow">A Mindful Earth Guide</span>
+    <h1 class="cover-title">Cultivating<br><em>Self-Love.</em></h1>
+    <p class="cover-sub">Various practices to help you cultivate deeper self-love and how that will impact your life overall. You are worthy of your own love.</p>
+    <p class="cover-authors">Written by Montana &amp; Julia · Mindful Earth</p>
+  </div>
+  <div class="cover-quote">
+    "Your task is not to seek for love, but merely to seek and find all the barriers within yourself that you have built against it." — Rumi
+  </div>
+  <div class="cover-bottom">
+    <div class="designed-by">Designed by Montana Cindy · mindfulearth.eco</div>
+    <div style="font-family:'Jost',sans-serif;font-size:11px;color:rgba(248,246,241,0.3);font-style:italic;">Open on desktop · Chrome recommended</div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer">
+  <h3>Before you begin</h3>
+  <p>Any information or practices in this guide are not intended to serve as medical advice. Montana and Julia are not licensed medical professionals. Anything discussed reflects personal knowledge and experience — all recommendations should be followed up with a professional where appropriate.</p>
+  <p>The contents of this workbook are owned by Mindful Earth. Please do not share this document with anyone who has not purchased it.</p>
+</div>
+
+<div class="progress-bar">
+  <span class="progress-label">Progress</span>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-pct" id="progressPct">0%</span>
+</div>
+
+<nav class="chapter-nav">
+  <a href="#intention" class="cnav-item">01 Intention</a>
+  <a href="#what-is" class="cnav-item">02 What Is Self-Love</a>
+  <a href="#heart-chakra" class="cnav-item">03 Heart Chakra</a>
+  <a href="#cultivate" class="cnav-item">04 How to Cultivate</a>
+  <a href="#impact" class="cnav-item">05 Impact</a>
+  <a href="#practices" class="cnav-item">06 Practices</a>
+  <a href="#closing" class="cnav-item">07 Closing</a>
+</nav>
+
+<!-- ═══ 01 INTENTION ═══ -->
+<div id="intention">
+<div style="padding:56px 80px;background:var(--rose);">
+  <span class="chapter-num">01</span>
+  <h2 class="chapter-title">Intention Setting<br><em>Practice</em></h2>
+  <p class="chapter-desc">Before diving in, take a moment to slow down. The quality of your presence here will shape everything that follows.</p>
+</div>
+
+<div class="section">
+  <div class="body-scan">
+    <h4>Inner Body Awareness Scan</h4>
+    <p>Take a few minutes to close your eyes, take a breath, and begin to tune into the sensations you feel within your body. Scanning from head to toe, notice any areas of sensation. From this place, begin to tune into your heart space. Notice what comes up for you here. Finally, when you feel connected to your body, begin to reflect on your intention with self-love.</p>
+  </div>
+
+  <div class="field-group" style="margin-top:28px;">
+    <span class="field-label">What is an intention you have for your own relationship with self-love?</span>
+    <textarea id="i1" placeholder="Write freely — this is for you, not for anyone else..."></textarea>
+  </div>
+  <div class="field-group">
+    <span class="field-label">What is your intention during this guide?</span>
+    <textarea id="i2" style="min-height:70px;" placeholder="What are you hoping to shift, understand, or open to?"></textarea>
+  </div>
+  <div class="field-group">
+    <span class="field-label">What are you hoping to gain from developing more self-love practices?</span>
+    <textarea id="i3" style="min-height:70px;" placeholder="Be specific and honest..."></textarea>
+  </div>
+  <div class="field-group">
+    <span class="field-label">What do you think is standing in your way of being open to receiving your own love?</span>
+    <textarea id="i4" placeholder="Notice any resistance, judgement, or fear that arises..."></textarea>
+  </div>
+  <div class="field-group">
+    <span class="field-label">Your intention (turn it into a phrase or mantra)</span>
+    <span class="field-hint">e.g. "Today, I will open my heart and release any judgement I have towards myself."</span>
+    <input type="text" id="i5" placeholder="My intention is...">
+  </div>
+</div>
+</div>
+
+<!-- ═══ 02 WHAT IS SELF-LOVE ═══ -->
+<div id="what-is">
+<div style="padding:56px 80px;background:var(--bark);">
+  <span class="chapter-num">02</span>
+  <h2 class="chapter-title" style="color:var(--off-white);">What is<br><em style="color:var(--rose-mid);">Self-Love?</em></h2>
+  <p class="chapter-desc">Self-love is the act of cultivating practices that help us stay connected to our heart. From this space we live with more compassion, trust, and devotion to ourselves.</p>
+</div>
+
+<div class="section">
+  <div class="section-body">
+    <p>Practising self-love is an empowering act of heart connection. It involves treating yourself with kindness, respect, and compassion while accepting all your flaws and imperfections.</p>
+    <p>By prioritising your own well-being and recognising your own worth, you can offer yourself the same care and understanding that you would provide to a dear friend in need. Self-love is not about being selfish or arrogant — it is about loving and valuing yourself just as you are.</p>
+  </div>
+
+  <div class="callout" style="margin-top:24px;">
+    <p><strong>Self-love is the act of cultivating practices that help us stay connected to our heart.</strong> From this space we live with more compassion, trust, and devotion to ourselves.</p>
+  </div>
+
+  <div class="field-group" style="margin-top:28px;">
+    <span class="field-label">What comes to mind when you think of self-love?</span>
+    <span class="field-hint">What are some words or feelings that arise for you?</span>
+    <textarea id="sl1" placeholder="Write without editing yourself..."></textarea>
+  </div>
+  <div class="field-group">
+    <span class="field-label">What is your personal definition of self-love?</span>
+    <textarea id="sl2" style="min-height:70px;" placeholder="Not someone else's definition — yours..."></textarea>
+  </div>
+</div>
+</div>
+
+<!-- ═══ 03 HEART CHAKRA ═══ -->
+<div id="heart-chakra">
+<div style="padding:56px 80px;background:#7a3a4a;">
+  <span class="chapter-num">03</span>
+  <h2 class="chapter-title" style="color:var(--off-white);">The Heart<br><em style="color:var(--rose-mid);">Chakra</em></h2>
+  <p class="chapter-desc">Anahata — translates to "unstruck" or "unhurt". Located in the middle of the chest, just above the physical heart.</p>
+</div>
+
+<div class="section">
+  <div class="section-body">
+    <p>The heart chakra is responsible for the distribution of Prana (life force energy) throughout the body. It expands all around the body creating an electric field that radiates around 6 feet from the body. It is responsible for emotions related to love, compassion, forgiveness, empathy, and acceptance — associated with the air element, signifying openness, freedom, and expansion.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0;">
+    <div style="background:rgba(193,122,138,0.08);border:1px solid rgba(193,122,138,0.2);padding:22px;">
+      <h4 style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--rose);margin-bottom:10px;">When balanced</h4>
+      <p style="font-size:13.5px;line-height:1.8;color:var(--bark);">Feelings of love, compassion, empathy, and connection with oneself and others. A sense of inner peace, harmony, and acceptance. Relationships characterised by mutual respect, understanding, and support.</p>
+    </div>
+    <div style="background:rgba(93,65,51,0.06);border:1px solid rgba(93,65,51,0.15);padding:22px;">
+      <h4 style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--bark);margin-bottom:10px;">When out of balance</h4>
+      <p style="font-size:13.5px;line-height:1.8;color:var(--bark);">Feelings of loneliness, bitterness, jealousy, or an inability to forgive. Physical symptoms such as heart palpitations, respiratory issues, or circulation problems may also indicate imbalance.</p>
+    </div>
+  </div>
+
+  <div class="callout sand">
+    <p><strong>Balancing practices:</strong> Gratitude practices, heart opening yoga, heart opening meditations, breathwork, spending time in nature, affirmations, having boundaries, listening to your intuition, connecting to God/source/the universe, intentional movement, and focusing on presence in daily life.</p>
+  </div>
+
+  <div class="field-group" style="margin-top:28px;">
+    <span class="field-label">Where do you feel in your heart space right now?</span>
+    <span class="field-hint">Notice without judgement — open, closed, tender, armoured?</span>
+    <textarea id="hc1" placeholder="Tune in before you write..."></textarea>
+  </div>
+  <div class="field-group">
+    <span class="field-label">Which balancing practice feels most accessible to you right now?</span>
+    <input type="text" id="hc2" style="min-height:auto;" placeholder="One practice you could begin this week...">
+  </div>
+
+  <h3 style="font-family:'Gloock',serif;font-size:20px;color:var(--bark);margin:28px 0 10px;">Finding your way back</h3>
+  <div class="callout dark">
+    <p><strong>"Finding your way back into your heart space is a gentle process of healing any of the hurt we hold within. Finding acceptance and compassion for the journey."</strong></p>
+  </div>
+  <div class="field-group" style="margin-top:20px;">
+    <span class="field-label">What hurt do you currently hold in your heart that is ready to be acknowledged?</span>
+    <textarea id="hc3" placeholder="You do not have to fix it here. Just name it."></textarea>
+  </div>
+</div>
+</div>
+
+<!-- ═══ 04 HOW TO CULTIVATE ═══ -->
+<div id="cultivate">
+<div style="padding:56px 80px;background:var(--forest);">
+  <span class="chapter-num">04</span>
+  <h2 class="chapter-title" style="color:var(--off-white);">How to Cultivate<br><em style="color:rgba(191,192,171,0.7);">Self-Love</em></h2>
+  <p class="chapter-desc">Learning to cultivate self-love can be a long journey, but it is an important one for our mental and emotional well-being. Be kind and compassionate towards yourself, especially during challenging times.</p>
+</div>
+
+<div class="section">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px;">
+    <div class="practice-card">
+      <h4>Become aware of your inner dialogue</h4>
+      <p>An important step is becoming aware of your inner dialogue and challenging negative self-talk. Replace self-criticism with self-affirmations that reinforce your worth and capabilities.</p>
+    </div>
+    <div class="practice-card">
+      <h4>Boundary setting</h4>
+      <p>Setting boundaries is a crucial aspect of cultivating self-love. Learn to say no to commitments, requests, and relationships that drain you or compromise your well-being. It is okay to prioritise yourself.</p>
+    </div>
+    <div class="practice-card">
+      <h4>Prioritise self-care</h4>
+      <p>Prioritise self-care as a non-negotiable aspect of your daily routine. Dedicate time to activities that nourish your body, mind, and soul — exercise, meditation, hobbies, quality time with loved ones.</p>
+    </div>
+    <div class="practice-card">
+      <h4>Seek external support</h4>
+      <p>Surround yourself with supportive people who uplift and encourage you. Seek out communities of like-minded people who understand and value the importance of self-love. Professional support is a form of self-love too.</p>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <span class="field-label">Which of these feels most challenging for you right now, and why?</span>
+    <textarea id="c1" placeholder="Be honest — the challenge is where the growth is..."></textarea>
+  </div>
+  <div class="field-group">
+    <span class="field-label">What areas of your life could benefit from a clearer boundary?</span>
+    <textarea id="c2" placeholder="Relationships, work, social media, energy..."></textarea>
+  </div>
+  <div class="field-group">
+    <span class="field-label">What is one small act of self-care you could commit to daily?</span>
+    <input type="text" id="c3" placeholder="Small is sustainable...">
+  </div>
+
+  <h3 style="font-family:'Gloock',serif;font-size:20px;color:var(--bark);margin:28px 0 12px;">Your inner dialogue</h3>
+  <p style="font-size:14px;line-height:1.85;color:var(--bark);margin-bottom:20px;">Notice the language you use about yourself. Write down three things your inner critic says often, then rewrite each one as a self-affirmation.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+    <div class="field-group"><span class="field-label">My inner critic says...</span><textarea id="c4" style="min-height:80px;" placeholder="1.&#10;2.&#10;3."></textarea></div>
+    <div class="field-group"><span class="field-label">The self-affirmation instead...</span><textarea id="c5" style="min-height:80px;" placeholder="1.&#10;2.&#10;3."></textarea></div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ 05 IMPACT ═══ -->
+<div id="impact">
+<div style="padding:56px 80px;background:var(--mauve);">
+  <span class="chapter-num">05</span>
+  <h2 class="chapter-title" style="color:var(--off-white);">How Self-Love<br><em style="color:var(--sand);">Impacts Your Life</em></h2>
+  <p class="chapter-desc">Self-love can have a radical impact across all aspects of our lives.</p>
+</div>
+
+<div class="section">
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:28px;">
+    <div style="background:var(--rose-light);border:1px solid rgba(193,122,138,0.2);border-top:3px solid var(--rose);padding:22px 20px;">
+      <h4 style="font-family:'Gloock',serif;font-size:17px;color:var(--bark);margin-bottom:8px;">Emotional wellbeing</h4>
+      <p style="font-size:13.5px;line-height:1.75;color:var(--bark);">Promotes mental resilience and emotional well-being, reducing stress and equipping you with inner strength and confidence to navigate challenges with grace.</p>
+    </div>
+    <div style="background:var(--rose-light);border:1px solid rgba(193,122,138,0.2);border-top:3px solid var(--bark);padding:22px 20px;">
+      <h4 style="font-family:'Gloock',serif;font-size:17px;color:var(--bark);margin-bottom:8px;">Self-compassion</h4>
+      <p style="font-size:13.5px;line-height:1.75;color:var(--bark);">When you have a deep sense of self-love, you become better equipped to navigate challenges, setbacks, and failures with compassion rather than self-criticism.</p>
+    </div>
+    <div style="background:var(--rose-light);border:1px solid rgba(193,122,138,0.2);border-top:3px solid var(--mauve);padding:22px 20px;">
+      <h4 style="font-family:'Gloock',serif;font-size:17px;color:var(--bark);margin-bottom:8px;">Self-empowerment</h4>
+      <p style="font-size:13.5px;line-height:1.75;color:var(--bark);">Self-love empowers you to assert yourself and pursue your goals and dreams, leading to greater success and fulfilment in your personal and professional life.</p>
+    </div>
+    <div style="background:var(--rose-light);border:1px solid rgba(193,122,138,0.2);border-top:3px solid var(--sand);padding:22px 20px;">
+      <h4 style="font-family:'Gloock',serif;font-size:17px;color:var(--bark);margin-bottom:8px;">Improved relationships</h4>
+      <p style="font-size:13.5px;line-height:1.75;color:var(--bark);">Self-love improves your relationships by helping you set healthy boundaries, communicate assertively, and cultivate fulfilling relationships based on mutual respect.</p>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <span class="field-label">Which area of your life do you most want to see shift as you cultivate more self-love?</span>
+    <textarea id="imp1" placeholder="Be specific — what would actually change?"></textarea>
+  </div>
+  <div class="field-group">
+    <span class="field-label">How will it feel to improve the relationship you have with yourself?</span>
+    <textarea id="imp2" placeholder="Imagine six months from now..."></textarea>
+  </div>
+</div>
+</div>
+
+<!-- ═══ 06 PRACTICES ═══ -->
+<div id="practices">
+<div style="padding:56px 80px;background:var(--bark);">
+  <span class="chapter-num">06</span>
+  <h2 class="chapter-title" style="color:var(--off-white);">Practices for<br><em style="color:var(--rose-mid);">Cultivating Self-Love</em></h2>
+  <p class="chapter-desc">These are not tasks to complete. They are invitations to return to yourself.</p>
+</div>
+
+<div class="section">
+  <p style="font-size:14.5px;line-height:1.9;color:var(--bark);margin-bottom:24px;">Tick the practices you want to explore. Return to this checklist each week and notice what changes.</p>
+  <div class="checklist">
+    <div class="check-item"><input type="checkbox" id="p1" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="p1"><strong>Eye-Gazing Meditation</strong><small>Sit before a mirror. Begin to look at yourself, eventually meeting your own gaze. Allow whatever comes up to come up. Journal afterwards.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="p2" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="p2"><strong>Self-Massage</strong><small>Cultivating the love language of physical touch with yourself. Inviting pleasure and connection between your soul and your body.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="p3" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="p3"><strong>Mirror Work</strong><small>Allow yourself to look at your own body. Bring compassion towards any emotions that surface. You are learning to rewire your thought patterns.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="p4" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="p4"><strong>Affirmations</strong><small>Rooted in love and positivity, affirmations begin to shift thought patterns and create new neural pathways. Start with one that feels true enough to say.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="p5" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="p5"><strong>Breathwork</strong><small>Specifically diaphragmatic breathing. Shifts you into a calm and relaxed state, helping you feel safe enough to open your heart.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="p6" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="p6"><strong>Restorative &amp; Heart Opening Yoga</strong><small>Try Anahatasana (Heart Melting Pose), Matsyasana (Fish Pose), and Balasana (Child's Pose).</small></label></div>
+    <div class="check-item"><input type="checkbox" id="p7" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="p7"><strong>Gratitude Practices</strong><small>At the end of each day, write down three things you are grateful for. Shifts your focus towards the positive aspects of your life.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="p8" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="p8"><strong>Heart-Opening Meditations</strong><small>Promotes emotional balance, improves relationships, boosts self-confidence and self-esteem, and promotes empathy and forgiveness.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="p9" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="p9"><strong>Mindful Eating</strong><small>Slow down and savour each bite. Pay attention to flavours, textures, sensations. Notice any judgements and gently redirect your focus.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="p10" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="p10"><strong>Energy Healing</strong><small>Release old and stagnant energies held within your physical vessel. By setting the intention to release what is heavy, you open to receiving more love.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="p11" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="p11"><strong>Spending Time in Nature</strong><small>Connects you to something greater than yourself. Cultivates feelings of wonder and appreciation. May lead to a deep understanding and acceptance of yourself.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="p12" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="p12"><strong>Mindful Movement</strong><small>Walking, yoga, gym, dancing — whatever movement you enjoy. Facilitates a deeper connection between your mind, body, and soul.</small></label></div>
+  </div>
+
+  <div class="field-group" style="margin-top:32px;">
+    <span class="field-label">Which three practices feel most alive for you right now?</span>
+    <textarea id="pr1" style="min-height:70px;" placeholder="And why these three?"></textarea>
+  </div>
+
+  <!-- DIAPHRAGMATIC BREATH PRACTICE -->
+  <div class="breath-card" style="margin-top:32px;">
+    <h4>Diaphragmatic Breath Practice</h4>
+    <div class="breath-step"><span class="breath-num">01</span><span class="breath-text">Inhale slowly (ideally through the nose) and visualise the air travelling all the way down toward your pelvis, filling up your belly, then your chest, until you cannot take any more air into your lungs.</span></div>
+    <div class="breath-step"><span class="breath-num">02</span><span class="breath-text">Exhale by simply relaxing your ribcage and diaphragm, allowing the air to slowly fall out of the chest without any force.</span></div>
+    <div class="breath-step"><span class="breath-num">03</span><span class="breath-text">Repeat this breathing style for several rounds and notice how your internal state shifts.</span></div>
+  </div>
+
+  <div class="field-group" style="margin-top:24px;">
+    <span class="field-label">After the breath practice — what do you notice?</span>
+    <textarea id="pr2" style="min-height:70px;" placeholder="Body sensations, emotions, thoughts..."></textarea>
+  </div>
+
+  <!-- EYE-GAZING PRACTICE -->
+  <div style="background:var(--bark);padding:32px 40px;margin-top:24px;">
+    <h4 style="font-family:'Gloock',serif;font-size:20px;color:var(--rose-mid);margin-bottom:16px;">Eye-Gazing Meditation</h4>
+    <ol style="padding-left:20px;font-size:14px;line-height:2.1;color:rgba(248,246,241,0.8);">
+      <li>Set your space with loving intentions. Light a candle or your favourite incense.</li>
+      <li>Set yourself up in front of a mirror.</li>
+      <li>Simply begin to look at yourself in the mirror, eventually meeting your own gaze.</li>
+      <li>Allow yourself to look into the depths of your soul through your own eyes.</li>
+      <li>Stay as long as feels right. Be patient. Welcome in all emotions.</li>
+    </ol>
+    <p style="font-size:13px;line-height:1.75;color:rgba(248,246,241,0.5);margin-top:16px;font-style:italic;">This practice can bring a lot of emotions to the surface. Be sure to journal about your experience afterwards.</p>
+  </div>
+
+  <div class="field-group" style="margin-top:24px;">
+    <span class="field-label">Journal — your eye-gazing experience</span>
+    <textarea id="pr3" placeholder="What came up? What did you see? Be gentle with yourself as you write..."></textarea>
+  </div>
+
+  <!-- AFFIRMATIONS -->
+  <h3 style="font-family:'Gloock',serif;font-size:20px;color:var(--bark);margin:32px 0 16px;">Your Affirmations</h3>
+  <p style="font-size:14px;line-height:1.85;color:var(--bark);margin-bottom:16px;">Write three affirmations that feel true enough to say out loud. They do not have to feel completely true yet — that is the practice.</p>
+  <div class="affirmation-list">
+    <div class="affirmation">I deeply and completely love and accept myself.</div>
+    <div class="affirmation">I am wanted and loved.</div>
+    <div class="affirmation">My heart is open to giving love.</div>
+    <div class="affirmation">I live in a state of grace and gratefulness.</div>
+  </div>
+  <div class="field-group">
+    <span class="field-label">Your personal affirmations (write your own)</span>
+    <textarea id="pr4" style="min-height:90px;" placeholder="1. I am...&#10;2. I am...&#10;3. I am..."></textarea>
+  </div>
+
+  <!-- GRATITUDE -->
+  <h3 style="font-family:'Gloock',serif;font-size:20px;color:var(--bark);margin:32px 0 12px;">Daily Gratitude Practice</h3>
+  <p style="font-size:14px;line-height:1.85;color:var(--bark);margin-bottom:20px;">At the end of each day, write three things you are grateful for — whether a small achievement, a moment of joy, or something as simple as a warm cup of tea.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;">
+    <div class="field-group"><span class="field-label">Day 1</span><textarea id="g1" style="min-height:80px;" placeholder="Three things..."></textarea></div>
+    <div class="field-group"><span class="field-label">Day 2</span><textarea id="g2" style="min-height:80px;" placeholder="Three things..."></textarea></div>
+    <div class="field-group"><span class="field-label">Day 3</span><textarea id="g3" style="min-height:80px;" placeholder="Three things..."></textarea></div>
+    <div class="field-group"><span class="field-label">Day 4</span><textarea id="g4" style="min-height:80px;" placeholder="Three things..."></textarea></div>
+    <div class="field-group"><span class="field-label">Day 5</span><textarea id="g5" style="min-height:80px;" placeholder="Three things..."></textarea></div>
+    <div class="field-group"><span class="field-label">Day 6</span><textarea id="g6" style="min-height:80px;" placeholder="Three things..."></textarea></div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ 07 CLOSING ═══ -->
+<div id="closing">
+<div class="quote-block">
+  <blockquote>"There is no love like your own."</blockquote>
+  <cite>k.tolnoe</cite>
+</div>
+
+<div class="section">
+  <h3 class="section-title">Closing Reflections</h3>
+  <p class="section-intro">Take your time with these. There is no rush. Come back to this page as often as you need to.</p>
+
+  <div class="field-group">
+    <span class="field-label">What do you intuitively feel is standing in your way of being open to receiving your own love?</span>
+    <textarea id="cr1" placeholder="Not the surface answer — the deeper one..."></textarea>
+  </div>
+  <div class="field-group">
+    <span class="field-label">What practices are you most excited to try to cultivate more self-love?</span>
+    <textarea id="cr2" style="min-height:70px;" placeholder="Be specific about when and how you'll begin..."></textarea>
+  </div>
+  <div class="field-group">
+    <span class="field-label">How will it feel to improve the relationship you have with yourself?</span>
+    <textarea id="cr3" placeholder="Write from the future — as if it has already happened..."></textarea>
+  </div>
+
+  <div style="background:var(--rose);padding:32px 40px;margin-top:28px;">
+    <h4 style="font-family:'Gloock',serif;font-size:20px;color:var(--off-white);margin-bottom:12px;">Thank you.</h4>
+    <p style="font-size:15px;line-height:1.9;color:rgba(248,246,241,0.78);">We are so grateful to share this knowledge with you. We understand that it can feel overwhelming to take in so much in such a short period of time. Take your time working through these practices. Be patient with your process. Release your judgements towards yourself.</p>
+    <p style="font-size:14px;color:rgba(248,246,241,0.55);margin-top:14px;font-style:italic;">If you desire support, reach out — we would love to support you.</p>
+  </div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="guide-footer">
+  <div class="gf-inner">
+    <div class="gf-brand">
+      <h3>Mindful Earth</h3>
+      <div style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(193,122,138,0.7);margin-bottom:10px;">Return to Self, Community &amp; Nature</div>
+      <p>A wellness ecosystem for practitioners, seekers, and the people building something meaningful. This guide is one part of a larger ecosystem of resources designed to support your return to yourself.</p>
+      <div class="gf-credit">Written by Montana &amp; Julia · Mindful Earth · mindfulearth.eco<br>Cultivating Self-Love · CA$37</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <div class="gf-cta">
+        <h4>Work with Montana Cindy</h4>
+        <p>Somatic work, yoga, breathwork, energy healing, and 1:1 intuitive mentorship. Everything begins with a free 30-min clarity call.</p>
+        <a href="https://mindfulearth.eco/pages/montana/">mindfulearth.eco/pages/montana/</a>
+      </div>
+      <div class="gf-cta">
+        <h4>The Nervous System Nourishment Workbook</h4>
+        <p>A companion guide — deeper into nervous system regulation, breathwork, and holistic nutrition. The natural next step after this guide.</p>
+        <a href="https://mindfulearth.eco/pages/workbooks/">Get it at mindfulearth.eco/pages/workbooks/</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="save-btn" onclick="saveAll()">Save Progress</button>
+<div class="save-confirm" id="saveConf">Saved ✓</div>
+
+<script>
+const KEY = 'sl_guide_v1';
+function saveAll() {
+  const d = {};
+  document.querySelectorAll('textarea[id],input[id]').forEach(el => { d[el.id] = el.value; });
+  document.querySelectorAll('input[type=checkbox][id]').forEach(cb => { d[cb.id] = cb.checked; });
+  localStorage.setItem(KEY, JSON.stringify(d));
+  const btn = document.querySelector('.save-btn');
+  const conf = document.getElementById('saveConf');
+  btn.style.display = 'none'; conf.style.display = 'block';
+  setTimeout(() => { btn.style.display = 'block'; conf.style.display = 'none'; }, 2000);
+  updateProgress();
+}
+function loadAll() {
+  const raw = localStorage.getItem(KEY);
+  if (!raw) return;
+  const d = JSON.parse(raw);
+  Object.entries(d).forEach(([id, val]) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (el.type === 'checkbox') { el.checked = val; if (val) el.closest('.check-item')?.classList.add('done'); }
+    else el.value = val;
+  });
+  updateProgress();
+}
+function updateProgress() {
+  const all = document.querySelectorAll('textarea[id],input[id]:not([type=checkbox])');
+  const cbs = document.querySelectorAll('input[type=checkbox][id]');
+  const filled = [...all].filter(el => el.value?.trim().length > 0).length;
+  const checked = [...cbs].filter(cb => cb.checked).length;
+  const total = all.length + cbs.length;
+  const pct = Math.round(((filled + checked) / total) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressPct').textContent = pct + '%';
+}
+window.addEventListener('scroll', () => {
+  ['intention','what-is','heart-chakra','cultivate','impact','practices','closing'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const link = document.querySelector(`.cnav-item[href="#${id}"]`);
+    if (link) link.classList.toggle('active', rect.top <= 120 && rect.bottom > 0);
+  });
+});
+document.addEventListener('change', saveAll);
+document.addEventListener('input', updateProgress);
+loadAll();
+</script>
+</body>
+</html>

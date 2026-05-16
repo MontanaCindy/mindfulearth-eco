@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Mindful Earth</title>
+<meta name="description" content="Event planning, wellness marketing, business consulting, and corporate wellness services for practitioners and organisations.">
+<link href="https://fonts.googleapis.com/css2?display=swap&family=Gloock&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/shared.css">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<style>
+.services-hero {
+  background: url('../../images/hero-bg.jpg') center/cover no-repeat;
+  min-height: 52vh; display:flex; align-items:flex-end;
+  padding: 0 10vw 72px; position:relative;
+}
+.services-hero::before { content:''; position:absolute; inset:0; background:rgba(35,44,35,0.62); z-index:1; }
+.services-hero > * { position:relative; z-index:2; }
+.svc-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-bottom:32px; }
+.svc { background:var(--white); border:1px solid rgba(191,192,171,0.3); padding:32px 28px; border-top:3px solid var(--sage); display:flex; flex-direction:column; transition:border-top-color 0.2s; }
+.svc:hover { border-top-color:var(--mauve); }
+.svc-cat { font-family:'Jost',sans-serif; font-size:9px; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--sage-mid,#8e988f); display:block; margin-bottom:8px; }
+.svc h3 { font-size:20px; color:var(--bark); margin-bottom:10px; line-height:1.25; }
+.svc p { font-size:14px; line-height:1.8; color:var(--forest); flex:1; margin-bottom:16px; }
+.svc-price { font-family:'Jost',sans-serif; font-size:12px; font-weight:500; color:var(--mauve); margin-bottom:18px; display:block; }
+.svc-links { display:flex; gap:12px; flex-wrap:wrap; }
+.svc-link { font-family:'Jost',sans-serif; font-size:10px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; padding-bottom:2px; transition:color 0.2s,border-color 0.2s; }
+.svc-link.primary { color:var(--bark); border-bottom:1px solid var(--sage); }
+.svc-link.primary:hover { color:var(--mauve); border-color:var(--mauve); }
+.svc-link.secondary { color:var(--sage-mid,#8e988f); border-bottom:1px solid rgba(191,192,171,0.4); }
+@media(max-width:900px) { .svc-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer">@mindfulearth.eco</a>
+  <span class="top-bar-sep">·</span>
+  <a href="https://instagram.com/mindfulearth.events" target="_blank" rel="noopener noreferrer">@mindfulearth.events</a>
+  <span class="top-bar-sep">·</span>
+  <a href="https://instagram.com/mindfulearth.media" target="_blank" rel="noopener noreferrer">@mindfulearth.media</a>
+</div>
+
+<nav id="nav">
+  <a href="../../" class="nav-logo"><img src="../../assets/logo.png" alt="Mindful Earth" style="height:60px;width:auto;"></a>
+  <ul class="nav-center">
+    <li><a href="../our-story/">About</a></li>
+    <li><a href="../community/">Community</a></li>
+    <li><a href="../experiences/">Experiences</a></li>
+    <li><a href="../journal/">Learn</a></li>
+    <li><a href="../services/" class="nav-active">Services</a></li>
+    <li><a href="../give-back/">Give Back</a></li>
+  </ul>
+  <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a 30-Min Clarity Call</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="services-hero">
+  <div>
+    <span class="eyebrow" style="color:rgba(191,192,171,0.65);">What we offer</span>
+    <h1 style="font-size:clamp(38px,5vw,68px);color:var(--off-white);line-height:1.05;margin-bottom:16px;">Services built for<br><em style="font-style:italic;color:var(--sand);">wellness practitioners.</em></h1>
+    <p style="font-size:16px;color:rgba(239,232,220,0.75);max-width:480px;line-height:1.8;">From event planning and marketing to consulting and corporate wellness — every service is designed to help you build sustainably without burning out.</p>
+  </div>
+</section>
+
+<section style="background:rgba(191,192,171,0.08);padding:96px 10vw;">
+  <div style="max-width:640px;margin-bottom:52px;">
+    <span class="eyebrow">All services</span>
+    <h2 style="font-size:clamp(28px,3vw,40px);line-height:1.15;margin-bottom:14px;">How we can <em style="font-style:italic;color:var(--mauve);">work together.</em></h2>
+    <p style="font-size:15px;line-height:1.85;color:var(--forest);">All services are available for individual practitioners, wellness studios, and corporate organisations. Every engagement begins with a free 30-minute clarity call.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc">
+      <span class="svc-cat">Planning</span>
+      <h3>Event Planning &amp; Retreat Management</h3>
+      <p>Full-service event planning for wellness practitioners — from concept and logistics through to day-of management and post-event follow-up. Workshops, retreats, festivals, and corporate events.</p>
+      <span class="svc-price">From CA$111 · Packages available</span>
+      <div class="svc-links">
+        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="svc-link primary">Book a free call →</a>
+        <a href="../event-planning/" class="svc-link secondary">Learn more</a>
+      </div>
+    </div>
+    <div class="svc">
+      <span class="svc-cat">Marketing</span>
+      <h3>Wellness Business Marketing</h3>
+      <p>Brand positioning, content strategy, retreat launch plans, social media, email marketing, and the full suite of marketing support for wellness practitioners ready to grow with intention.</p>
+      <span class="svc-price">From CA$111 · Packages available</span>
+      <div class="svc-links">
+        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="svc-link primary">Book a free call →</a>
+        <a href="../media-marketing/" class="svc-link secondary">Learn more</a>
+      </div>
+    </div>
+    <div class="svc">
+      <span class="svc-cat">Consulting</span>
+      <h3>Wellness Business Consulting</h3>
+      <p>Strategic business support for wellness practitioners — offer development, pricing, positioning, systems, and the clarity to build something sustainable. 1:1 and package options available.</p>
+      <span class="svc-price">From CA$111 · Packages available</span>
+      <div class="svc-links">
+        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="svc-link primary">Book a free call →</a>
+        <a href="../wellness-consulting/" class="svc-link secondary">Learn more</a>
+      </div>
+    </div>
+    <div class="svc">
+      <span class="svc-cat">Corporate</span>
+      <h3>Corporate Wellness Programmes</h3>
+      <p>Bespoke wellness programming for organisations — from single workshops and team retreats through to ongoing wellness strategy and practitioner placement within corporate environments.</p>
+      <span class="svc-price">Starting at CA$1,000 · Individualised</span>
+      <div class="svc-links">
+        <a href="mailto:connect@mindfulearth.eco?subject=Corporate%20Wellness%20Enquiry" class="svc-link primary">Send an enquiry →</a>
+        <a href="../corporate-wellness/" class="svc-link secondary">Learn more</a>
+      </div>
+    </div>
+    <div class="svc">
+      <span class="svc-cat">Personal · 1:1 with Montana</span>
+      <h3>Yoga, Somatic &amp; Intuitive Mentorship</h3>
+      <p>1:1 yoga instruction, somatic bodywork, breathwork, energy healing, and intuitive mentorship with Montana Cindy. In-person and online. Every engagement begins with a free clarity call.</p>
+      <span class="svc-price">Varies by service · CA$111 strategy calls</span>
+      <div class="svc-links">
+        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="svc-link primary">Book a free call →</a>
+        <a href="../montana/" class="svc-link secondary">Work with Montana</a>
+      </div>
+    </div>
+    <div class="svc" style="background:var(--forest);border-color:var(--forest);border-top-color:var(--sand);">
+      <span class="svc-cat" style="color:rgba(191,192,171,0.6);">Not sure where to start</span>
+      <h3 style="color:var(--off-white);">Book a free clarity call</h3>
+      <p style="color:rgba(239,232,220,0.7);">30 minutes, free, no obligation. We will talk through what you are building and what kind of support would actually move the needle. If we are not the right fit, we will say so honestly.</p>
+      <span class="svc-price" style="color:var(--sand);">Free · 30 minutes</span>
+      <div class="svc-links">
+        <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;color:var(--sand);border-bottom:1px solid rgba(217,179,130,0.4);padding-bottom:2px;">Book now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER placeholder — uses shared footer -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="footer-brand-name">Mindful Earth</span>
+      <span class="footer-tagline">Return to Self, Community &amp; Nature</span>
+      <p class="footer-desc">A wellness ecosystem for practitioners, seekers, and the people building something meaningful.</p>
+    </div>
+    <div class="footer-col"><h4>Explore</h4><ul>
+      <li><a href="../our-story/">Our Story</a></li>
+      <li><a href="../experiences/">Experiences</a></li>
+      <li><a href="../journal/">The Journal</a></li>
+      <li><a href="../eco-pledge/">Eco Pledge</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Work Together</h4><ul>
+      <li><a href="../event-planning/">Event Planning</a></li>
+      <li><a href="../media-marketing/">Wellness Marketing</a></li>
+      <li><a href="../wellness-consulting/">Business Consulting</a></li>
+      <li><a href="../corporate-wellness/">Corporate Wellness</a></li>
+      <li><a href="../contact/">Work With Us</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Education</h4><ul>
+      <li><a href="../workbooks/">All Guides</a></li>
+      <li><a href="../grounded-growth/">Event Planning Guide</a></li>
+      <li><a href="../genuine-reach/">Marketing Guide</a></li>
+      <li><a href="../podcast/">Podcast</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul>
+      <li><a href="../community/">The Community</a></li>
+      <li><a href="../partnerships/">Brand Partnerships</a></li>
+      <li><a href="../contact/">Contact</a></li>
+    </ul></div>
+  </div>
+  <div style="padding-top:20px;margin-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;">
+    <span style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-mid);">Follow Us</span>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
+      <a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;">@mindfulearth.eco</a>
+      <a href="https://www.facebook.com/mindfuleartheco" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;">Facebook</a>
+      <a href="https://linkedin.com/company/mindful-earth-eco" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;">LinkedIn</a>
+      <a href="https://chat.whatsapp.com/GzOQyhpVlbS50fCpybsFGp" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;">WhatsApp Community</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      <a href="../privacy/">Privacy</a>
+      <a href="../terms/">Terms</a>
+      <a href="../cookies/">Cookies</a>
+    </div>
+    <span class="footer-copy">&copy; 2019&ndash;2026 Mindful Earth. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+document.getElementById('hamburger').addEventListener('click',function(){
+  document.getElementById('mobile-menu')?.classList.toggle('open');
+  this.classList.toggle('open');
+});
+</script>
+</body>
+</html>

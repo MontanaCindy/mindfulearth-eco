@@ -226,7 +226,7 @@ nav.dark .nav-hamburger span { background:var(--off-white); }
 
 /* ── FOOTER ── */
 footer { background:var(--forest); padding:64px 10vw 32px; }
-.footer-top { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:48px; margin-bottom:32px; padding-bottom:32px; border-bottom:1px solid rgba(191,192,171,0.15); }
+.footer-top { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr 1fr; gap:36px; margin-bottom:32px; padding-bottom:32px; border-bottom:1px solid rgba(191,192,171,0.15); }
 .footer-brand-name { font-family:'Gloock',serif; font-size:22px; color:var(--off-white); display:block; margin-bottom:6px; }
 .footer-tagline { font-family:'Lora',serif; font-style:italic; font-size:12px; color:var(--sand); display:block; margin-bottom:14px; }
 .footer-desc { font-size:13px; line-height:1.75; color:var(--sage); }
@@ -407,4 +407,20 @@ section.newsletter,
 
 @media(max-width:768px) {
   .hide-on-mobile { display:none !important; }
+}
+
+/* ── HERO DARK OVERLAYS (sitewide) ── */
+.page-hero, .inner-hero, .service-hero, .experiences-hero {
+  position: relative;
+}
+.page-hero::before, .inner-hero::before, .service-hero::before, .experiences-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 38, 30, 0.55);
+  z-index: 1;
+}
+.page-hero > *, .inner-hero > *, .service-hero > *, .experiences-hero > * {
+  position: relative;
+  z-index: 2;
 }

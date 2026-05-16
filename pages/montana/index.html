@@ -350,7 +350,7 @@
   display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
 }
 .m-testi-card {
-  background:var(--off-white); border:1px solid rgba(191,192,171,0.25);
+  background:var(--parchment); border:1px solid rgba(191,192,171,0.15);
   padding:28px 24px;
 }
 .m-testi-quote {
@@ -395,7 +395,7 @@
 /* MOBILE */
 @media(max-width:900px) {
   .m-hero { grid-template-columns:1fr; }
-  .m-hero-left { min-height:50vw; aspect-ratio:4/3; position:relative; }
+  .m-hero-left { min-height:60vw; aspect-ratio:3/4; position:relative; }
   .m-hero-right { padding:48px 6vw 60px; }
   .m-strip { grid-template-columns:repeat(2,1fr); height:200px; }
   .m-about { grid-template-columns:1fr; gap:40px; padding:64px 6vw; }
@@ -405,7 +405,7 @@
   .m-expect-grid { grid-template-columns:repeat(2,1fr); }
   .m-testi-grid { grid-template-columns:1fr; }
   .m-ready { grid-template-columns:1fr; gap:40px; padding:64px 6vw; }
-  .m-ready-portrait { aspect-ratio:16/9; }
+  .m-ready-portrait { aspect-ratio:3/4; background-position:center top; }
   .m-clarity-box { grid-template-columns:1fr; gap:14px; }
 }
 </style>
@@ -458,6 +458,7 @@
         <li><a href="../../pages/media-marketing/">Wellness Marketing</a></li>
         <li><a href="../../pages/wellness-consulting/">Wellness Business Consulting</a></li>
         <li><a href="../../pages/corporate-wellness/">Corporate Wellness</a></li>
+        <li><a href="../../pages/photography/">Retreat Photography</a></li>
         
       </ul>
     </li>
@@ -496,10 +497,10 @@
   </div>
   <div class="m-hero-right">
     <span class="eyebrow">Montana Cindy</span>
-    <h1 class="m-hero-name">Montana<em>Cindy.</em></h1>
+    <h1 class="m-hero-name" style="font-size:clamp(44px,5vw,72px);line-height:1.05;">Montana <em style="display:inline;font-style:italic;color:var(--mauve);">Cindy.</em></h1>
     <p class="m-hero-role">Wellness Business Consultant &middot; Retreat Photographer &middot; Somatic Practitioner &middot; Retreat Host</p>
-    <p class="m-hero-intro">Where spirit meets science and psychology. I work with wellness practitioners who are building their brand and want clarity, structure, and support — alongside the somatic and healing work that makes the building sustainable.</p>
-    <p class="m-hero-intro">Based in London. Working globally. Retreats internationally.</p>
+    <p class="m-hero-intro">Retreat &amp; event planner, wellness business mentor, somatic practitioner, yoga teacher, and retreat photographer. I work with practitioners who are building something real — helping them plan and market their events, grow their brand, and do the inner work that makes the building sustainable.</p>
+    <p class="m-hero-intro">Six years of international wellness operations. Based in London. Working globally. Retreats internationally.</p>
     <div class="m-hero-tags">
       <span class="m-hero-tag">Somatic Work</span>
       <span class="m-hero-tag">Yoga &amp; Breathwork</span>
@@ -523,23 +524,25 @@
 
 <!-- ═══ PHOTO STRIP ═══ -->
 <div class="m-strip">
-  <div class="m-strip-photo"></div>
-  <div class="m-strip-photo"></div>
-  <div class="m-strip-photo"></div>
-  <div class="m-strip-photo"></div>
+  <div class="m-strip-photo" style="background-image:url('../../images/montana-moment-1.jpg')" onerror="this.style.display='none'"></div>
+  <div class="m-strip-photo" style="background-image:url('../../images/montana-retreat-1.jpg')" onerror="this.style.display='none'"></div>
+  <div class="m-strip-photo" style="background-image:url('../../images/montana-travel-1.jpg')" onerror="this.style.display='none'"></div>
+  <div class="m-strip-photo" style="background-image:url('../../images/montana-moment-2.jpg')" onerror="this.style.display='none'"></div>
 </div>
 
 <!-- ═══ ABOUT ═══ -->
 <section class="m-about">
   <div class="m-about-text">
     <span class="eyebrow">A bit about me</span>
-    <h2>Building something real<br><em>takes the whole person.</em></h2>
+    <h2>I built this from the<br><em>inside out.</em></h2>
     <div class="sand-rule"></div>
-    <p>I am Canadian-born, currently living in London. I started Mindful Earth in 2019 — first as handmade jewellery, then retreats, and now a full ecosystem for wellness practitioners. Through all of it, the thread has been the same: how do you build something meaningful without losing yourself in the process?</p>
-    <p>My work lives at the intersection of business strategy and somatic practice. I have a BSc in life sciences, 200hr yoga teacher training, 300hr somatic bodywork certification, and years of retreat hosting internationally — Nicaragua, Canada, and increasingly Europe. I say that not to impress you but because I know you want to know who you are working with.</p>
-    <p><strong>The person I work with is passionate about helping others — through retreats, events, or their own healing practice. They know their work is good. What they need is someone to help them build the structure around it.</strong> They want to connect, travel, do the inner work, and have fun along the way. They are driven and motivated, and they are tired of figuring it all out alone.</p>
-    <p>I have been that person. I know what it costs to give everything to the work while running on empty yourself. The burnout, the identity crises, the moments where you wonder if it is worth it. The failures that made me wiser. Those experiences are in every session I hold and every strategy I build.</p>
-    <p>I believe a truly holistic approach to building a wellness brand includes somatic and energetic work alongside the strategy — because the way you feel in your body affects every decision you make in your business. All packages reflect that.</p>
+    <p>I am Canadian — born and raised — and moved to London in 2025 not entirely knowing why. Only that something needed to shift, and sometimes you have to change the backdrop before you can change anything else. I brought my dog. I am still figuring the rest out.</p>
+    <p>I have lived with anxiety since I was six years old. It has shaped everything — the way I move through a room, the work I chose, the practitioner I became. A lot of what I do now is rooted in what I had to learn the hard way: how to regulate a nervous system that wanted to keep me small, how to work with fear rather than around it, how to show up anyway. Yoga found me at eighteen and hasn't left.</p>
+    <p>The past few years have held more grief than I knew how to carry. Loss has a way of doing that — making you a stranger to yourself. I am only just now finding my way back. I share this not for sympathy, but because I think it matters for you to know that the person you are working with has been in the dark too. Has sat with the kind of pain that doesn't go away, only changes shape. I am learning to live alongside mine, and I want to help you do the same.</p>
+    <p>I built Mindful Earth from all of that. From the belief that people should be able to do the things they dream of — host the retreat, build the brand, step into the role — and that there should be real, honest support available when they are ready to try. I love the inner work of it. The fear that comes with putting something into the world. The identity shifts that come with stepping into leadership. I have been through all of it. That is what I bring to this.</p>
+    <p>I believe in something larger than myself. I pray, not in a religious sense, but in the way of someone who is still on the journey — still figuring out what it means to trust, to surrender, to be held by something you cannot quite name. That spirituality is woven into everything I do, quietly.</p>
+    <p>One of my biggest dreams is to have retreat venues in different countries. Places I have visited enough times to love, and love enough to want to share. I am working toward that, one event at a time.</p>
+    <p style="font-size:13px;color:var(--sage-mid);font-style:italic;margin-top:8px;">BSc life sciences · 200hr YTT · 300hr somatic bodywork certification · Six years of international retreat hosting</p>
     <a href="https://cal.com/montana-king-mrfkvt/clarity-call" target="_blank" rel="noopener noreferrer" class="btn-forest" style="display:inline-block;margin-top:8px;">Book a Clarity Call</a>
   </div>
   <div class="m-about-aside">
@@ -562,6 +565,10 @@
     <div class="m-slide"></div>
   </div>
   <span class="m-slider-caption">Nicaragua · Canada · London · Greece · Ireland · Colombia · Italy</span>
+  <div style="position:absolute;bottom:20px;left:10vw;margin-top:28px;">
+    <a href="../travel-journal/" style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(248,246,241,0.5);text-decoration:none;border-bottom:1px solid rgba(248,246,241,0.2);padding-bottom:2px;margin-right:20px;">Travel Journal →</a>
+    <a href="../photography/" style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(248,246,241,0.5);text-decoration:none;border-bottom:1px solid rgba(248,246,241,0.2);padding-bottom:2px;">Photography Gallery →</a>
+  </div>
   <div class="m-slider-controls">
     <button class="m-slider-btn" onclick="slideLeft()" aria-label="Previous">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
@@ -577,7 +584,10 @@
   <div class="m-services-intro">
     <span class="eyebrow">Work With Montana</span>
     <h2>Where do you want<br>to <em>begin?</em></h2>
-    <p>My ideal client is building a wellness brand and wants clarity, structure, and support. The services below reflect what most people come to me for first — but all of them weave in somatic and energetic work, because I believe that is what makes the building sustainable rather than depleting.</p>
+    <p>Working with me is for you if you are somewhere in the middle of building something — a retreat, a brand, a practice — and it feels bigger than you expected. If you are scared of getting it wrong. If you have the vision but not the structure. If you are doing the inner work and the outer work at the same time and it is a lot.</p>
+    <p>You have come to the right place. I know how it feels to stand at the beginning of something and not know where to start. I know the particular overwhelm of trying to plan an event, market it honestly, and still show up as a whole person. I have been there — many times. I am still there, in different ways.</p>
+    <p>I work with the nervous system. I work with fear and anxiety. I work with the stories that keep people from stepping into what they are here to do. And I work with the practical stuff too — the logistics, the marketing, the brand. All of it, together, because that is the only way it actually works.</p>
+    <p>No pressure. No wrong entry point. Everything starts with a free thirty-minute call.</p>
     <div class="m-clarity-box">
       <p><strong>How it works:</strong> Everything starts with a free 30-minute clarity call. We talk, I understand what you are carrying, and I send you the right booking link from there. No pressure, no guessing, no booking the wrong thing.</p>
       <a href="https://cal.com/montana-king-mrfkvt/clarity-call" target="_blank" rel="noopener noreferrer" class="btn-sand" style="white-space:nowrap;flex-shrink:0;">Book a Call</a>
@@ -604,7 +614,8 @@
       <h3>Retreat Photography</h3>
       <span class="m-service-meta">Half day £350 · Full day £600 · Multi-day £450/day</span>
       <p>Intentional photography for wellness retreats and events — by someone who understands what is happening in the room. Includes edited photos, short-form reels, and raw footage. Available in London, EU, and internationally.</p>
-      <a href="https://cal.com/montana-king-mrfkvt/photography-enquiry" target="_blank" rel="noopener noreferrer" class="m-service-link">Book Photography Enquiry Call →</a>
+      <a href="../../pages/photography/" class="m-service-link" style="display:block;margin-bottom:8px;">View photography gallery →</a>
+      <a href="https://cal.com/montana-king-mrfkvt/photography-enquiry-call" target="_blank" rel="noopener noreferrer" class="m-service-link">Book Photography Enquiry Call →</a>
     </div>
     <div class="m-service-card">
       <span class="m-service-num">04</span>
@@ -661,8 +672,10 @@
 </section>
 
 <!-- ═══ TESTIMONIALS ═══ -->
-<section class="m-testimonials">
-  <h2>From the people<br><em>I have worked with.</em></h2>
+<section class="m-testimonials" style="position:relative;background-image:url('../../images/nicaragua-hero.jpg');background-size:cover;background-position:center;padding:80px 10vw;">
+  <div style="position:absolute;inset:0;background:rgba(42,50,42,0.72);"></div>
+  <div style="position:relative;z-index:2;">
+  <h2 style="color:var(--off-white);">From the people<br><em>I have worked with.</em></h2>
   <div class="m-testi-grid">
     <div class="m-testi-card">
       <span class="m-testi-bar"></span>
@@ -694,6 +707,73 @@
       <p class="m-testi-quote">"Montana is a warm, wholesome, and comforting energy. Her presence is full of compassion and kindness. She radiates all of the grace, peace and love that many of us seek to keep in our orbit."</p>
       <span class="m-testi-name">Retreat Guest</span> &nbsp;<span class="m-testi-role">Yoga Retreat</span>
     </div>
+  </div>
+</section>
+
+
+<!-- ═══ GUIDES ═══ -->
+<section style="background:var(--parchment);padding:80px 10vw;border-top:1px solid rgba(191,192,171,0.2);">
+  <div style="max-width:640px;margin-bottom:48px;">
+    <span class="eyebrow">Learn from my experience</span>
+    <h2 style="font-family:'Gloock',serif;font-size:clamp(28px,3vw,42px);color:var(--bark);line-height:1.1;margin-bottom:14px;">Guides built from<br><em style="font-style:italic;color:var(--mauve);">the inside out.</em></h2>
+    <p style="font-size:15px;line-height:1.9;color:var(--forest);">I have planned retreats, run events, and built a wellness brand from scratch. I know how overwhelming it feels and exactly why I made these — to give you a clear, practical, and honest resource so you can focus on the work itself. I have been there. These are built from real experience, not theory.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px;">
+    <a href="../grounded-growth/" style="text-decoration:none;">
+      <div style="aspect-ratio:3/4;background:var(--forest);background-image:url('../../images/guide-grounded-growth.jpg');background-size:cover;background-position:center;margin-bottom:12px;"></div>
+      <span style="font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-mid);display:block;margin-bottom:4px;">Event Planning</span>
+      <h4 style="font-family:'Gloock',serif;font-size:16px;color:var(--bark);margin-bottom:6px;">Grounded Growth</h4>
+      <span style="font-family:'Jost',sans-serif;font-size:11px;color:var(--forest);border-bottom:1px solid var(--sage);padding-bottom:2px;">CA$22 →</span>
+    </a>
+    <a href="../genuine-reach/" style="text-decoration:none;">
+      <div style="aspect-ratio:3/4;background:var(--sage);background-image:url('../../images/guide-genuine-reach.jpg');background-size:cover;background-position:center;margin-bottom:12px;"></div>
+      <span style="font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-mid);display:block;margin-bottom:4px;">Marketing</span>
+      <h4 style="font-family:'Gloock',serif;font-size:16px;color:var(--bark);margin-bottom:6px;">Genuine Reach</h4>
+      <span style="font-family:'Jost',sans-serif;font-size:11px;color:var(--forest);border-bottom:1px solid var(--sage);padding-bottom:2px;">CA$22 →</span>
+    </a>
+    <a href="../nervous-system-nourishment/" style="text-decoration:none;">
+      <div style="aspect-ratio:3/4;background:var(--bark);background-image:url('../../images/guide-nervous-system.jpg');background-size:cover;background-position:center;margin-bottom:12px;"></div>
+      <span style="font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-mid);display:block;margin-bottom:4px;">Wellness</span>
+      <h4 style="font-family:'Gloock',serif;font-size:16px;color:var(--bark);margin-bottom:6px;">Nervous System Nourishment</h4>
+      <span style="font-family:'Jost',sans-serif;font-size:11px;color:var(--forest);border-bottom:1px solid var(--sage);padding-bottom:2px;">CA$37 →</span>
+    </a>
+    <a href="../self-love-handbook/" style="text-decoration:none;">
+      <div style="aspect-ratio:3/4;background-image:url('../../images/guide-self-love.jpg');background-size:cover;background-position:center;margin-bottom:12px;background-color:var(--blush);"></div>
+      <span style="font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-mid);display:block;margin-bottom:4px;">Personal Growth</span>
+      <h4 style="font-family:'Gloock',serif;font-size:16px;color:var(--bark);margin-bottom:6px;">Cultivating Self-Love</h4>
+      <span style="font-family:'Jost',sans-serif;font-size:11px;color:var(--forest);border-bottom:1px solid var(--sage);padding-bottom:2px;">CA$37 →</span>
+    </a>
+  </div>
+  <a href="../workbooks/" style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest);text-decoration:none;border-bottom:1px solid var(--sage);padding-bottom:2px;">View all guides →</a>
+</section>
+
+<!-- ═══ PAST EXPERIENCES ═══ -->
+<section style="background:var(--off-white);padding:80px 10vw;border-top:1px solid rgba(191,192,171,0.2);">
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:24px;gap:24px;flex-wrap:wrap;">
+    <div>
+      <span class="eyebrow">Retreat hosting</span>
+      <h2 style="font-family:'Gloock',serif;font-size:clamp(26px,2.8vw,38px);color:var(--bark);line-height:1.15;">Why I love<br><em style="font-style:italic;color:var(--mauve);">hosting retreats.</em></h2>
+    </div>
+    <a href="../past-events/" style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--forest);text-decoration:none;border-bottom:1px solid var(--sage);padding-bottom:2px;white-space:nowrap;">View all past events →</a>
+  </div>
+  <p style="font-size:15px;line-height:1.9;color:var(--forest);max-width:680px;margin-bottom:40px;">I host retreats because I believe in what happens when people are brought together intentionally — properly fed, properly rested, properly held. The connections that form. The permission people give themselves to slow down. The way the room changes by day three when the guards come down and something real begins. People leave feeling less alone, more themselves, more certain that what they are looking for is actually possible. That is why I do this. Every time.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+    <div style="background:var(--white);border:1px solid rgba(191,192,171,0.25);padding:28px 24px;border-top:3px solid var(--forest);">
+      <span style="font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-mid);display:block;margin-bottom:8px;">Nicaragua · 2025</span>
+      <h4 style="font-family:'Gloock',serif;font-size:18px;color:var(--bark);margin-bottom:8px;">Cedar Mindful Nicaragua</h4>
+      <p style="font-size:13.5px;line-height:1.75;color:var(--forest);">7-day international retreat — yoga, surf, somatic work, and community. Sold out. San Juan del Sur, Nicaragua.</p>
+    </div>
+    <div style="background:var(--white);border:1px solid rgba(191,192,171,0.25);padding:28px 24px;border-top:3px solid var(--sand);">
+      <span style="font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-mid);display:block;margin-bottom:8px;">Ireland · Greece · Colombia · Italy</span>
+      <h4 style="font-family:'Gloock',serif;font-size:18px;color:var(--bark);margin-bottom:8px;">International Retreats</h4>
+      <p style="font-size:13.5px;line-height:1.75;color:var(--forest);">Wellness and yoga retreats hosted across Europe and Latin America — each one different, each one teaching me something I did not expect.</p>
+    </div>
+    <div style="background:var(--white);border:1px solid rgba(191,192,171,0.25);padding:28px 24px;border-top:3px solid var(--mauve);">
+      <span style="font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-mid);display:block;margin-bottom:8px;">Ongoing</span>
+      <h4 style="font-family:'Gloock',serif;font-size:18px;color:var(--bark);margin-bottom:8px;">Workshops &amp; Intensives</h4>
+      <p style="font-size:13.5px;line-height:1.75;color:var(--forest);">Nervous System Nourishment workshops, breathwork intensives, and somatic sessions — London and internationally.</p>
+    </div>
+  </div>
   </div>
 </section>
 
@@ -751,6 +831,7 @@ function ml_webform_success_41150854(){var $=ml_jQuery||jQuery;$('.ml-subscribe-
       <li><a href="../our-story/">Our Story</a></li>
       <li><a href="../experiences/">Experiences</a></li>
       <li><a href="../past-events/">Past Events</a></li>
+      <li><a href="../travel-journal/">Travel Journal</a></li>
       <li><a href="../journal/">The Journal</a></li>
       <li><a href="../eco-pledge/">Eco Pledge</a></li>
     </ul></div>
@@ -776,7 +857,7 @@ function ml_webform_success_41150854(){var $=ml_jQuery||jQuery;$('.ml-subscribe-
       <li><a href="../contact/">Contact</a></li>
     </ul></div>
   </div>
-  <div style="border-top:1px solid rgba(191,192,171,0.12);padding-top:20px;margin-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;">
+  <div style="padding-top:20px;margin-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;">
     <span style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-mid);">Follow Us</span>
     <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
       <a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;">@mindfulearth.eco</a>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Voice First — Using AI Without Losing What Makes You, You · Mindful Earth</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Jost:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bark:#5d4133; --forest:#4d554c; --sage:#bfc0ab; --sage-mid:#8e988f;
+  --sage-light:#f0f1eb; --sand:#d9b382; --parchment:#f5f0e8;
+  --off-white:#f8f6f1; --white:#ffffff; --mauve:#754b4d;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lora',serif;background:var(--parchment);color:var(--forest);line-height:1.8;}
+h1,h2,h3,h4{font-family:'Gloock',serif;font-weight:400;}
+
+/* DESKTOP WARNING */
+.desktop-warn{display:none;position:fixed;inset:0;background:var(--bark);z-index:9999;padding:40px;text-align:center;align-items:center;justify-content:center;flex-direction:column;gap:16px;}
+.desktop-warn h2{font-family:'Gloock',serif;font-size:24px;color:var(--sand);}
+.desktop-warn p{font-size:15px;color:var(--parchment);max-width:360px;line-height:1.7;}
+@media(max-width:900px){.desktop-warn{display:flex;}}
+
+/* COVER */
+.cover{background:var(--forest);min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:60px 80px;}
+.cover-top{display:flex;justify-content:space-between;align-items:flex-start;}
+.brand-name{font-family:'Gloock',serif;font-size:20px;color:var(--off-white);}
+.brand-tagline{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--sage);margin-top:4px;}
+.cover-badge{font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sand);background:rgba(217,179,130,0.12);border:1px solid rgba(217,179,130,0.3);padding:6px 14px;border-radius:2px;}
+.cover-mid{max-width:640px;}
+.cover-eyebrow{font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);display:block;margin-bottom:20px;}
+.cover-title{font-size:clamp(44px,5.5vw,72px);color:var(--off-white);line-height:1.05;margin-bottom:16px;}
+.cover-title em{font-style:italic;color:var(--sand);}
+.cover-sub{font-size:16px;color:rgba(239,232,220,0.7);line-height:1.8;max-width:500px;margin-bottom:32px;}
+.cover-rule{width:48px;height:2px;background:var(--sand);margin-bottom:24px;}
+.cover-bonus{font-family:'Jost',sans-serif;font-size:12px;color:rgba(191,192,171,0.6);font-style:italic;}
+.cover-bottom{display:flex;justify-content:space-between;align-items:flex-end;padding-top:32px;border-top:1px solid rgba(191,192,171,0.12);}
+.designed-by{font-family:'Jost',sans-serif;font-size:11px;color:rgba(191,192,171,0.4);letter-spacing:0.06em;}
+
+/* BODY */
+.page{max-width:760px;margin:0 auto;padding:80px 40px;}
+
+/* INTRO */
+.intro{padding:64px 80px;background:var(--white);border-bottom:1px solid rgba(191,192,171,0.2);}
+.intro p{font-size:16px;line-height:2;color:var(--forest);margin-bottom:20px;}
+.intro p:last-child{margin-bottom:0;}
+.intro strong{font-weight:500;color:var(--bark);}
+
+/* SECTIONS */
+.guide-section{padding:56px 80px;background:var(--white);border-bottom:1px solid rgba(191,192,171,0.15);}
+.guide-section:nth-child(even){background:var(--off-white);}
+.section-eyebrow{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage-mid);display:block;margin-bottom:10px;}
+.section-title{font-size:clamp(22px,2.5vw,32px);color:var(--bark);margin-bottom:16px;line-height:1.2;}
+.section-title em{font-style:italic;}
+.section-body p{font-size:15px;line-height:1.95;color:var(--forest);margin-bottom:18px;}
+.section-body p:last-child{margin-bottom:0;}
+.section-body strong{font-weight:500;color:var(--bark);}
+.section-body em{font-style:italic;}
+
+/* CALLOUT */
+.callout{background:rgba(93,65,51,0.05);border-left:3px solid var(--sand);padding:20px 24px;margin:24px 0;}
+.callout p{font-size:14px;line-height:1.85;color:var(--forest);}
+.callout strong{color:var(--bark);}
+.callout.mauve{background:rgba(117,75,77,0.05);border-left-color:var(--mauve);}
+.callout.forest{background:rgba(77,85,76,0.06);border-left-color:var(--forest);}
+
+/* PROMPT CARD */
+.prompt-section{margin:28px 0;}
+.prompt-label{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-mid);display:block;margin-bottom:10px;}
+.prompt-card{background:var(--sage-light);border:1px solid rgba(191,192,171,0.4);padding:20px 24px;margin-bottom:10px;position:relative;}
+.prompt-card p{font-size:14px;line-height:1.8;color:var(--forest);font-style:italic;}
+.prompt-card::before{content:'"';font-family:'Gloock',serif;font-size:48px;color:var(--sage);position:absolute;top:-8px;left:16px;line-height:1;}
+.prompt-card p{padding-left:20px;}
+.prompt-note{font-family:'Jost',sans-serif;font-size:11px;color:var(--sage-mid);font-style:italic;margin-top:6px;padding-left:4px;}
+
+/* BEFORE/AFTER */
+.before-after{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:24px 0;border:1px solid rgba(191,192,171,0.3);}
+.ba-col{padding:24px 28px;}
+.ba-col:first-child{background:rgba(93,65,51,0.05);border-right:1px solid rgba(191,192,171,0.3);}
+.ba-col:last-child{background:rgba(77,85,76,0.05);}
+.ba-label{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;display:block;margin-bottom:14px;}
+.ba-col:first-child .ba-label{color:var(--bark);}
+.ba-col:last-child .ba-label{color:var(--forest);}
+.ba-item{font-size:13.5px;line-height:1.75;color:var(--forest);padding:8px 0;border-bottom:1px solid rgba(191,192,171,0.15);}
+.ba-item:last-child{border-bottom:none;}
+
+/* RULE */
+.process-steps{counter-reset:steps;display:flex;flex-direction:column;gap:0;margin:24px 0;}
+.step{counter-increment:steps;display:grid;grid-template-columns:48px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid rgba(191,192,171,0.15);align-items:start;}
+.step:last-child{border-bottom:none;}
+.step-num{font-family:'Gloock',serif;font-style:italic;font-size:28px;color:var(--sand);line-height:1;padding-top:2px;}
+.step-body h4{font-family:'Gloock',serif;font-size:17px;color:var(--bark);margin-bottom:8px;}
+.step-body p{font-size:14px;line-height:1.8;color:var(--forest);}
+
+/* EXAMPLE BOX */
+.example{margin:20px 0;}
+.example-label{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-mid);display:block;margin-bottom:8px;}
+.example-box{background:var(--white);border:1px solid rgba(191,192,171,0.35);padding:20px 24px;}
+.example-box p{font-size:14px;line-height:1.85;color:var(--forest);}
+.example-box.bad{border-left:3px solid rgba(93,65,51,0.3);}
+.example-box.good{border-left:3px solid var(--forest);}
+
+/* INTERACTIVE */
+textarea{width:100%;font-family:'Lora',serif;font-size:14px;color:var(--forest);background:var(--sage-light);border:1px solid rgba(191,192,171,0.5);padding:12px 16px;border-radius:2px;outline:none;transition:border-color 0.2s;resize:vertical;min-height:80px;}
+textarea:focus{border-color:var(--forest);background:var(--white);}
+.field-label{font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--forest);display:block;margin-bottom:8px;}
+.field-hint{font-family:'Lora',serif;font-size:12px;font-style:italic;color:var(--sage-mid);display:block;margin-bottom:8px;line-height:1.6;}
+.field-group{margin-bottom:24px;}
+
+/* FOOTER */
+.guide-footer{background:var(--bark);padding:56px 80px;}
+.gf-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+.gf-brand h3{font-family:'Gloock',serif;font-size:22px;color:var(--off-white);margin-bottom:6px;}
+.gf-brand p{font-size:13px;color:rgba(239,232,220,0.55);line-height:1.8;margin-top:8px;max-width:340px;}
+.gf-credit{font-family:'Jost',sans-serif;font-size:10px;color:rgba(191,192,171,0.4);letter-spacing:0.08em;margin-top:16px;}
+.gf-guides{display:flex;flex-direction:column;gap:14px;}
+.gf-guide{background:rgba(255,255,255,0.06);border:1px solid rgba(191,192,171,0.1);padding:20px 22px;}
+.gf-guide h4{font-family:'Gloock',serif;font-size:16px;color:var(--sand);margin-bottom:6px;}
+.gf-guide p{font-size:13px;color:rgba(239,232,220,0.55);line-height:1.7;margin-bottom:10px;}
+.gf-guide a{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);text-decoration:none;}
+
+/* SAVE */
+.save-btn{position:fixed;bottom:32px;right:32px;background:var(--forest);color:var(--off-white);border:none;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:12px 22px;cursor:pointer;border-radius:2px;box-shadow:0 4px 20px rgba(0,0,0,0.2);z-index:50;}
+.save-confirm{position:fixed;bottom:32px;right:32px;background:var(--sand);color:var(--bark);font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:12px 22px;border-radius:2px;z-index:50;display:none;}
+</style>
+</head>
+<body>
+
+<div class="desktop-warn">
+  <h2>Best viewed on desktop</h2>
+  <p>Open this on a laptop or desktop for the full experience.</p>
+</div>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-top">
+    <div>
+      <div class="brand-name">Mindful Earth</div>
+      <div class="brand-tagline">Return to Self, Community &amp; Nature</div>
+    </div>
+    <div class="cover-badge">Free Bonus Guide</div>
+  </div>
+  <div class="cover-mid">
+    <span class="cover-eyebrow">The AI Authenticity Guide</span>
+    <h1 class="cover-title">Your Voice<br><em>First.</em></h1>
+    <p class="cover-sub">How to use AI as a thinking partner without sounding like one — a practical guide for wellness practitioners who want to work smarter without losing what makes their work real.</p>
+    <div class="cover-rule"></div>
+    <p class="cover-bonus">Free bonus — included with your Grounded Growth or Genuine Reach purchase</p>
+  </div>
+  <div class="cover-bottom">
+    <div class="designed-by">Designed by Montana Cindy · Mindful Earth · mindfulearth.eco</div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<div class="intro">
+  <p>You have probably noticed it. A caption that reads like it was written by committee. A newsletter that sounds polished but somehow empty. A retreat description that has all the right words — transformation, nourishment, healing — and none of the actual person behind it.</p>
+  <p>This is what happens when people use AI to do their thinking for them instead of to sharpen it. And it is spreading through the wellness space fast — because AI tools are genuinely useful and the temptation to just ask them to "write my Instagram bio" or "write a caption for my retreat" is completely understandable when you are stretched thin.</p>
+  <p>But here is the thing: <strong>your audience can feel the difference.</strong> Not always consciously. But something in them recognises when they are reading a person versus a template. And in a field that is entirely built on trust, presence, and genuine human connection — that difference matters enormously.</p>
+  <p>This guide is not anti-AI. Montana uses AI every day in building Mindful Earth. It is one of the most useful tools available for a solo founder running a business on limited time and budget. <strong>The key is using it in the right order.</strong></p>
+  <p>Your voice first. AI second. Always.</p>
+</div>
+
+<!-- SECTION 1 -->
+<div class="guide-section">
+  <span class="section-eyebrow">The Core Principle</span>
+  <h2 class="section-title">AI is a thinking partner,<br>not a <em>ghostwriter.</em></h2>
+  <div class="section-body">
+    <p>There is a fundamental difference between using AI to help you think more clearly and using AI to think for you. The first makes you better at your work. The second produces content that sounds like everyone else who gave AI the same brief.</p>
+    <p>When you ask AI to write your retreat description from scratch, you get a retreat description. It will be grammatically correct, appropriately warm, and utterly generic. It will use words like "transformative journey" and "safe space" and "reconnect with yourself" — because those are the words every retreat description uses, and AI learned from all of them.</p>
+    <p>When you start with your own words — even rough, unpolished, rambling notes — and then ask AI to help you shape, tighten, or develop them, something different happens. The ideas are yours. The perspective is yours. The specific thing only you would say is still in there. AI just helped you say it more clearly.</p>
+    <p><strong>That is the distinction this entire guide is built around.</strong></p>
+  </div>
+  <div class="before-after">
+    <div class="ba-col">
+      <span class="ba-label">❌ The wrong order</span>
+      <div class="ba-item">"Write me a retreat description for a yoga and surf retreat in Nicaragua"</div>
+      <div class="ba-item">AI produces generic template</div>
+      <div class="ba-item">You change a few words</div>
+      <div class="ba-item">You post it feeling vaguely uncomfortable</div>
+      <div class="ba-item">Nobody books because nobody feels you in it</div>
+    </div>
+    <div class="ba-col">
+      <span class="ba-label">✓ The right order</span>
+      <div class="ba-item">You write rough notes: what this retreat is, why you run it, who it is for, what changed for you the first time you went to Nicaragua</div>
+      <div class="ba-item">You share those notes with AI and ask it to help you shape them into a description</div>
+      <div class="ba-item">You read the result and edit what does not sound like you</div>
+      <div class="ba-item">The final version is yours — AI just helped you get there faster</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="guide-section">
+  <span class="section-eyebrow">On Tools</span>
+  <h2 class="section-title">Why we recommend<br><em>Claude.</em></h2>
+  <div class="section-body">
+    <p>There are a lot of AI tools available. We use and recommend Claude (claude.ai), specifically for wellness practitioners working on their brand voice, content, and marketing.</p>
+    <p>The reason is nuanced but important: Claude is trained to understand context, hold a conversation, and work with you over a long session in a way that produces more thoughtful, less template-like output. It asks clarifying questions and holds the thread of what you have told it earlier in the conversation. It is more likely to push back on generic output and more able to capture something specific to you if you give it enough to work with.</p>
+    <p>For wellness practitioners specifically — people whose work is built on nuance, presence, and genuine human connection — this matters. You need a tool that can engage with the subtlety of what you do, not one that pattern-matches to the nearest wellness cliché.</p>
+    <p>The most important thing you can do before any AI session: <strong>tell it who you are, what your voice sounds like, and what you are trying to avoid.</strong> The more context you give it, the better the output.</p>
+  </div>
+  <div class="callout forest">
+    <p><strong>Before you start any AI session for your business, paste this in:</strong> "I am [your name], a [what you do] based in [where]. My voice is [3 words that describe how you write/speak]. I work with [who you work with]. I want my content to feel [what you want it to feel like]. I want to avoid [what you want to avoid — e.g. overly spiritual language, toxic positivity, salesy pressure]. Here is an example of something I have written that sounds like me: [paste something real you have written]."</p>
+  </div>
+  <div class="field-group" style="margin-top:28px;">
+    <span class="field-label">Your AI context paragraph — write it once, use it every time</span>
+    <span class="field-hint">Fill this in now. Copy it at the start of every Claude session. This is the single most useful thing in this guide.</span>
+    <textarea id="ai_context" style="min-height:140px;" placeholder="I'm [name], a [what you do] based in [where]. My voice is [3 words]. I work with [who]. I want my content to feel [what]. I want to avoid [what]. Here's something I've written that sounds like me: [paste an example]..."></textarea>
+  </div>
+</div>
+
+<!-- SECTION 3 — THE PROCESS -->
+<div class="guide-section">
+  <span class="section-eyebrow">The Process</span>
+  <h2 class="section-title">Your voice first —<br>every <em>single time.</em></h2>
+  <div class="section-body">
+    <p>This is the process that keeps your content sounding like you, regardless of how much AI you use in the making of it.</p>
+  </div>
+  <div class="process-steps">
+    <div class="step">
+      <span class="step-num">01</span>
+      <div class="step-body">
+        <h4>Start with a brain dump — not a brief</h4>
+        <p>Before you open Claude, open a notes app or a blank document and write everything you actually think and feel about whatever you are trying to communicate. It does not need to be good. It needs to be yours. What is the real thing you want to say? What is the experience you are trying to describe? What would you say if you were telling a friend?</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">02</span>
+      <div class="step-body">
+        <h4>Paste your context paragraph first</h4>
+        <p>Start every Claude session with the paragraph you wrote above. This sets the tone and stops AI from defaulting to generic. It knows who you are and what you sound like before you ask it to do anything.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">03</span>
+      <div class="step-body">
+        <h4>Share your brain dump, not a blank canvas</h4>
+        <p>Give Claude your rough notes and ask it to help you shape them — not write from scratch. The brief is: "Here is what I am trying to say in my own messy words. Help me say it more clearly, keeping my voice." The difference in output is significant.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">04</span>
+      <div class="step-body">
+        <h4>Read it out loud before you use it</h4>
+        <p>This is the simplest test. If you read it out loud and there is a moment where you would not say that, that is where AI slipped in. Edit those parts back to your voice. A few minutes of editing keeps the whole piece genuine.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">05</span>
+      <div class="step-body">
+        <h4>Use AI for the parts that drain you, not the parts that define you</h4>
+        <p>There are parts of running a business that are genuinely tedious — formatting, structures, first drafts of contracts, research, SEO descriptions, FAQ pages. AI is brilliant for these. The parts that define you — your story, your philosophy, your retreat description, your personal bio — start with you. Always.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4 — PROMPTS -->
+<div class="guide-section">
+  <span class="section-eyebrow">Practical Prompts</span>
+  <h2 class="section-title">Prompts that work —<br>for <em>wellness practitioners.</em></h2>
+  <div class="section-body">
+    <p>These are prompts designed to support your work without replacing your voice. Copy, adapt, and make them yours. Always paste your context paragraph first.</p>
+  </div>
+
+  <h3 style="font-family:'Gloock',serif;font-size:18px;color:var(--bark);margin:28px 0 16px;">For content and captions</h3>
+
+  <div class="prompt-section">
+    <span class="prompt-label">When you have rough notes but need a caption</span>
+    <div class="prompt-card">
+      <p>Here are my rough notes about [what you want to share]: [paste notes]. Can you help me turn this into an Instagram caption that sounds like me — conversational, honest, not salesy? Keep my specific words where possible and flag anything that sounds too generic.</p>
+    </div>
+    <div class="prompt-note">→ Then edit whatever still does not sound like you. This should take 5 minutes, not 30.</div>
+  </div>
+
+  <div class="prompt-section">
+    <span class="prompt-label">When you are stuck on what to say</span>
+    <div class="prompt-card">
+      <p>I want to share something about [topic] but I am not sure how to frame it. Here is what I actually think about it: [write what you actually think, even if it is messy]. What angles could I take with this? Give me 5 options — some personal, some educational, some that speak directly to the person I am trying to reach.</p>
+    </div>
+  </div>
+
+  <div class="prompt-section">
+    <span class="prompt-label">When you want to repurpose something you have written</span>
+    <div class="prompt-card">
+      <p>Here is something I wrote that I am happy with: [paste it]. Can you help me turn this into: 1) a shorter Instagram caption 2) a subject line for an email 3) a Pinterest pin description — all in the same voice as the original?</p>
+    </div>
+  </div>
+
+  <h3 style="font-family:'Gloock',serif;font-size:18px;color:var(--bark);margin:28px 0 16px;">For retreat and event copy</h3>
+
+  <div class="prompt-section">
+    <span class="prompt-label">For a retreat description that sounds like you</span>
+    <div class="prompt-card">
+      <p>I am writing the description for my retreat. Here is everything about it in my own words: [write everything — dates, location, what happens, who it is for, why you run it, what you want people to feel, what past participants have said]. Can you help me shape this into a 200-word retreat description? Keep it warm and specific — not generic wellness language. Flag any phrases that sound like every other retreat description.</p>
+    </div>
+  </div>
+
+  <div class="prompt-section">
+    <span class="prompt-label">For an email to your list</span>
+    <div class="prompt-card">
+      <p>I need to write an email to my list about [topic]. Here is the core of what I want to say: [your rough version]. The tone should feel like I am writing to someone I actually know — not a newsletter blast. Can you help me shape this and suggest a subject line? Point out anything that sounds performative or overly formal.</p>
+    </div>
+  </div>
+
+  <h3 style="font-family:'Gloock',serif;font-size:18px;color:var(--bark);margin:28px 0 16px;">For the business side</h3>
+
+  <div class="prompt-section">
+    <span class="prompt-label">For the parts that are genuinely tedious</span>
+    <div class="prompt-card">
+      <p>I need to write [FAQ page / cancellation policy / terms and conditions / booking confirmation email / invoice template]. Here are the key details: [list the specifics]. Can you draft this for me? It does not need to sound like my brand voice — it just needs to be clear, professional, and cover everything important.</p>
+    </div>
+    <div class="prompt-note">→ These are the tasks AI is genuinely brilliant for. Let it do the heavy lifting here so your energy goes where it counts.</div>
+  </div>
+
+  <div class="prompt-section">
+    <span class="prompt-label">For feedback on something you have written</span>
+    <div class="prompt-card">
+      <p>Here is something I have written: [paste it]. I want honest feedback. Does it sound like a real person wrote it? Are there any phrases that feel generic or like they could have come from any wellness brand? What is the strongest line? What would you cut?</p>
+    </div>
+    <div class="prompt-note">→ This is one of the most useful things you can do with AI — use it as an editor, not just a writer.</div>
+  </div>
+
+  <div class="prompt-section">
+    <span class="prompt-label">When you are genuinely stuck</span>
+    <div class="prompt-card">
+      <p>I am trying to [what you are trying to do] and I have hit a wall. Here is what I have tried so far: [what you have tried]. Here is what is not working: [what is not working]. I am not looking for you to write it for me — I need help thinking through the problem. What questions should I be asking myself? What am I missing?</p>
+    </div>
+    <div class="prompt-note">→ Using AI to think rather than produce is often the most valuable use of the tool.</div>
+  </div>
+</div>
+
+<!-- SECTION 5 — WHAT TO AVOID -->
+<div class="guide-section">
+  <span class="section-eyebrow">Red Flags</span>
+  <h2 class="section-title">How to spot when AI<br>has <em>taken over.</em></h2>
+  <div class="section-body">
+    <p>These are the phrases and patterns that appear when someone has let AI do too much of the thinking. If you see these in your own content, that is where to go back and make it yours again.</p>
+  </div>
+
+  <div class="callout" style="margin:0 0 16px;">
+    <p><strong>Words and phrases to watch for:</strong></p>
+    <p style="margin-top:10px;line-height:2.2;">"transformative journey" · "safe and sacred space" · "dive deep" · "show up as your authentic self" · "truly" and "genuinely" overused · "in today's fast-paced world" · "I am here to support you on your journey" · "nourish your mind, body, and soul" · "at the end of the day" · "it is time to" · sentences that start with "Whether you are..."</p>
+  </div>
+
+  <div class="callout mauve">
+    <p><strong>Structural patterns to watch for:</strong> Lists of three things where the third is the most dramatic. Sentences that end with an em dash for effect — like this. Opening with a rhetorical question. Closing every paragraph with a call to action. Any paragraph that could be copy-pasted onto a different wellness brand's website without changing a word.</p>
+  </div>
+
+  <div class="section-body" style="margin-top:24px;">
+    <p>The test is simple: <strong>could only you have written this?</strong> If the answer is no — if any yoga teacher or retreat host could have written the same thing — it needs more of you in it.</p>
+    <p>That does not mean you have to be radical or confessional or unconventional. It means your specific perspective, your specific experience, your specific relationship with this work needs to be somewhere in there. One genuine detail beats three polished sentences every time.</p>
+  </div>
+
+  <div class="example">
+    <span class="example-label">❌ AI wrote this</span>
+    <div class="example-box bad">
+      <p>"Join us for a truly transformative weekend retreat where you will dive deep into your authentic self, nourish your mind, body, and soul, and emerge ready to show up fully in your life. In today's fast-paced world, taking time for yourself is not a luxury — it is a necessity."</p>
+    </div>
+  </div>
+  <div class="example">
+    <span class="example-label">✓ A person wrote this</span>
+    <div class="example-box good">
+      <p>"This retreat came out of watching women arrive completely depleted and leave three days later with something different in their eyes — not fixed, but present again. I have run this retreat in Nicaragua twice now and both times, by day three, something shifts in the room that I cannot fully explain. That is what we are building toward."</p>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 6 — EXERCISES -->
+<div class="guide-section">
+  <span class="section-eyebrow">Put It Into Practice</span>
+  <h2 class="section-title">Three exercises to find<br>your <em>real voice.</em></h2>
+
+  <div class="section-body">
+    <p>Before you use AI for anything — do these three things. They take 20 minutes total and they will make every AI session you have after them significantly more useful.</p>
+  </div>
+
+  <div class="field-group" style="margin-top:8px;">
+    <span class="field-label">Exercise 1 — The voice memo transcript</span>
+    <span class="field-hint">Set a 3-minute timer. Speak out loud about why you do this work — as if you are explaining it to someone you have just met who is genuinely curious. Then transcribe what you said (voice memo → AI transcription). The way you speak is your voice. This is the material you work from.</span>
+    <textarea id="ex1" style="min-height:120px;" placeholder="Paste your transcribed voice memo here..."></textarea>
+  </div>
+
+  <div class="field-group">
+    <span class="field-label">Exercise 2 — The three things only you would say</span>
+    <span class="field-hint">What are three specific things about your work, your approach, or your perspective that no other practitioner would say in exactly the same way? They do not have to be radical. They just have to be genuinely yours.</span>
+    <textarea id="ex2" placeholder="1.&#10;2.&#10;3."></textarea>
+  </div>
+
+  <div class="field-group">
+    <span class="field-label">Exercise 3 — The sentence you'd never say</span>
+    <span class="field-hint">What is a phrase that appears constantly in wellness marketing that makes you cringe or roll your eyes? Write it down. Now write what you'd actually say instead to convey the same idea — in your own words.</span>
+    <textarea id="ex3" placeholder="I'd never say: '...'&#10;&#10;What I'd actually say: '...'"></textarea>
+  </div>
+
+  <div class="callout forest" style="margin-top:8px;">
+    <p><strong>Now open Claude.</strong> Paste your context paragraph. Share exercise 1. Tell it the three things from exercise 2 that you want to come through in your content. Tell it the phrase from exercise 3 that you want to avoid. Then ask it to help you with whatever you are working on. That session will produce something genuinely useful.</p>
+  </div>
+</div>
+
+<!-- CLOSING -->
+<div class="guide-section" style="background:var(--forest);">
+  <span class="section-eyebrow" style="color:var(--sage);">One Last Thing</span>
+  <h2 class="section-title" style="color:var(--off-white);">The point is not to use less AI.<br>It is to use it <em>better.</em></h2>
+  <div class="section-body">
+    <p style="color:rgba(239,232,220,0.8);">AI saves time. It helps you think through problems. It drafts the things that would take you an hour and does it in two minutes. For a solo founder or independent practitioner, it levels the playing field in a real way — you can produce the quality of content and materials that used to require a team.</p>
+    <p style="color:rgba(239,232,220,0.8);">None of that is worth anything if people stop trusting that there is a real person behind your brand.</p>
+    <p style="color:rgba(239,232,220,0.8);">The practitioners who will use AI well are the ones who stay clear on what only they can bring — their experience, their perspective, their specific relationship with this work — and use AI to help them communicate it more efficiently. Not to replace it.</p>
+    <p style="color:rgba(239,232,220,0.8);">Your voice is the thing that makes people book your retreat instead of someone else's. It is worth protecting.</p>
+    <p style="color:var(--sand);font-family:'Gloock',serif;font-style:italic;font-size:18px;margin-top:24px;">Your voice first. Always.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="guide-footer">
+  <div class="gf-inner">
+    <div class="gf-brand">
+      <h3>Mindful Earth</h3>
+      <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);margin-bottom:12px;">Return to Self, Community &amp; Nature</p>
+      <p>This guide is a free bonus — included with your Grounded Growth or Genuine Reach purchase. If you have not got the full guides yet, find them at mindfulearth.eco/pages/workbooks/</p>
+      <div class="gf-credit">Designed by Montana Cindy · Mindful Earth · mindfulearth.eco<br>Your Voice First — Free Bonus Guide</div>
+    </div>
+    <div class="gf-guides">
+      <div class="gf-guide">
+        <h4>Grounded Growth</h4>
+        <p>The Event Planning Guide — from first idea to full event, step by step. Budget tools, timeline builder, venue checklist, and everything else in one place.</p>
+        <a href="https://mindfulearth.eco/pages/workbooks/">Get it at mindfulearth.eco/pages/workbooks/</a>
+      </div>
+      <div class="gf-guide">
+        <h4>Genuine Reach</h4>
+        <p>The Brand &amp; Event Marketing Guide — how to build your brand and fill your events with the right people, in your own voice.</p>
+        <a href="https://mindfulearth.eco/pages/workbooks/">Use code BOTHGUIDES for 50% off when buying both →</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="save-btn" onclick="saveAll()">Save Notes</button>
+<div class="save-confirm" id="saveConfirm">Saved ✓</div>
+
+<script>
+const KEY = 'yv_guide_v1';
+function saveAll() {
+  const data = {};
+  document.querySelectorAll('textarea[id]').forEach(el => { data[el.id] = el.value; });
+  localStorage.setItem(KEY, JSON.stringify(data));
+  const btn = document.querySelector('.save-btn');
+  const conf = document.getElementById('saveConfirm');
+  btn.style.display = 'none'; conf.style.display = 'block';
+  setTimeout(() => { btn.style.display = 'block'; conf.style.display = 'none'; }, 2000);
+}
+function loadAll() {
+  const raw = localStorage.getItem(KEY);
+  if(!raw) return;
+  const data = JSON.parse(raw);
+  Object.entries(data).forEach(([id, val]) => {
+    const el = document.getElementById(id);
+    if(el) el.value = val;
+  });
+}
+document.addEventListener('change', saveAll);
+loadAll();
+</script>
+</body>
+</html>

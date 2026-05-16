@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nervous System Nourishment — Mindful Earth</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Jost:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest:#4d554c; --sage:#bfc0ab; --sage-light:#f0f1eb; --sage-mid:#8e988f;
+  --bark:#5d4133; --sand:#d9b382; --parchment:#f5f0e8; --off-white:#f8f6f1;
+  --mauve:#754b4d; --rose:#c17a8a; --white:#ffffff;
+  --ns-green:#3d4f3a; --ns-light:#e8ede7;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lora',serif;background:var(--ns-light);color:var(--bark);line-height:1.75;}
+h1,h2,h3,h4{font-family:'Gloock',serif;font-weight:400;}
+
+/* DESKTOP WARN */
+.desktop-warn{display:none;position:fixed;inset:0;background:var(--forest);z-index:9999;padding:40px;text-align:center;align-items:center;justify-content:center;flex-direction:column;gap:16px;}
+.desktop-warn h2{font-family:'Gloock',serif;font-size:24px;color:var(--off-white);}
+.desktop-warn p{font-size:15px;color:rgba(240,241,235,0.7);max-width:360px;line-height:1.7;}
+@media(max-width:900px){.desktop-warn{display:flex;}}
+
+/* COVER */
+.cover{min-height:100vh;background:var(--ns-green);display:grid;grid-template-rows:auto 1fr auto;padding:56px 80px;}
+.cover-brand{display:flex;justify-content:space-between;align-items:flex-start;}
+.cover-brand-name{font-family:'Gloock',serif;font-size:20px;color:var(--off-white);}
+.cover-brand-sub{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(240,241,235,0.45);margin-top:4px;}
+.cover-mid{display:flex;flex-direction:column;justify-content:center;padding:48px 0;}
+.cover-eyebrow{font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:rgba(191,192,171,0.55);display:block;margin-bottom:20px;}
+.cover-title{font-size:clamp(44px,6vw,80px);color:var(--off-white);line-height:0.95;margin-bottom:20px;}
+.cover-title em{font-style:italic;color:var(--sage);}
+.cover-by{font-family:'Jost',sans-serif;font-size:12px;color:rgba(240,241,235,0.45);letter-spacing:0.08em;margin-bottom:28px;}
+.cover-desc{font-size:15px;color:rgba(240,241,235,0.65);line-height:1.85;max-width:520px;border-left:2px solid rgba(191,192,171,0.25);padding-left:20px;}
+.cover-bottom{display:flex;justify-content:space-between;align-items:flex-end;padding-top:32px;border-top:1px solid rgba(191,192,171,0.12);}
+.cover-sections{display:flex;gap:24px;flex-wrap:wrap;}
+.cover-sec{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(191,192,171,0.45);}
+.cover-price{font-family:'Jost',sans-serif;font-size:11px;color:rgba(240,241,235,0.3);border:1px solid rgba(191,192,171,0.15);padding:6px 14px;}
+
+/* DISCLAIMER */
+.disclaimer{background:var(--parchment);padding:48px 80px;border-bottom:1px solid rgba(77,85,76,0.1);}
+.disclaimer h3{font-family:'Gloock',serif;font-size:20px;color:var(--bark);margin-bottom:14px;}
+.disclaimer p{font-size:13.5px;line-height:1.85;color:var(--bark);margin-bottom:10px;}
+.disclaimer p:last-child{margin-bottom:0;}
+
+/* PROGRESS */
+.progress-bar{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid rgba(77,85,76,0.12);padding:12px 80px;display:flex;align-items:center;gap:20px;}
+.progress-label{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--forest);white-space:nowrap;}
+.progress-track{flex:1;height:3px;background:var(--sage-light);border-radius:2px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--forest);border-radius:2px;transition:width 0.4s;}
+.progress-pct{font-family:'Jost',sans-serif;font-size:11px;font-weight:500;color:var(--forest);min-width:42px;text-align:right;}
+
+/* CHAPTER NAV */
+.chapter-nav{display:flex;gap:0;background:var(--white);border-bottom:2px solid var(--sage-light);position:sticky;top:52px;z-index:90;overflow-x:auto;}
+.cnav-item{padding:13px 18px;font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage-mid);text-decoration:none;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all 0.2s;white-space:nowrap;}
+.cnav-item:hover,.cnav-item.active{color:var(--forest);border-bottom-color:var(--forest);}
+
+/* CHAPTER HEADER */
+.chapter-header{padding:52px 80px;}
+.ch-green{background:var(--forest);}
+.ch-dark{background:var(--ns-green);}
+.ch-bark{background:var(--bark);}
+.ch-mauve{background:var(--mauve);}
+.ch-sand{background:#7a5a3a;}
+.chapter-num{font-family:'Gloock',serif;font-style:italic;font-size:60px;color:rgba(240,241,235,0.18);display:block;line-height:1;margin-bottom:4px;}
+.chapter-title{font-size:clamp(26px,3.2vw,42px);color:var(--off-white);line-height:1.1;margin-bottom:10px;}
+.chapter-title em{font-style:italic;color:var(--sage);}
+.chapter-desc{font-size:15px;color:rgba(240,241,235,0.6);max-width:560px;line-height:1.8;}
+.with-tag{display:inline-flex;align-items:center;gap:8px;font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(191,192,171,0.45);margin-top:12px;}
+
+/* SECTION */
+.section{padding:48px 80px;background:var(--white);border-bottom:1px solid rgba(77,85,76,0.08);}
+.section:nth-child(even){background:var(--off-white);}
+.section.sage-bg{background:var(--ns-light);}
+.section-title{font-size:22px;color:var(--bark);margin-bottom:8px;}
+.section-body p{font-size:14.5px;line-height:1.9;color:var(--bark);margin-bottom:14px;}
+.section-body p:last-child{margin-bottom:0;}
+
+/* INPUTS */
+.field-group{margin-bottom:20px;}
+.field-label{font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--forest);display:block;margin-bottom:8px;}
+.field-hint{font-size:12px;font-style:italic;color:var(--sage-mid);display:block;margin-bottom:8px;line-height:1.6;}
+textarea,input[type=text],input[type=date]{width:100%;font-family:'Lora',serif;font-size:14px;color:var(--bark);background:var(--ns-light);border:1px solid rgba(77,85,76,0.2);padding:12px 16px;border-radius:2px;outline:none;transition:border-color 0.2s;resize:vertical;min-height:90px;}
+textarea:focus,input[type=text]:focus,input[type=date]:focus{border-color:var(--forest);background:var(--white);}
+input[type=text],input[type=date]{min-height:auto;}
+input[type=range]{width:100%;accent-color:var(--forest);}
+
+/* CHECKLIST */
+.checklist{display:flex;flex-direction:column;}
+.check-item{display:grid;grid-template-columns:24px 1fr;gap:12px;padding:11px 0;border-bottom:1px solid rgba(77,85,76,0.08);align-items:start;}
+.check-item:last-child{border-bottom:none;}
+.check-item input[type=checkbox]{width:16px;height:16px;accent-color:var(--forest);margin-top:3px;cursor:pointer;}
+.check-item label{font-size:14px;line-height:1.6;color:var(--bark);cursor:pointer;}
+.check-item label small{display:block;font-size:12px;color:var(--sage-mid);font-style:italic;margin-top:2px;}
+.check-item.done label{text-decoration:line-through;color:var(--sage);}
+
+/* CALLOUT */
+.callout{background:rgba(77,85,76,0.06);border-left:3px solid var(--forest);padding:18px 22px;margin:16px 0;}
+.callout p,.callout{font-size:14px;line-height:1.85;color:var(--bark);}
+.callout strong{color:var(--forest);}
+.callout.dark{background:var(--ns-green);border-left-color:var(--sage);}
+.callout.dark p{color:rgba(240,241,235,0.78);}
+.callout.dark strong{color:var(--sage);}
+.callout.sand{background:rgba(217,179,130,0.1);border-left-color:var(--sand);}
+.callout.sand p,.callout.sand{color:var(--bark);}
+
+/* INFO GRID */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;}
+.info-card{background:var(--white);border:1px solid rgba(77,85,76,0.15);padding:22px 20px;}
+.info-card h4{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--forest);margin-bottom:10px;}
+.info-card p{font-size:13.5px;line-height:1.8;color:var(--bark);}
+.info-card.accent{border-top:3px solid var(--forest);}
+.info-card.accent-sand{border-top:3px solid var(--sand);}
+.info-card.accent-mauve{border-top:3px solid var(--mauve);}
+
+/* BREATH TYPES */
+.breath-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;}
+.breath-type{background:var(--ns-green);padding:24px 20px;}
+.breath-type h4{font-family:'Gloock',serif;font-size:17px;color:var(--off-white);margin-bottom:8px;}
+.breath-type .pattern{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);margin-bottom:10px;display:block;}
+.breath-type p{font-size:13px;line-height:1.75;color:rgba(240,241,235,0.65);}
+
+/* PRACTICE CARD */
+.practice-card{background:var(--white);border:1px solid rgba(77,85,76,0.15);padding:28px 32px;margin-bottom:16px;border-left:3px solid var(--forest);}
+.practice-card h4{font-family:'Gloock',serif;font-size:18px;color:var(--bark);margin-bottom:8px;}
+.practice-card p{font-size:14px;line-height:1.85;color:var(--bark);margin-bottom:10px;}
+.practice-card ol,.practice-card ul{padding-left:18px;font-size:14px;line-height:1.9;color:var(--bark);}
+.practice-card ol li,.practice-card ul li{margin-bottom:6px;}
+
+/* QUOTE */
+.quote-block{padding:40px 80px;background:var(--ns-green);}
+.quote-block blockquote{font-family:'Gloock',serif;font-style:italic;font-size:clamp(17px,2.2vw,24px);color:var(--off-white);line-height:1.6;max-width:700px;margin:0 auto 12px;}
+.quote-block cite{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(191,192,171,0.45);}
+
+/* JOURNAL */
+.journal-day{background:var(--white);border:1px solid rgba(77,85,76,0.15);padding:28px 32px;margin-bottom:16px;}
+.journal-day-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid rgba(77,85,76,0.1);}
+.journal-day-header h4{font-family:'Gloock',serif;font-size:18px;color:var(--bark);}
+.journal-day-header input[type=date]{width:160px;min-height:auto;font-size:12px;padding:6px 10px;}
+.day-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.day-grid .field-group{margin-bottom:0;}
+
+/* RATING */
+.rating-row{display:flex;align-items:center;gap:16px;margin:10px 0;}
+.rating-row input[type=range]{flex:1;}
+.rating-val{font-family:'Jost',sans-serif;font-size:11px;font-weight:500;color:var(--forest);min-width:24px;}
+
+/* FOOTER */
+.guide-footer{background:var(--ns-green);padding:48px 80px;}
+.gf-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+.gf-brand h3{font-family:'Gloock',serif;font-size:20px;color:var(--off-white);margin-bottom:6px;}
+.gf-brand p{font-size:13px;color:rgba(240,241,235,0.45);line-height:1.8;margin-top:8px;max-width:340px;}
+.gf-cta{background:rgba(255,255,255,0.05);border:1px solid rgba(191,192,171,0.15);padding:22px 24px;margin-bottom:14px;}
+.gf-cta h4{font-family:'Gloock',serif;font-size:16px;color:var(--sage);margin-bottom:8px;}
+.gf-cta p{font-size:13px;color:rgba(240,241,235,0.5);line-height:1.7;margin-bottom:10px;}
+.gf-cta a{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage-mid);text-decoration:none;}
+
+/* SAVE */
+.save-btn{position:fixed;bottom:32px;right:32px;background:var(--forest);color:var(--off-white);border:none;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:12px 22px;cursor:pointer;border-radius:2px;box-shadow:0 4px 20px rgba(0,0,0,0.2);z-index:50;transition:background 0.2s;}
+.save-btn:hover{background:var(--bark);}
+.save-confirm{position:fixed;bottom:32px;right:32px;background:var(--sand);color:var(--bark);font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:12px 22px;border-radius:2px;z-index:50;display:none;}
+
+/* TWO COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:20px 0;}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:20px 0;}
+</style>
+</head>
+<body>
+
+<div class="desktop-warn">
+  <h2>Best on desktop</h2>
+  <p>This interactive workbook is designed for desktop use. Please open it in Chrome on a laptop or desktop computer.</p>
+</div>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-brand">
+    <div><div class="cover-brand-name">Mindful Earth</div><div class="cover-brand-sub">Return to Self, Community &amp; Nature</div></div>
+    <div class="cover-price">CA$37</div>
+  </div>
+  <div class="cover-mid">
+    <span class="cover-eyebrow">A Mindful Earth Workbook</span>
+    <h1 class="cover-title">Nervous System<br><em>Nourishment.</em></h1>
+    <p class="cover-by">Written by Montana, Julia &amp; Em · Mindful Earth</p>
+    <p class="cover-desc">A workbook designed to teach you everything you need to know to begin restoring your nervous system and finding a consistent sense of regulation. Educational and practical content broken down for easy understanding and application.</p>
+  </div>
+  <div class="cover-bottom">
+    <div class="cover-sections">
+      <span class="cover-sec">01 Inner Awareness</span>
+      <span class="cover-sec">02 NS Regulation</span>
+      <span class="cover-sec">03 Breath Practices</span>
+      <span class="cover-sec">04 Holistic Nutrition</span>
+      <span class="cover-sec">05 Worksheets</span>
+    </div>
+    <div style="font-family:'Jost',sans-serif;font-size:11px;color:rgba(240,241,235,0.25);font-style:italic;">Chrome · Desktop recommended</div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer">
+  <h3>Before you begin</h3>
+  <p>Any information or practices in this workbook are not intended to serve as medical advice. Montana, Julia, and Em are not licensed medical professionals. Anything discussed reflects personal knowledge and experience — all recommendations should be followed up by a professional where appropriate.</p>
+  <p>This workbook is solely for your personal growth, education, and exploration — it is not a therapeutic activity such as medical treatment, psychotherapy, or counselling, and is not intended as such. You take full personal responsibility for your physical health and mental well-being throughout this process.</p>
+  <p>The contents of this workbook are owned by Mindful Earth. Please do not share this document with anyone who has not purchased it.</p>
+</div>
+
+<div class="progress-bar">
+  <span class="progress-label">Progress</span>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-pct" id="progressPct">0%</span>
+</div>
+
+<nav class="chapter-nav">
+  <a href="#intention" class="cnav-item">01 Inner Awareness</a>
+  <a href="#ns-reg" class="cnav-item">02 NS Regulation</a>
+  <a href="#breath" class="cnav-item">03 Breathwork</a>
+  <a href="#nutrition" class="cnav-item">04 Nutrition</a>
+  <a href="#worksheets" class="cnav-item">05 Worksheets</a>
+  <a href="#journal" class="cnav-item">06 Daily Journal</a>
+</nav>
+
+<!-- ═══ 01 INNER AWARENESS ═══ -->
+<div id="intention">
+<div class="chapter-header ch-dark">
+  <span class="chapter-num">01</span>
+  <h2 class="chapter-title">Inner Awareness &amp;<br><em>Intention Setting</em></h2>
+  <p class="chapter-desc">An introduction to the workbook and an intention setting practice for your journey through nervous system regulation.</p>
+</div>
+
+<div class="quote-block">
+  <blockquote>"I wish more people knew healing the nervous system is about being still. Laying in the sun, being present while you eat your food. Listening to the sounds of nature... Instead of more routine, the body needs less."</blockquote>
+  <cite>Dr. Nicole LePera · The Holistic Psychologist</cite>
+</div>
+
+<div class="section">
+  <h3 class="section-title">Inner Body Awareness Scan</h3>
+  <p style="font-size:14.5px;line-height:1.9;color:var(--bark);margin-bottom:20px;">Before getting started, take a moment to reflect on where you are at within your own nervous system. Developing an awareness of where you stand is the first step to cultivating regulation.</p>
+
+  <div style="background:var(--ns-green);padding:28px 32px;margin-bottom:28px;">
+    <h4 style="font-family:'Gloock',serif;font-size:17px;color:var(--off-white);margin-bottom:14px;">How to do a body scan</h4>
+    <ol style="padding-left:18px;font-size:14px;line-height:2.1;color:rgba(240,241,235,0.72);">
+      <li>Close your eyes and begin to notice your breath — don't try to change it. Just notice. Is it shallow? Does it feel stuck? Are you breathing into your belly or chest?</li>
+      <li>Slowly deepen your inhales and exhales at your own pace. Take your time.</li>
+      <li>Once your breath deepens, begin scanning your body — feet, legs, torso, up into your head. Don't rush.</li>
+      <li>Ask yourself: how is my nervous system feeling today? Do you feel stuck, stressed, anxious? Get curious.</li>
+    </ol>
+  </div>
+
+  <div class="field-group">
+    <span class="field-label">What did you notice in your body scan?</span>
+    <span class="field-hint">Be honest and non-judgemental — there are no wrong answers here.</span>
+    <textarea id="bs1" placeholder="Sensations, emotions, areas of tension or ease..."></textarea>
+  </div>
+  <div class="field-group">
+    <span class="field-label">Is there anything your body is asking for right now?</span>
+    <textarea id="bs2" style="min-height:70px;" placeholder="Rest, movement, nourishment, connection..."></textarea>
+  </div>
+</div>
+
+<div class="section sage-bg">
+  <h3 class="section-title">Intention Setting Practice</h3>
+  <div class="section-body">
+    <p>Now that you have a better understanding of where you're at, take some time to create an intention for your journey through this workbook. An intention is not a goal. Do not attach an expectation or evaluation to it. Your intention is to work towards aligning yourself with it over time.</p>
+    <p>Your nervous system based intention might be to listen to your body, to be present to how your body is feeling, or to have compassion for where you're currently at. For now, choose one thing to focus on.</p>
+  </div>
+
+  <div class="callout" style="margin:20px 0;">
+    <p><strong>First it is an intention → then a behaviour → then a habit → then it becomes second nature → then it is simply who you are.</strong></p>
+  </div>
+
+  <div class="field-group">
+    <span class="field-label">My intention for this journey</span>
+    <span class="field-hint">e.g. "Today, I will honour my need to slow down and rest."</span>
+    <input type="text" id="int1" placeholder="My intention is...">
+  </div>
+  <div class="two-col" style="margin-top:16px;">
+    <div class="field-group" style="margin-bottom:0;">
+      <span class="field-label">What does this intention mean to you?</span>
+      <textarea id="int2" style="min-height:80px;" placeholder="Why this one?"></textarea>
+    </div>
+    <div class="field-group" style="margin-bottom:0;">
+      <span class="field-label">How will you know when you are living it?</span>
+      <textarea id="int3" style="min-height:80px;" placeholder="What will be different?"></textarea>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ 02 NERVOUS SYSTEM REGULATION ═══ -->
+<div id="ns-reg">
+<div class="chapter-header ch-green">
+  <span class="chapter-num">02</span>
+  <h2 class="chapter-title">All About Nervous System<br><em>Regulation &amp; Nourishment</em></h2>
+  <p class="chapter-desc">Detailed knowledge about how the nervous system works, what nervous system regulation is, and how it impacts your overall well-being.</p>
+  <div class="with-tag">With Montana</div>
+</div>
+
+<div class="section">
+  <h3 class="section-title">The Nervous System</h3>
+  <div class="section-body">
+    <p>The Nervous System is responsible for all of our human functions — from thinking, problem solving, and voluntary movements to involuntary functions and digestion.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:20px 0;">
+    <div class="info-card accent">
+      <h4>Central Nervous System</h4>
+      <p>Contains the brain and spinal cord. The brain is the control center that processes information, interprets sensory input, and coordinates the body's responses.</p>
+    </div>
+    <div class="info-card accent">
+      <h4>Autonomic Nervous System</h4>
+      <p>Responsible for involuntary responses like breathing, heart rate, hormones, and digestion. Split into sympathetic (fight/flight) and parasympathetic (rest/digest).</p>
+    </div>
+    <div class="info-card accent">
+      <h4>Enteric Nervous System</h4>
+      <p>A complex network of neurons within the gastrointestinal tract. Plays a crucial role in regulating digestion — sometimes called the "second brain."</p>
+    </div>
+  </div>
+
+  <div class="info-grid" style="margin-top:24px;">
+    <div style="background:rgba(77,85,76,0.08);border:1px solid rgba(77,85,76,0.15);border-top:3px solid var(--forest);padding:24px;">
+      <h4 style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--forest);margin-bottom:10px;">Sympathetic — Fight or Flight</h4>
+      <p style="font-size:13.5px;line-height:1.8;color:var(--bark);">Prepares the body for action in response to stress or danger. Heart rate increases, respiration increases, pupils dilate, and digestion is inhibited to send energy elsewhere. Useful for taking action — but costly when chronically activated.</p>
+    </div>
+    <div style="background:rgba(117,75,77,0.06);border:1px solid rgba(117,75,77,0.15);border-top:3px solid var(--mauve);padding:24px;">
+      <h4 style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--mauve);margin-bottom:10px;">Parasympathetic — Rest &amp; Digest</h4>
+      <p style="font-size:13.5px;line-height:1.8;color:var(--bark);">Promotes relaxation, conserves energy, and restores the body after a stressor. Heart rate and respiration slow, digestion activates, nutrients are absorbed. Essential for recovery and healing.</p>
+    </div>
+  </div>
+
+  <h3 style="font-family:'Gloock',serif;font-size:20px;color:var(--bark);margin:32px 0 14px;">Nervous System Responses</h3>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;">
+    <div style="background:var(--white);border:1px solid rgba(77,85,76,0.15);padding:18px;border-top:3px solid var(--forest);">
+      <h4 style="font-family:'Gloock',serif;font-size:15px;color:var(--bark);margin-bottom:8px;">Fight</h4>
+      <p style="font-size:12.5px;line-height:1.7;color:var(--bark);">Aggression or defensiveness. The body prepares to confront the threat. More reactive, harder to think clearly.</p>
+    </div>
+    <div style="background:var(--white);border:1px solid rgba(77,85,76,0.15);padding:18px;border-top:3px solid var(--sand);">
+      <h4 style="font-family:'Gloock',serif;font-size:15px;color:var(--bark);margin-bottom:8px;">Flight</h4>
+      <p style="font-size:12.5px;line-height:1.7;color:var(--bark);">Instinct to escape or avoid. The body prepares to move away from the perceived threat rapidly.</p>
+    </div>
+    <div style="background:var(--white);border:1px solid rgba(77,85,76,0.15);padding:18px;border-top:3px solid var(--mauve);">
+      <h4 style="font-family:'Gloock',serif;font-size:15px;color:var(--bark);margin-bottom:8px;">Freeze</h4>
+      <p style="font-size:12.5px;line-height:1.7;color:var(--bark);">Immobility or reduced activity when the threat feels overwhelming. Can feel like shutdown or dissociation.</p>
+    </div>
+    <div style="background:var(--white);border:1px solid rgba(77,85,76,0.15);padding:18px;border-top:3px solid var(--rose);">
+      <h4 style="font-family:'Gloock',serif;font-size:15px;color:var(--bark);margin-bottom:8px;">Fawn</h4>
+      <p style="font-size:12.5px;line-height:1.7;color:var(--bark);">People-pleasing to avoid harm. Appeasement to avoid confrontation. Often associated with helplessness.</p>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <span class="field-label">Which response do you recognise most in yourself?</span>
+    <span class="field-hint">Notice without judgement — this is information, not a verdict.</span>
+    <textarea id="ns1" placeholder="What patterns do you notice in how you respond to stress?"></textarea>
+  </div>
+</div>
+
+<div class="section sage-bg">
+  <h3 class="section-title">Signs of a Dysregulated Nervous System</h3>
+  <p style="font-size:14px;line-height:1.85;color:var(--bark);margin-bottom:20px;">This is not an exhaustive list — dysregulation is often complex and typically impacts most aspects of daily functioning.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px;">
+    <div class="info-card"><h4>Cognitive</h4><p>Anxiety, depression, panic, feelings of overwhelm, memory problems, brain fog. When in fight/flight, energy is diverted away from the brain's optimal function.</p></div>
+    <div class="info-card"><h4>Digestive</h4><p>Nausea, diarrhea, or lack of appetite. When the sympathetic system is activated, the body struggles to digest nutrients properly.</p></div>
+    <div class="info-card"><h4>Emotional</h4><p>Less control over emotions — irritability, angry outbursts, consistent crying. Important to feel these in healthy ways so they do not impact daily life.</p></div>
+    <div class="info-card"><h4>Physical</h4><p>Increased muscle tension, aches, pains, and stiffness throughout the body. The nervous system response manifests physically.</p></div>
+    <div class="info-card"><h4>Daily Tasks</h4><p>Everyday tasks like cleaning, cooking, and self-care may feel overwhelming. Personal hygiene or home environment may suffer.</p></div>
+    <div class="info-card"><h4>Sleep</h4><p>Insomnia, constant fatigue, nightmares, or stress dreams. Sometimes the opposite — sleeping too much.</p></div>
+  </div>
+
+  <div class="field-group">
+    <span class="field-label">Which signs do you currently experience? Tick what applies:</span>
+  </div>
+  <div class="checklist" style="margin-bottom:24px;">
+    <div class="check-item"><input type="checkbox" id="d1" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="d1">Anxiety or persistent worry</label></div>
+    <div class="check-item"><input type="checkbox" id="d2" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="d2">Brain fog or difficulty concentrating</label></div>
+    <div class="check-item"><input type="checkbox" id="d3" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="d3">Digestive issues</label></div>
+    <div class="check-item"><input type="checkbox" id="d4" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="d4">Emotional dysregulation — reactive, easily overwhelmed</label></div>
+    <div class="check-item"><input type="checkbox" id="d5" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="d5">Muscle tension or physical pain</label></div>
+    <div class="check-item"><input type="checkbox" id="d6" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="d6">Sleep disturbances</label></div>
+    <div class="check-item"><input type="checkbox" id="d7" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="d7">Overwhelm with daily tasks</label></div>
+    <div class="check-item"><input type="checkbox" id="d8" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="d8">Disconnection from body or sense of numbness</label></div>
+  </div>
+
+  <div class="field-group">
+    <span class="field-label">Any additional symptoms you notice in yourself?</span>
+    <textarea id="ns2" style="min-height:70px;" placeholder="Be specific and honest..."></textarea>
+  </div>
+</div>
+
+<div class="section">
+  <h3 class="section-title">Ways to Nourish Your Nervous System</h3>
+  <div class="callout">
+    <p><strong>Nourishing your nervous system is an individual practice.</strong> It involves getting to know yourself and what works for you. There are many tools — it is about doing things that fuel your soul, fill your heart with joy, and make you feel more connected to yourself overall.</p>
+  </div>
+
+  <p style="font-size:14px;line-height:1.85;color:var(--bark);margin:20px 0 14px;">Tick the practices you want to explore. There is no right order — start with what feels most accessible:</p>
+  <div class="checklist">
+    <div class="check-item"><input type="checkbox" id="n1" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n1">Getting outside in nature<small>One of the most impactful tools. Nature allows you to move, to just be, and to reconnect to your body and surroundings.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="n2" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n2">Physical movement and shaking<small>When the sympathetic nervous system activates, shaking or dancing can move that energy through the body. Start with your hands and let it move upward.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="n3" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n3">Allowing emotions to surface without judgement<small>When we reject heavy emotions by immediately trying to fix them, we store them in the body. Allow what is there, with love and care.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="n4" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n4">Body scan and mindfulness practices<small>Reconnects you to the present moment and can alleviate symptoms of dysregulation.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="n5" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n5">Meditation and restorative yoga<small>Gives the body and mind the ability to deepen their connection. Restorative yoga in particular can help release emotions stored in the tissues.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="n6" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n6">EFT Tapping<small>Tapping specific areas of the body to relieve symptoms of a negative experience or difficult emotion. Can be combined with meditation or breathwork.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="n7" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n7">Breathwork practices<small>One of the only automatic functions we can also consciously control. Various breath patterns can shift sympathetic or parasympathetic states.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="n8" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n8">Somatic body work<small>Specific movements to release stored trauma and emotion from the tissues and subconscious mind. Shaking is a somatic exercise.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="n9" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n9">Intention setting and planning<small>Setting intentions creates clarity on where you want to go. A plan helps you navigate the actual steps towards change.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="n10" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n10">Productive rest<small>Taking space to fully rest without guilt. Gives the body an opportunity to move into a parasympathetic state for recovery and healing.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="n11" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n11">Mindful eating and proper diet<small>Eating mindfully can help you tap into a parasympathetic state, allowing the body to digest and absorb nutrients more effectively.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="n12" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n12">Sleep hygiene<small>Creating a routine that develops better sleep habits. Getting adequate sleep is incredibly important for nervous system regulation.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="n13" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n13">Grounding — bare feet on earth, sunlight<small>Direct contact with the earth and natural light are simple, powerful tools for regulation.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="n14" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n14">Reiki and energy healing<small>Working with the energy field to release what is held within.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="n15" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n15">Therapy or professional support<small>Seeking professional help is not a sign of weakness — it is a tool.</small></label></div>
+    <div class="check-item"><input type="checkbox" id="n16" onchange="this.closest('.check-item').classList.toggle('done',this.checked)"><label for="n16">Community and quality connection<small>Gathering with others, quality time with family and friends — co-regulation is real.</small></label></div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ 03 BREATHWORK ═══ -->
+<div id="breath">
+<div class="chapter-header ch-bark">
+  <span class="chapter-num">03</span>
+  <h2 class="chapter-title">Nervous System Regulation &amp;<br><em>Breath Based Practices</em></h2>
+  <p class="chapter-desc">A detailed understanding of the ways that breathwork, yoga, and meditation have on our nervous system.</p>
+  <div class="with-tag">With Julia</div>
+</div>
+
+<div class="section">
+  <h3 class="section-title">How Breath Impacts the Nervous System</h3>
+  <div class="section-body">
+    <p>Shallow breathing (especially through the mouth) activates the sympathetic stress response due to the concentration of SNS receptors in the upper lobes of the lungs. Full and deep breaths that reach the lower lobes activate the parasympathetic response. Breathing through the nose allows for more air to enter the lungs due to the structure of the nasal passages and sinus cavities.</p>
+    <p>The diaphragm connects to many areas of the body and plays a vital role in the lymphatic, circulatory, and digestive systems. If we don't engage it enough, it will atrophy and lose its flexibility — this is prevented by taking deeper and fuller breaths.</p>
+  </div>
+
+  <h3 style="font-family:'Gloock',serif;font-size:20px;color:var(--bark);margin:28px 0 14px;">Types of Breathwork</h3>
+  <div class="breath-grid">
+    <div class="breath-type">
+      <h4>Breath of Fire</h4>
+      <span class="pattern">Short rapid equal inhales + exhales</span>
+      <p>Engage the diaphragm and pump the breath rhythmically. Good for gaining focus and clarity, increased lymphatic drainage, and stress reduction.</p>
+    </div>
+    <div class="breath-type">
+      <h4>Box Breathing</h4>
+      <span class="pattern">Inhale 4 · Hold 4 · Exhale 4 · Hold 4</span>
+      <p>Four-part equal pattern. Promotes relaxation, slows racing thoughts, and improves concentration.</p>
+    </div>
+    <div class="breath-type">
+      <h4>4-7-8 Breathing</h4>
+      <span class="pattern">Inhale 4 · Hold 7 · Exhale 8</span>
+      <p>Great for better sleep, calming the nervous system, and lowering anxiety. Hold while lungs are near full capacity.</p>
+    </div>
+    <div class="breath-type">
+      <h4>Physiological Sigh</h4>
+      <span class="pattern">Double inhale · Long exhale</span>
+      <p>Breathe in to full capacity, take a short second breath in, then a long slow exhale. Immediately calms the nervous system and lowers anxiety.</p>
+    </div>
+  </div>
+
+  <div class="field-group" style="margin-top:28px;">
+    <span class="field-label">Which breathwork practice will you try first, and when?</span>
+    <input type="text" id="br1" placeholder="Practice + when you'll try it...">
+  </div>
+  <div class="field-group">
+    <span class="field-label">After trying a practice — what did you notice?</span>
+    <textarea id="br2" placeholder="Sensations, shifts, anything at all..."></textarea>
+  </div>
+</div>
+
+<div class="section sage-bg">
+  <div class="practice-card">
+    <h4>Breath-Body Awareness Practice (10–15 minutes)</h4>
+    <p>Begin sitting or lying down comfortably. Bring your attention to your breath. Notice how the breath enters, and what parts of your body expand with it.</p>
+    <ol>
+      <li>Imagine a balloon inside your belly — it expands with every inhale, comes back with each exhale. No pause between inhale and exhale.</li>
+      <li>Move the balloon down to your pelvis — feel the pelvic floor expand towards your feet with each inhale, return with each exhale.</li>
+      <li>Shift awareness to your lower ribs and mid-back. Notice the ribcage expand. Allow natural movement to arise in the spine, pelvis, and neck.</li>
+      <li>Move the balloon to your upper chest and heart area. Notice how the chest rises and falls. With each inhale, the heart area starts to soften.</li>
+      <li>Move to the throat and neck. Then up to the entire skull. Then slowly scan back down.</li>
+      <li>When your experience naturally closes, thank yourself for this time.</li>
+    </ol>
+  </div>
+
+  <div class="field-group" style="margin-top:20px;">
+    <span class="field-label">Journal about your breath-body awareness experience</span>
+    <textarea id="br3" placeholder="What came up? Where did you feel sensation? Any emotions that surfaced?"></textarea>
+  </div>
+
+  <div class="practice-card" style="margin-top:20px;">
+    <h4>Breath-Walk Practice</h4>
+    <p>A simple yet effective way to calm your nervous system that you can do anywhere.</p>
+    <ol>
+      <li>Begin walking slowly and steadily, paying attention to each step.</li>
+      <li>Box breathe with your steps: inhale for 5 steps, hold for 5 steps, exhale for 5 steps, hold for 5 steps.</li>
+      <li>If your mind wanders, gently bring it back to your steps and breath.</li>
+      <li>Start with 5–10 minutes and work up over time.</li>
+    </ol>
+  </div>
+</div>
+</div>
+
+<!-- ═══ 04 HOLISTIC NUTRITION ═══ -->
+<div id="nutrition">
+<div class="chapter-header ch-mauve">
+  <span class="chapter-num">04</span>
+  <h2 class="chapter-title">Nervous System Regulation<br><em>From a Holistic Nutrition View</em></h2>
+  <p class="chapter-desc">An exploration of the link between the parasympathetic nervous system and digestive health — with education about intuitive eating and cultivating calmness through diet.</p>
+  <div class="with-tag">With Em McInnes R.H.N.</div>
+</div>
+
+<div class="section">
+  <div class="callout dark">
+    <p><strong>"We are not only shaped by what we eat, but more intricately, by what our bodies can effectively digest and absorb."</strong></p>
+  </div>
+
+  <h3 class="section-title" style="margin-top:28px;">Rest and Digest</h3>
+  <div class="section-body">
+    <p>The parasympathetic nervous system plays a vital role in creating an environment conducive to efficient digestion. When the body is in a state of relaxation, the parasympathetic nervous system becomes more active — triggered in situations of rest, after a meal, or during periods of low stress.</p>
+    <p>Holistic Nutrition emphasises mindful eating practices to encourage the parasympathetic nervous system to dominate during meals — paying attention to the sensory experience of eating, chewing thoroughly, and being present.</p>
+  </div>
+
+  <h3 style="font-family:'Gloock',serif;font-size:20px;color:var(--bark);margin:28px 0 14px;">Healthy Digestion Practices</h3>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px;">
+    <div class="info-card accent"><h4>Smaller meals and grazing</h4><p>Prevents overloading the digestive system, optimises nutrient absorption, maintains stable blood sugar, and encourages mindful eating habits.</p></div>
+    <div class="info-card accent-sand"><h4>Chew thoroughly</h4><p>Initiates the breakdown process, eases the workload on the digestive system, and enhances nutrient absorption. Do not rush eating.</p></div>
+    <div class="info-card accent-mauve"><h4>Stay hydrated</h4><p>Water is vital for healthy digestion — it aids in breaking down food, facilitates nutrient absorption, and ensures smooth bowel movements.</p></div>
+    <div class="info-card accent"><h4>Gentle cooking methods</h4><p>Steaming, sautéing at medium-low heat, poaching, and simmering preserve nutrients and make food easier to digest than high-heat methods.</p></div>
+    <div class="info-card accent-sand"><h4>Natural digestive aids</h4><p>Peppermint, ginger, chamomile, fennel, probiotics, lemon balm, and papaya all support digestion and align with parasympathetic activation.</p></div>
+    <div class="info-card accent-mauve"><h4>Mindful meal timing</h4><p>Eating your last meal 2–3 hours before bedtime supports digestion, prevents discomfort, stabilises blood sugar, and improves sleep quality.</p></div>
+  </div>
+
+  <div class="field-group">
+    <span class="field-label">Which digestion practice feels most relevant to your current habits?</span>
+    <textarea id="nu1" style="min-height:70px;" placeholder="Be honest about what's working and what isn't..."></textarea>
+  </div>
+  <div class="field-group">
+    <span class="field-label">One small dietary change you could make this week</span>
+    <input type="text" id="nu2" placeholder="Small and sustainable...">
+  </div>
+</div>
+</div>
+
+<!-- ═══ 05 WORKSHEETS ═══ -->
+<div id="worksheets">
+<div class="chapter-header ch-dark">
+  <span class="chapter-num">05</span>
+  <h2 class="chapter-title">Worksheets &amp;<br><em>Exercises</em></h2>
+  <p class="chapter-desc">Work through these four steps towards creating a manageable plan for nervous system regulation. Take your time — return to this section as often as you need.</p>
+</div>
+
+<div class="section">
+  <div class="callout dark">
+    <p><strong>"Working on the long term regulation of your nervous system is a marathon, not a sprint. It is to be done mindfully with intention and patience. Taking baby steps towards your healing is better than trying to take big leaps."</strong></p>
+  </div>
+
+  <!-- STEP 1 -->
+  <div style="margin-top:36px;">
+    <h3 style="font-family:'Gloock',serif;font-size:22px;color:var(--forest);margin-bottom:4px;">Step 01 — Identify where you are currently at</h3>
+    <p style="font-size:13.5px;color:var(--sage-mid);font-style:italic;margin-bottom:16px;">Get curious about where you're at. Answering these questions without judgement will help you develop a better understanding of your current state.</p>
+    <div class="field-group">
+      <span class="field-label">How is my nervous system feeling today?</span>
+      <textarea id="ws1" placeholder="Journal freely — symptoms, sensations, how you're showing up in your life..."></textarea>
+    </div>
+    <div class="two-col">
+      <div class="field-group" style="margin-bottom:0;">
+        <span class="field-label">What symptoms are surfacing?</span>
+        <textarea id="ws2" style="min-height:80px;" placeholder="Physical, emotional, cognitive..."></textarea>
+      </div>
+      <div class="field-group" style="margin-bottom:0;">
+        <span class="field-label">Do I feel disconnected from my body?</span>
+        <textarea id="ws3" style="min-height:80px;" placeholder="How does that disconnection feel or show up?"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div style="margin-top:40px;padding-top:36px;border-top:1px solid rgba(77,85,76,0.12);">
+    <h3 style="font-family:'Gloock',serif;font-size:22px;color:var(--forest);margin-bottom:4px;">Step 02 — Reflect on what has contributed to your current state</h3>
+    <p style="font-size:13.5px;color:var(--sage-mid);font-style:italic;margin-bottom:16px;">Identify the factors contributing to where you are. This exercise is not meant to overwhelm you — reflect without judgement. You are doing your best.</p>
+    <div class="field-group">
+      <span class="field-label">What is a major source of overwhelm in my life right now?</span>
+      <textarea id="ws4" placeholder="Work, relationships, health, environment..."></textarea>
+    </div>
+    <div class="two-col">
+      <div class="field-group" style="margin-bottom:0;">
+        <span class="field-label">What are my lifestyle habits like?</span>
+        <textarea id="ws5" style="min-height:80px;" placeholder="Sleep, movement, nutrition, rest..."></textarea>
+      </div>
+      <div class="field-group" style="margin-bottom:0;">
+        <span class="field-label">What patterns or beliefs might be contributing?</span>
+        <textarea id="ws6" style="min-height:80px;" placeholder="Stored emotions, conditioning, trauma..."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div style="margin-top:40px;padding-top:36px;border-top:1px solid rgba(77,85,76,0.12);">
+    <h3 style="font-family:'Gloock',serif;font-size:22px;color:var(--forest);margin-bottom:4px;">Step 03 — Identify where you want to be</h3>
+    <p style="font-size:13.5px;color:var(--sage-mid);font-style:italic;margin-bottom:16px;">Focus on the positive feelings you'd like to welcome in, rather than what you don't want. Instead of "I don't want to feel stressed" — "I would like to feel at peace."</p>
+    <div class="field-group">
+      <span class="field-label">How would my nervous system feel daily in an ideal world?</span>
+      <textarea id="ws7" placeholder="Close your eyes and ask — then write whatever comes..."></textarea>
+    </div>
+    <div class="two-col">
+      <div class="field-group" style="margin-bottom:0;">
+        <span class="field-label">How would I show up differently for myself?</span>
+        <textarea id="ws8" style="min-height:80px;" placeholder="Daily habits, relationships, self-talk..."></textarea>
+      </div>
+      <div class="field-group" style="margin-bottom:0;">
+        <span class="field-label">What would be different in 6 months if I committed to this?</span>
+        <textarea id="ws9" style="min-height:80px;" placeholder="Write from the future..."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4 -->
+  <div style="margin-top:40px;padding-top:36px;border-top:1px solid rgba(77,85,76,0.12);">
+    <h3 style="font-family:'Gloock',serif;font-size:22px;color:var(--forest);margin-bottom:4px;">Step 04 — Create a manageable action plan</h3>
+    <p style="font-size:13.5px;color:var(--sage-mid);font-style:italic;margin-bottom:20px;">The most important part is coming up with a plan that feels safe and manageable. Small steps cultivate safety, self-trust, and empowerment in the healing journey.</p>
+
+    <h4 style="font-family:'Gloock',serif;font-size:18px;color:var(--bark);margin-bottom:8px;">Short Term Action Plan</h4>
+    <p style="font-size:14px;line-height:1.8;color:var(--bark);margin-bottom:14px;">For when you notice dysregulation in the moment — immediate tools to navigate a specific symptom as it arises.</p>
+    <div class="field-group">
+      <span class="field-label">When I feel anxious or overwhelmed, I will...</span>
+      <textarea id="ws10" placeholder="e.g. Go outside for 10 minutes, do 4-7-8 breathing, shake for 2 minutes..."></textarea>
+    </div>
+
+    <h4 style="font-family:'Gloock',serif;font-size:18px;color:var(--bark);margin:28px 0 8px;">Long Term Action Plan</h4>
+    <p style="font-size:14px;line-height:1.8;color:var(--bark);margin-bottom:14px;">Implemented over time with the goal of eliminating or reducing the frequency of your symptoms. Typically involves development of new habits — one at a time.</p>
+    <div class="two-col">
+      <div class="field-group" style="margin-bottom:0;">
+        <span class="field-label">New habits I want to develop (one at a time)</span>
+        <textarea id="ws11" style="min-height:100px;" placeholder="1.&#10;2.&#10;3.&#10;Start with just one."></textarea>
+      </div>
+      <div class="field-group" style="margin-bottom:0;">
+        <span class="field-label">What I am willing to let go of or reduce</span>
+        <textarea id="ws12" style="min-height:100px;" placeholder="Stressors, habits, commitments, substances..."></textarea>
+      </div>
+    </div>
+    <div class="field-group" style="margin-top:16px;">
+      <span class="field-label">My one commitment this week</span>
+      <input type="text" id="ws13" placeholder="One small step. That is enough.">
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ 06 DAILY JOURNAL ═══ -->
+<div id="journal">
+<div class="chapter-header ch-green">
+  <span class="chapter-num">06</span>
+  <h2 class="chapter-title">Daily Morning &amp;<br><em>Evening Journal</em></h2>
+  <p class="chapter-desc">A daily companion for mindfulness, progress, and self-care. Use it to simplify your choices, monitor your progress, and create accountability — without judgement.</p>
+</div>
+
+<div class="section">
+  <p style="font-size:14.5px;line-height:1.9;color:var(--bark);margin-bottom:28px;">Complete one day at a time. You do not need to fill in all 7 days at once. Return to this journal each morning and evening as part of your practice.</p>
+
+  <!-- JOURNAL DAYS - 7 days -->
+  <div id="journalDays"></div>
+</div>
+</div>
+
+<!-- GUIDE FOOTER -->
+<footer class="guide-footer">
+  <div class="gf-inner">
+    <div class="gf-brand">
+      <h3>Mindful Earth</h3>
+      <div style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(191,192,171,0.5);margin-bottom:10px;">Return to Self, Community &amp; Nature</div>
+      <p>A wellness ecosystem for practitioners, seekers, and the people building something meaningful. This workbook is one part of a larger ecosystem of resources designed to support your return to yourself.</p>
+      <div style="font-family:'Jost',sans-serif;font-size:10px;color:rgba(240,241,235,0.25);margin-top:14px;">Written by Montana, Julia &amp; Em · Mindful Earth · mindfulearth.eco<br>Nervous System Nourishment · CA$37</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div class="gf-cta">
+        <h4>Work with Montana Cindy</h4>
+        <p>Somatic work, yoga, breathwork, energy healing, and 1:1 intuitive mentorship for practitioners building their wellness brand.</p>
+        <a href="https://mindfulearth.eco/pages/montana/">mindfulearth.eco/pages/montana/</a>
+      </div>
+      <div class="gf-cta">
+        <h4>The Cultivating Self-Love Guide</h4>
+        <p>A companion guide — practices for heart opening, self-compassion, and reconnecting to yourself. The natural companion to this workbook.</p>
+        <a href="https://mindfulearth.eco/pages/workbooks/">mindfulearth.eco/pages/workbooks/</a>
+      </div>
+      <div class="gf-cta">
+        <h4>Book a Free Clarity Call</h4>
+        <p>Not sure where to start? Every engagement begins with a free 30-minute conversation.</p>
+        <a href="https://calendly.com/mindfuleartheco/30min">Book at calendly.com/mindfuleartheco/30min</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="save-btn" onclick="saveAll()">Save Progress</button>
+<div class="save-confirm" id="saveConf">Saved ✓</div>
+
+<script>
+const KEY = 'ns_guide_v1';
+const DAYS = 7;
+
+// Build journal days dynamically
+const jContainer = document.getElementById('journalDays');
+for (let i = 1; i <= DAYS; i++) {
+  jContainer.innerHTML += `
+  <div class="journal-day" style="margin-bottom:20px;">
+    <div class="journal-day-header">
+      <h4>Day ${i}</h4>
+      <input type="date" id="jdate${i}">
+    </div>
+    <h5 style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--forest);margin-bottom:14px;">Morning</h5>
+    <div class="day-grid" style="margin-bottom:20px;">
+      <div class="field-group">
+        <span class="field-label">Today's affirmation or mantra</span>
+        <input type="text" id="jm1_${i}" placeholder="One positive affirmation for today...">
+      </div>
+      <div class="field-group">
+        <span class="field-label">How will I nourish my nervous system today?</span>
+        <input type="text" id="jm2_${i}" placeholder="One practice...">
+      </div>
+      <div class="field-group">
+        <span class="field-label">Hydration plan / goal</span>
+        <input type="text" id="jm3_${i}" placeholder="How much water, when...">
+      </div>
+      <div class="field-group">
+        <span class="field-label">Movement plan</span>
+        <input type="text" id="jm4_${i}" placeholder="Walk, yoga, shaking, gym...">
+      </div>
+      <div class="field-group" style="grid-column:1/-1;">
+        <span class="field-label">What do I feel like eating today / what am I looking forward to?</span>
+        <input type="text" id="jm5_${i}" placeholder="Mindful meal intention...">
+      </div>
+    </div>
+    <h5 style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--mauve);margin-bottom:14px;">Evening</h5>
+    <div class="day-grid" style="margin-bottom:14px;">
+      <div class="field-group">
+        <span class="field-label">Three things I am grateful for today</span>
+        <textarea id="je1_${i}" style="min-height:70px;" placeholder="1.&#10;2.&#10;3."></textarea>
+      </div>
+      <div class="field-group">
+        <span class="field-label">One moment I truly savoured food / how did it feel?</span>
+        <textarea id="je2_${i}" style="min-height:70px;" placeholder="Mindful eating reflection..."></textarea>
+      </div>
+      <div class="field-group">
+        <span class="field-label">How I took time for myself today</span>
+        <input type="text" id="je3_${i}" placeholder="Self-care highlight...">
+      </div>
+      <div class="field-group">
+        <span class="field-label">One intuitive food choice I made today + how my body responded</span>
+        <input type="text" id="je4_${i}" placeholder="Intuitive eating check-in...">
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+      <div>
+        <span class="field-label">Stress level today</span>
+        <div class="rating-row"><span style="font-family:'Jost',sans-serif;font-size:10px;color:var(--sage-mid);">Low</span><input type="range" id="js1_${i}" min="1" max="10" value="5" oninput="document.getElementById('jsv1_${i}').textContent=this.value"><span class="rating-val" id="jsv1_${i}">5</span><span style="font-family:'Jost',sans-serif;font-size:10px;color:var(--sage-mid);">High</span></div>
+      </div>
+      <div>
+        <span class="field-label">Sleep quality last night</span>
+        <div class="rating-row"><span style="font-family:'Jost',sans-serif;font-size:10px;color:var(--sage-mid);">Poor</span><input type="range" id="js2_${i}" min="1" max="10" value="5" oninput="document.getElementById('jsv2_${i}').textContent=this.value"><span class="rating-val" id="jsv2_${i}">5</span><span style="font-family:'Jost',sans-serif;font-size:10px;color:var(--sage-mid);">Great</span></div>
+      </div>
+    </div>
+    <div class="field-group" style="margin-top:14px;margin-bottom:0;">
+      <span class="field-label">Tonight's sleep support plan</span>
+      <input type="text" id="je5_${i}" placeholder="What will you do to support good sleep tonight?">
+    </div>
+  </div>`;
+}
+
+function saveAll() {
+  const d = {};
+  document.querySelectorAll('textarea[id],input[id]:not([type=checkbox])').forEach(el => { d[el.id] = el.value; });
+  document.querySelectorAll('input[type=checkbox][id]').forEach(cb => { d[cb.id] = cb.checked; });
+  localStorage.setItem(KEY, JSON.stringify(d));
+  const btn = document.querySelector('.save-btn');
+  const conf = document.getElementById('saveConf');
+  btn.style.display='none'; conf.style.display='block';
+  setTimeout(()=>{ btn.style.display='block'; conf.style.display='none'; }, 2000);
+  updateProgress();
+}
+function loadAll() {
+  const raw = localStorage.getItem(KEY);
+  if (!raw) return;
+  const d = JSON.parse(raw);
+  Object.entries(d).forEach(([id,val]) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (el.type === 'checkbox') { el.checked = val; if(val) el.closest('.check-item')?.classList.add('done'); }
+    else el.value = val;
+  });
+  // Update range displays
+  for(let i=1;i<=DAYS;i++){
+    const r1=document.getElementById(`js1_${i}`);
+    const r2=document.getElementById(`js2_${i}`);
+    if(r1) document.getElementById(`jsv1_${i}`).textContent = r1.value;
+    if(r2) document.getElementById(`jsv2_${i}`).textContent = r2.value;
+  }
+  updateProgress();
+}
+function updateProgress() {
+  const all = document.querySelectorAll('textarea[id],input[id]:not([type=checkbox]):not([type=range])');
+  const cbs = document.querySelectorAll('input[type=checkbox][id]');
+  const filled = [...all].filter(el => el.value?.trim().length > 0).length;
+  const checked = [...cbs].filter(cb => cb.checked).length;
+  const total = all.length + cbs.length;
+  const pct = Math.round(((filled + checked) / total) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressPct').textContent = pct + '%';
+}
+window.addEventListener('scroll', () => {
+  ['intention','ns-reg','breath','nutrition','worksheets','journal'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const link = document.querySelector(`.cnav-item[href="#${id}"]`);
+    if(link) link.classList.toggle('active', rect.top<=120 && rect.bottom>0);
+  });
+});
+document.addEventListener('change', saveAll);
+document.addEventListener('input', updateProgress);
+loadAll();
+</script>
+</body>
+</html>
