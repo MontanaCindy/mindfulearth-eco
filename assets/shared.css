@@ -410,17 +410,42 @@ section.newsletter,
 }
 
 /* ── HERO DARK OVERLAYS (sitewide) ── */
-.page-hero, .inner-hero, .service-hero, .experiences-hero {
+.page-hero, .inner-hero, .service-hero, .experiences-hero,
+.our-story-hero, .story-hero, .journal-hero, .community-hero,
+.give-back-hero, .eco-hero, .practitioners-hero {
   position: relative;
 }
-.page-hero::before, .inner-hero::before, .service-hero::before, .experiences-hero::before {
+.page-hero::before, .inner-hero::before, .service-hero::before,
+.experiences-hero::before, .our-story-hero::before, .story-hero::before,
+.journal-hero::before, .community-hero::before, .give-back-hero::before,
+.eco-hero::before, .practitioners-hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(30, 38, 30, 0.55);
+  background: rgba(25, 32, 25, 0.62);
   z-index: 1;
 }
-.page-hero > *, .inner-hero > *, .service-hero > *, .experiences-hero > * {
+.page-hero > *, .inner-hero > *, .service-hero > *, .experiences-hero > *,
+.our-story-hero > *, .story-hero > *, .journal-hero > *, .community-hero > *,
+.give-back-hero > *, .eco-hero > *, .practitioners-hero > * {
   position: relative;
   z-index: 2;
+}
+
+/* Universal inline hero overlay fallback */
+[data-hero] { position: relative; }
+[data-hero]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(25, 32, 25, 0.62);
+  z-index: 1;
+  pointer-events: none;
+}
+[data-hero] > * { position: relative; z-index: 2; }
+
+/* Remove all decorative background circles sitewide */
+.guide-circle, .practitioner-bg-circle, .bg-circle, .deco-circle,
+.m-about-circle, .about-circle, .hero-circle, .section-circle {
+  display: none !important;
 }

@@ -1,3 +1,13 @@
 User-agent: *
 Allow: /
+
+# Noindex thank-you pages and internal pages
+Disallow: /pages/thank-you-grounded-growth/
+Disallow: /pages/thank-you-genuine-reach/
+Disallow: /pages/thank-you-nervous-system/
+Disallow: /pages/thank-you-self-love/
+Disallow: /pages/careers/
+Disallow: /pages/press/
+Disallow: /pages/practitioner-survey/
+
 Sitemap: https://mindfulearth.eco/sitemap.xml

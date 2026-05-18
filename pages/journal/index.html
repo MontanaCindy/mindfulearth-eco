@@ -118,7 +118,7 @@
 @media(max-width:700px) { .journal-grid { grid-template-columns:1fr; padding:48px 6vw; } }
 </style>
 
-<section class="inner-hero" style="background:var(--parchment); padding-top:120px;">
+<section class="inner-hero" data-hero="true" style="background:var(--parchment); padding-top:120px;">
   <span class="eyebrow">The Journal</span>
   <h1>Words worth <em>returning to.</em></h1>
   <p>Reflections on healing, practitioner life, retreats, and the practice of building something meaningful. Written from the inside out.</p>
@@ -299,5 +299,18 @@
   function hideCookieBanner() { const b = document.getElementById('cookieBanner'); if(b) b.classList.remove('visible'); }
   showCookieBanner();
 </script>
+<script>
+// Hide journal card images that fail to load — use fetch to check
+document.querySelectorAll('.journal-card-img').forEach(function(el) {
+  var style = el.getAttribute('style') || '';
+  var match = style.match(/url\(['"]?([^'")\s]+)['"]?\)/);
+  if (match) {
+    var img = new Image();
+    img.onerror = function() { el.style.background = 'var(--sage-light)'; };
+    img.src = match[1];
+  }
+});
+</script>
+<!-- journal-img-fallback -->
 </body>
 </html>

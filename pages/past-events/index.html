@@ -56,7 +56,7 @@
 .gallery-img { aspect-ratio:4/3; background:linear-gradient(160deg,var(--sage) 0%,var(--parchment) 100%); background-size:cover; background-position:center; border-radius:2px; overflow:hidden; position:relative; }
 .gallery-img.tall { aspect-ratio:3/4; grid-row:span 2; }
 .gallery-img.wide { grid-column:span 2; aspect-ratio:16/9; }
-.gallery-placeholder { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+.gallery-placeholder { display:none !important; /*  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;  */ display:none !important; }
 .gallery-placeholder span { font-family:"Jost",sans-serif; font-size:9px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.5); text-align:center; padding:8px; }
 
 /* Testimonial grid */
@@ -84,6 +84,7 @@
   .rt-grid { grid-template-columns:1fr; }
   .retreat-cta { padding:56px 6vw; }
 }
+.gallery-placeholder { display:none !important; }
 </style>
   <link rel="canonical" href="https://mindfulearth.eco/pages/past-events.html">
 </head>
@@ -185,7 +186,7 @@
 </div>
 
 <!-- HERO -->
-<section class="pe-hero">
+<section class="pe-hero" data-hero="true">
   <span class="eyebrow" style="color:rgba(191,192,171,0.55);">Past Experiences</span>
   <h1>Where we have <em>been.</em></h1>
   <p>Every retreat and gathering we have hosted is a chapter in the Mindful Earth story. Real experiences, real transformation, real community — this is the proof of what becomes possible when people are held well.</p>
@@ -210,22 +211,16 @@
   <!-- PHOTO GALLERY -->
   <div class="gallery">
     <div class="gallery-img tall" style="background-image:url('../../images/nicaragua-2025-01.jpg');">
-      <div class="gallery-placeholder"><span>nicaragua-2025-01.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/nicaragua-2025-02.jpg');">
-      <div class="gallery-placeholder"><span>nicaragua-2025-02.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/nicaragua-2025-03.jpg');">
-      <div class="gallery-placeholder"><span>nicaragua-2025-03.jpg</span></div>
     </div>
     <div class="gallery-img wide" style="background-image:url('../../images/nicaragua-2025-04.jpg');">
-      <div class="gallery-placeholder"><span>nicaragua-2025-04.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/nicaragua-2025-05.jpg');">
-      <div class="gallery-placeholder"><span>nicaragua-2025-05.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/nicaragua-2025-06.jpg');">
-      <div class="gallery-placeholder"><span>nicaragua-2025-06.jpg</span></div>
     </div>
   </div>
 
@@ -279,22 +274,16 @@
   <!-- PHOTO GALLERY -->
   <div class="gallery">
     <div class="gallery-img tall" style="background-image:url('../../images/nicaragua-2024-01.jpg');">
-      <div class="gallery-placeholder"><span>nicaragua-2024-01.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/nicaragua-2024-02.jpg');">
-      <div class="gallery-placeholder"><span>nicaragua-2024-02.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/nicaragua-2024-03.jpg');">
-      <div class="gallery-placeholder"><span>nicaragua-2024-03.jpg</span></div>
     </div>
     <div class="gallery-img wide" style="background-image:url('../../images/nicaragua-2024-04.jpg');">
-      <div class="gallery-placeholder"><span>nicaragua-2024-04.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/nicaragua-2024-05.jpg');">
-      <div class="gallery-placeholder"><span>nicaragua-2024-05.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/nicaragua-2024-06.jpg');">
-      <div class="gallery-placeholder"><span>nicaragua-2024-06.jpg</span></div>
     </div>
   </div>
 
@@ -372,22 +361,16 @@
   <!-- PHOTO GALLERY -->
   <div class="gallery">
     <div class="gallery-img tall" style="background-image:url('../../images/autumn-harmony-01.jpg');">
-      <div class="gallery-placeholder"><span>autumn-harmony-01.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/autumn-harmony-02.jpg');">
-      <div class="gallery-placeholder"><span>autumn-harmony-02.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/autumn-harmony-03.jpg');">
-      <div class="gallery-placeholder"><span>autumn-harmony-03.jpg</span></div>
     </div>
     <div class="gallery-img wide" style="background-image:url('../../images/autumn-harmony-04.jpg');">
-      <div class="gallery-placeholder"><span>autumn-harmony-04.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/autumn-harmony-05.jpg');">
-      <div class="gallery-placeholder"><span>autumn-harmony-05.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/autumn-harmony-06.jpg');">
-      <div class="gallery-placeholder"><span>autumn-harmony-06.jpg</span></div>
     </div>
   </div>
 
@@ -440,22 +423,16 @@
   <!-- PHOTO GALLERY -->
   <div class="gallery">
     <div class="gallery-img tall" style="background-image:url('../../images/elemental-awakening-01.jpg');">
-      <div class="gallery-placeholder"><span>elemental-awakening-01.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/elemental-awakening-02.jpg');">
-      <div class="gallery-placeholder"><span>elemental-awakening-02.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/elemental-awakening-03.jpg');">
-      <div class="gallery-placeholder"><span>elemental-awakening-03.jpg</span></div>
     </div>
     <div class="gallery-img wide" style="background-image:url('../../images/elemental-awakening-04.jpg');">
-      <div class="gallery-placeholder"><span>elemental-awakening-04.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/elemental-awakening-05.jpg');">
-      <div class="gallery-placeholder"><span>elemental-awakening-05.jpg</span></div>
     </div>
     <div class="gallery-img" style="background-image:url('../../images/elemental-awakening-06.jpg');">
-      <div class="gallery-placeholder"><span>elemental-awakening-06.jpg</span></div>
     </div>
   </div>
 
