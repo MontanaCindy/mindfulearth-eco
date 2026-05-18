@@ -17,6 +17,8 @@
 <title>Wellness Workbooks — Mindful Earth</title>
 <link rel="stylesheet" href="../../assets/shared.css">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/favicon.svg">
+<meta name="theme-color" content="#4d554c">
 <style>
 
   .workbooks-page { background:var(--white); padding:80px 10vw; }
@@ -31,7 +33,7 @@
   .wb-full-card { display:grid; grid-template-columns:200px 1fr; gap:36px; align-items:start; background:var(--white); border:1px solid rgba(191,192,171,0.3); padding:36px; }
   .wb-section.alt .wb-full-card { background:var(--white); }
   .wb-cover { aspect-ratio:3/4; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; padding:20px; background-size:cover; background-position:center; position:relative; overflow:hidden; }
-  .wb-cover span { font-family:"Gloock",serif; font-size:16px; text-align:center; line-height:1.3; }
+  .wb-cover span { display: none; }
   .wb-cover.grounded { background:var(--sage); }
   .wb-cover.grounded span { color:white; }
   .wb-cover.genuine { background:var(--forest); }
@@ -142,7 +144,7 @@
 <section class="inner-hero" data-hero="true" style="padding-top:120px;">
   <span class="eyebrow">Resources</span>
   <h1>Tools for the <em>inner work.</em></h1>
-  <p>Thoughtfully designed workbooks for practitioners, seekers, and anyone building a life with more intention. Each one pairs practical frameworks with space for genuine reflection.</p>
+  <p>Workbooks built from real practice — not theory. For practitioners growing a business, and for the inner work that runs alongside it. Each one is short enough to finish, deep enough to matter.</p>
 </section>
 <div style="background:var(--white);padding:20px 10vw;border-bottom:1px solid rgba(191,192,171,0.2);">
   <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap;">
@@ -163,8 +165,6 @@
       <div class="wb-full-card">
         <div class="wb-card-left">
           <div class="wb-cover grounded" style="background-image:url('../../images/guide-grounded-growth.jpg');background-size:cover;background-position:center;">
-            <span>Grounded</span>
-            <span>Growth</span>
           </div>
         </div>
         <div class="wb-card-right">
@@ -181,8 +181,6 @@
       <div class="wb-full-card">
         <div class="wb-card-left">
           <div class="wb-cover genuine" style="background-image:url('../../images/guide-genuine-reach.jpg');background-size:cover;background-position:center;">
-            <span>Genuine</span>
-            <span>Reach</span>
           </div>
         </div>
         <div class="wb-card-right">
@@ -205,8 +203,6 @@
       <div class="wb-full-card">
         <div class="wb-card-left">
           <div class="wb-cover nervous" style="background-image:url('../../images/guide-nervous-system.jpg');background-size:cover;background-position:center;">
-            <span>Nervous System</span>
-            <span>Nourishment</span>
           </div>
         </div>
         <div class="wb-card-right">
@@ -223,8 +219,6 @@
       <div class="wb-full-card">
         <div class="wb-card-left">
           <div class="wb-cover selflove" style="background-image:url('../../images/guide-self-love.jpg');background-size:cover;background-position:center;">
-            <span>Self Love</span>
-            <span>Handbook</span>
           </div>
         </div>
         <div class="wb-card-right">
@@ -269,7 +263,7 @@
     <div class="footer-brand">
       <span class="footer-brand-name">Mindful Earth</span>
       <span class="footer-tagline">Return to Self, Community &amp; Nature</span>
-      <p class="footer-desc">A wellness ecosystem for practitioners, seekers, and the people building something meaningful.</p>
+      <p class="footer-desc">A wellness ecosystem for practitioners, seekers, and the people building something real.</p>
     </div>
     <div class="footer-col"><h4>Explore</h4><ul>
       <li><a href="../our-story/">Our Story</a></li>
