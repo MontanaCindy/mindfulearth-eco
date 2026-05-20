@@ -104,6 +104,17 @@
   .m-hero-eyebrow { display: none !important; }
 }
 </style>
+<style>
+/* Mobile overflow safety */
+@media(max-width:768px){
+  html,body{overflow-x:hidden;max-width:100vw;}
+  section,div{max-width:100%;}
+  [style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns:repeat(2"],[style*="grid-template-columns: repeat(2"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns:repeat(3"],[style*="grid-template-columns: repeat(3"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns:repeat(4"],[style*="grid-template-columns: repeat(4"]{grid-template-columns:repeat(2,1fr) !important;}
+}
+</style>
 </head>
 <style>
 /* ─── MONTANA PAGE REBUILD ─── */
@@ -126,7 +137,7 @@
 .m-hero-left:hover .m-hero-photo { transform:scale(1.03); }
 .m-hero-left-overlay {
   position:absolute; inset:0;
-  background:linear-gradient(to right, rgba(77,85,76,0.15) 0%, transparent 100%);
+  background: none;
 }
 .m-hero-right {
   background:var(--parchment); padding:140px 64px 80px;
@@ -506,18 +517,18 @@
 
 
 <!-- ═══ HERO ═══ -->
-<section class="m-hero" data-hero="true">
-  <div class="m-hero-left" data-hero="true">
-    <div class="m-hero-photo" data-hero="true" id="heroPhoto"></div>
-    <div class="m-hero-left-overlay" data-hero="true"></div>
+<section class="m-hero">
+  <div class="m-hero-left">
+    <div class="m-hero-photo" id="heroPhoto"></div>
+    <div class="m-hero-left-overlay"></div>
   </div>
-  <div class="m-hero-right" data-hero="true">
+  <div class="m-hero-right">
     <span class="eyebrow">Montana Cindy</span>
     <h1 class="m-hero-name" style="font-size:clamp(44px,5vw,72px);line-height:1.05;">Montana <em style="display:inline;font-style:italic;color:var(--mauve);">Cindy.</em></h1>
     <p class="m-hero-role">Wellness Business Consultant &middot; Retreat Photographer &middot; Somatic Practitioner &middot; Retreat Host</p>
     <p class="m-hero-intro">Retreat &amp; event planner, wellness business mentor, somatic practitioner, yoga teacher, and retreat photographer. I work with practitioners who are building something real — helping them plan and market their events, grow their brand, and do the inner work that makes the building sustainable.</p>
     <p class="m-hero-intro">Six years of international wellness operations. Based in London. Working globally. Retreats internationally.</p>
-    <div class="m-hero-tags" data-hero="true">
+    <div class="m-hero-tags">
       <span class="m-hero-tag">Somatic Work</span>
       <span class="m-hero-tag">Yoga &amp; Breathwork</span>
       <span class="m-hero-tag">Energy Healing</span>
@@ -629,7 +640,7 @@
     <div class="m-service-card">
       <span class="m-service-num">03</span>
       <h3>Retreat Photography</h3>
-      <span class="m-service-meta">Half day £350 · Full day £600 · Multi-day £450/day</span>
+      <span class="m-service-meta">Half day CA$600 · Full day CA$1,050 · Multi-day CA$790/day</span>
       <p>Intentional photography for wellness retreats and events — by someone who understands what is happening in the room. Includes edited photos, short-form reels, and raw footage. Available in London, EU, and internationally.</p>
       <a href="../../pages/photography/" class="m-service-link" style="display:block;margin-bottom:8px;">View photography gallery →</a>
       <a href="https://cal.com/montana-king-mrfkvt/photography-enquiry-call" target="_blank" rel="noopener noreferrer" class="m-service-link">Book Photography Enquiry Call →</a>

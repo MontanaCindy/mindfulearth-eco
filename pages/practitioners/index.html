@@ -45,6 +45,17 @@
 <meta property="og:url" content="https://mindfulearth.eco/pages/practitioners.html">
 <meta property="og:type" content="website">
   <link rel="canonical" href="https://mindfulearth.eco/pages/practitioners.html">
+<style>
+/* Mobile overflow safety */
+@media(max-width:768px){
+  html,body{overflow-x:hidden;max-width:100vw;}
+  section,div{max-width:100%;}
+  [style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns:repeat(2"],[style*="grid-template-columns: repeat(2"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns:repeat(3"],[style*="grid-template-columns: repeat(3"]{grid-template-columns:1fr !important;}
+  [style*="grid-template-columns:repeat(4"],[style*="grid-template-columns: repeat(4"]{grid-template-columns:repeat(2,1fr) !important;}
+}
+</style>
 </head>
 <body class="page-top">
 <div class="top-bar">
@@ -124,15 +135,18 @@
   <a href="../contact/" class="mobile-cta">Work With Us</a>
 </div>
 
-<section class="inner-hero" data-hero="true" style="padding-top:120px;">
+<section class="inner-hero" data-hero="true" style="padding-top:120px;background-image:url('../../images/practitioners-hero.jpg');background-size:cover;background-position:center;position:relative;">
+  <div style="position:absolute;inset:0;background:rgba(25,32,25,0.62);z-index:0;pointer-events:none;"></div>
+  <div style="position:relative;z-index:1;">
   <span class="eyebrow">The Network</span>
   <h1>Meet the <em>practitioners.</em></h1>
   <p>Every practitioner in the Mindful Earth network is personally vetted — selected for their integrity, their training, and their genuine investment in the people they work with. This is not a directory. It is a community of healers we trust.</p>
+  </div>
 </section>
 <section class="practitioners-section">
   <div class="prac-grid">
     <a href="../montana/" class="prac-profile-card">
-      <div class="prac-card-img"></div>
+      <div class="prac-card-img" style="background-image:url('../../images/montana-portrait-1.jpg');background-size:cover;background-position:center top;"></div>
       <div class="prac-card-body">
         <div class="prac-card-tags">
           <span>Somatic Bodywork</span>
@@ -145,8 +159,8 @@
         <span class="prac-view">View Profile →</span>
       </div>
     </a>
-    <a href="https://www.tammyroggie.com" target="_blank" rel="noopener noreferrer" class="prac-profile-card">
-      <div class="prac-card-img" style="background:linear-gradient(160deg,#e8ddd0 0%,#c9b99a 100%);"></div>
+    <a href="../tammy-roggie/" class="prac-profile-card">
+      <div class="prac-card-img" style="background-image:url('../../images/tammy-roggie.jpg');background-size:cover;background-position:center;background-color:#c9b99a;"></div>
       <div class="prac-card-body">
         <div class="prac-card-tags">
           <span>Abstract Art</span>
@@ -156,7 +170,7 @@
         <h3>Tammy Roggie</h3>
         <p class="prac-location">Canada · Online</p>
         <p>Abstract artist, medicine woman, and ceremony holder. Tammy's work bridges the visual and the sacred — holding space for deep transformation through art and ancestral practice.</p>
-        <span class="prac-view">Visit Website →</span>
+        <span class="prac-view">View Profile →</span>
       </div>
     </a>
   </div>

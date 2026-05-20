@@ -92,6 +92,19 @@
   .story-vision { grid-template-columns:1fr; gap:40px; padding:64px 6vw; }
   .story-hero { padding:100px 6vw 60px; }
 }
+
+/* Mobile overflow safety */
+@media(max-width:768px) {
+  section { overflow-x: hidden; max-width: 100%; }
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  [style*="grid-template-columns:repeat(2"],
+  [style*="grid-template-columns: repeat(2"] {
+    grid-template-columns: 1fr !important;
+  }
+}
 </style>
   <link rel="canonical" href="https://mindfulearth.eco/pages/our-story.html">
 </head>
