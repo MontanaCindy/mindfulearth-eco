@@ -199,14 +199,14 @@ td [contenteditable]:focus { background: rgba(79,94,78,0.06); }
 </nav>
 
 <!-- SAVE BANNER -->
-<div style="background:#d9b382;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:58px;z-index:99;">
-  <div style="font-family:'Jost',sans-serif;font-size:12px;font-weight:600;color:#3d2e24;letter-spacing:0.06em;">
-    💾 <strong>Your progress saves automatically</strong> — but only in this browser on this device. 
-    Open this file in the <strong>same browser</strong> each time to see your saved notes. 
-    Do not use Incognito / Private mode.
+<div style="background:#d9b382;padding:16px 40px;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;position:sticky;top:58px;z-index:99;">
+  <div style="font-family:'Jost',sans-serif;font-size:11.5px;font-weight:500;color:#3d2e24;letter-spacing:0.04em;line-height:1.7;">
+    💾 <strong style="font-weight:700;">Before your first session:</strong> do a quick test — type something in any field, hit Save, close the file, reopen it in the same browser and check your note is still there. This confirms saving is working on your device.<br>
+    <strong style="font-weight:700;">Each session:</strong> hit Save regularly and always use the <strong>same browser on the same device</strong> — your notes live there, not in the cloud. No Incognito / Private mode.<br>
+    <strong style="font-weight:700;">Extra safety:</strong> after each working session, re-save this file to your desktop (File → Save As) to keep a local backup with your notes embedded.
   </div>
   <button onclick="saveAll();this.textContent='Saved ✓';setTimeout(()=>this.textContent='Save progress',2000)" 
-    style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:#3d2e24;color:#f8f6f1;border:none;padding:10px 20px;cursor:pointer;white-space:nowrap;border-radius:2px;">
+    style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:#3d2e24;color:#f8f6f1;border:none;padding:10px 20px;cursor:pointer;white-space:nowrap;border-radius:2px;flex-shrink:0;margin-top:2px;">
     Save progress
   </button>
 </div>

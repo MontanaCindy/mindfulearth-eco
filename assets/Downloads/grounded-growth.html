@@ -435,14 +435,14 @@ td [contenteditable]:focus { background: rgba(77,85,76,0.06); }
 </nav>
 
 <!-- SAVE BANNER -->
-<div style="background:#d9b382;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:58px;z-index:99;">
-  <div style="font-family:'Jost',sans-serif;font-size:12px;font-weight:600;color:#3d2e24;letter-spacing:0.06em;">
-    💾 <strong>Your progress saves automatically</strong> — but only in this browser on this device. 
-    Open this file in the <strong>same browser</strong> each time to see your saved notes. 
-    Do not use Incognito / Private mode.
+<div style="background:#d9b382;padding:16px 40px;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;position:sticky;top:58px;z-index:99;">
+  <div style="font-family:'Jost',sans-serif;font-size:11.5px;font-weight:500;color:#3d2e24;letter-spacing:0.04em;line-height:1.7;">
+    💾 <strong style="font-weight:700;">Before your first session:</strong> do a quick test — type something in any field, hit Save, close the file, reopen it in the same browser and check your note is still there. This confirms saving is working on your device.<br>
+    <strong style="font-weight:700;">Each session:</strong> hit Save regularly and always use the <strong>same browser on the same device</strong> — your notes live there, not in the cloud. No Incognito / Private mode.<br>
+    <strong style="font-weight:700;">Extra safety:</strong> after each working session, re-save this file to your desktop (File → Save As) to keep a local backup with your notes embedded.
   </div>
   <button onclick="saveAll();this.textContent='Saved ✓';setTimeout(()=>this.textContent='Save progress',2000)" 
-    style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:#3d2e24;color:#f8f6f1;border:none;padding:10px 20px;cursor:pointer;white-space:nowrap;border-radius:2px;">
+    style="font-family:'Jost',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:#3d2e24;color:#f8f6f1;border:none;padding:10px 20px;cursor:pointer;white-space:nowrap;border-radius:2px;flex-shrink:0;margin-top:2px;">
     Save progress
   </button>
 </div>
@@ -719,7 +719,7 @@ td [contenteditable]:focus { background: rgba(77,85,76,0.06); }
       <div class="card sand">
         <span class="card-tag">Premium</span>
         <h4>Full-Week Retreat</h4>
-        <p>High-touch, high-investment, high-transformation. Requires experienced facilitation, a support team, and deep pre-event participant communication. Price: CA$2,000–6,000+.</p>
+        <p>High-touch, high-investment, deeply immersive. Requires experienced facilitation, a support team, and deep pre-event participant communication. Price: CA$2,000–6,000+.</p>
         <p class="caption">Key additions: dedicated retreat centre, support team, medical protocols, daily programme design.</p>
       </div>
       <div class="card bark">
@@ -764,7 +764,7 @@ td [contenteditable]:focus { background: rgba(77,85,76,0.06); }
       <div class="card sand">
         <span class="card-tag">Method 02</span>
         <h4>Value-based pricing</h4>
-        <p>Price the transformation, not the hours. If this retreat genuinely shifts someone's life — what is that worth? Price from that answer.</p>
+        <p>Price the outcome, not the hours. If this retreat genuinely shifts someone's life — what is that worth? Price from that answer.</p>
       </div>
       <div class="card bark">
         <span class="card-tag">Method 03</span>
@@ -1119,7 +1119,7 @@ td [contenteditable]:focus { background: rgba(77,85,76,0.06); }
   <div class="section-header-inner">
     <span class="section-num">07</span>
     <h2 class="section-header-title">Day-Of &amp; <em>Programme Design</em></h2>
-    <p class="section-header-desc">How you hold the day — the structure, the energy, and the principles that turn a well-planned event into a genuinely transformational one.</p>
+    <p class="section-header-desc">How you hold the day — the structure, the energy, and the principles that turn a well-planned event into one that genuinely shifts something.</p>
   </div>
 </div>
 <section class="section bg-white">
