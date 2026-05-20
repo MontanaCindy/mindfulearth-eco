@@ -2,52 +2,140 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="This page has wandered off. Return to the Mindful Earth ecosystem.">
-<meta property="og:title" content="Page Not Found — Mindful Earth">
-<meta property="og:description" content="This page has wandered off. Return to the Mindful Earth ecosystem.">
-<meta property="og:image" content="https://mindfulearth.eco/assets/logo2.png">
-<meta property="og:url" content="https://mindfulearth.eco/404.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Mindful Earth">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Page Not Found — Mindful Earth">
-<meta name="twitter:description" content="This page has wandered off. Return to the Mindful Earth ecosystem.">
-<meta name="twitter:image" content="https://mindfulearth.eco/assets/logo2.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Page Not Found — Mindful Earth</title>
-<link href="https://fonts.googleapis.com/css2?display=swap&family=Gloock&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/shared.css">
+<meta name="description" content="This page has wandered off. Return to the Mindful Earth ecosystem.">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <style>
-.not-found {
-  min-height:100vh; display:flex; align-items:center; justify-content:center;
-  text-align:center; padding:40px 6vw;
-  background:var(--parchment);
+:root {
+  --bark:#5d4133; --forest:#4d554c; --sage:#bfc0ab; --sage-mid:#8e988f;
+  --sand:#d9b382; --mauve:#754b4d; --parchment:#f5f0e8; --off-white:#f8f6f1;
 }
-.not-found-inner { max-width:480px; }
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Lora',Georgia,serif;
+  background:var(--parchment);
+  color:var(--forest);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 6vw;
+}
+
+/* Ginkgo SVG mark */
+.ginkgo-mark { margin-bottom:32px; opacity:0.35; }
+
 .not-found-num {
-  font-family:'Gloock',serif; font-size:120px; line-height:1;
-  color:var(--sage); display:block; margin-bottom:8px;
+  font-family:'Gloock',serif;
+  font-size:clamp(80px,14vw,140px);
+  line-height:1;
+  color:var(--sage);
+  display:block;
+  margin-bottom:12px;
   letter-spacing:-4px;
 }
-.not-found h1 { font-size:clamp(24px,3vw,36px); margin-bottom:14px; }
-.not-found h1 em { font-style:italic; color:var(--mauve); }
-.not-found p { font-size:15px; line-height:1.8; color:var(--forest); margin-bottom:32px; }
-.not-found-ctas { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+h1 {
+  font-family:'Gloock',serif;
+  font-size:clamp(24px,3vw,36px);
+  color:var(--bark);
+  margin-bottom:16px;
+  line-height:1.2;
+}
+h1 em { font-style:italic; color:var(--mauve); }
+.sub {
+  font-size:15px;
+  line-height:1.85;
+  color:var(--forest);
+  max-width:460px;
+  margin:0 auto 32px;
+}
+.ctas {
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:32px;
+}
+.btn-bark {
+  font-family:'Jost',sans-serif;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  text-decoration:none;
+  background:var(--bark);
+  color:var(--off-white);
+  padding:14px 28px;
+  display:inline-block;
+}
+.btn-outline {
+  font-family:'Jost',sans-serif;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  text-decoration:none;
+  border:1px solid var(--bark);
+  color:var(--bark);
+  padding:14px 28px;
+  display:inline-block;
+}
+.email-note {
+  font-family:'Jost',sans-serif;
+  font-size:12px;
+  color:var(--sage-mid);
+  line-height:1.7;
+}
+.email-note a {
+  color:var(--forest);
+  border-bottom:1px solid var(--sage);
+  text-decoration:none;
+}
+.wordmark {
+  font-family:'Jost',sans-serif;
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--sage-mid);
+  display:block;
+  margin-bottom:48px;
+}
 </style>
-  <link rel="canonical" href="https://mindfulearth.eco/404.html">
 </head>
 <body>
-<section class="not-found">
-  <div class="not-found-inner">
-    <span class="not-found-num">404</span>
-    <h1>This page has <em>wandered off.</em></h1>
-    <p>It happens to the best of us. The page you are looking for does not exist — but the ecosystem is still here, waiting for you.</p>
-    <div class="not-found-ctas">
-      <a href="index.html" class="btn-bark">Return Home</a>
-      <a href="pages/contact.html" class="btn-outline">Get in Touch</a>
-    </div>
+
+  <span class="wordmark">Mindful Earth</span>
+
+  <!-- Ginkgo mark -->
+  <div class="ginkgo-mark">
+    <svg viewBox="0 0 80 100" xmlns="http://www.w3.org/2000/svg" width="56" height="70">
+      <path d="M40 88 Q20 70 16 50 Q12 30 22 16 Q30 6 40 8 Q28 22 26 42 Q24 62 40 88Z"
+            fill="none" stroke="#5d4133" stroke-width="1.5" opacity="0.8"/>
+      <path d="M40 88 Q60 70 64 50 Q68 30 58 16 Q50 6 40 8 Q52 22 54 42 Q56 62 40 88Z"
+            fill="none" stroke="#5d4133" stroke-width="1.5" opacity="0.8"/>
+      <line x1="40" y1="88" x2="40" y2="8" stroke="#5d4133" stroke-width="0.8" opacity="0.4"/>
+      <line x1="40" y1="88" x2="40" y2="98" stroke="#d9b382" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
   </div>
-</section>
+
+  <span class="not-found-num">404</span>
+  <h1>This page has <em>wandered off.</em></h1>
+  <p class="sub">It happens to the best of us. The page you are looking for does not exist — but the ecosystem is still here, waiting for you.</p>
+
+  <div class="ctas">
+    <a href="/" class="btn-bark">Return Home</a>
+    <a href="/pages/contact/" class="btn-outline">Get in Touch</a>
+  </div>
+
+  <p class="email-note">
+    If you were looking for something specific and can't find it,<br>
+    reach out directly: <a href="mailto:connect@mindfulearth.eco">connect@mindfulearth.eco</a>
+  </p>
+
 </body>
 </html>
