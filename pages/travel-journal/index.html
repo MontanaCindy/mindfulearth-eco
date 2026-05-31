@@ -2,211 +2,337 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Travel Journal — Montana Cindy · Mindful Earth</title>
-<meta name="description" content="A visual journal of places, retreats, and moments from Montana Cindy's travels hosting wellness experiences around the world.">
-<link href="https://fonts.googleapis.com/css2?display=swap&family=Gloock&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Six years of living on the road — van life, retreats, grief, loss, and the slow discovery of what home actually means. A travel journal by Montana Cindy.">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/shared.css">
-<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../../assets/favicon.svg">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#4d554c">
 <style>
-.tj-hero {
-  min-height:55vh; background:url('../../images/montana-travel-1.jpg') center/cover no-repeat;
-  display:flex; align-items:flex-end; padding:0 10vw 64px; position:relative;
-}
-.tj-hero::before { content:''; position:absolute; inset:0; background:rgba(35,44,35,0.55); z-index:1; }
-.tj-hero > * { position:relative; z-index:2; }
+.tj-hero{min-height:65vh;display:flex;align-items:flex-end;padding:0 10vw 72px;position:relative;background:url('../../images/montana-travel-1.jpg') center/cover no-repeat;}
+.tj-hero::before{content:'';position:absolute;inset:0;background:rgba(25,32,25,0.58);z-index:1;}
+.tj-hero>*{position:relative;z-index:2;}
 
-/* INSTAGRAM-STYLE FEED */
-.feed { max-width:680px; margin:0 auto; padding:80px 40px; }
-.feed-item { margin-bottom:72px; }
-.feed-img {
-  width:100%; aspect-ratio:4/5;
-  background:var(--sage-light); background-size:cover; background-position:center;
-  margin-bottom:18px; display:block;
-}
-.feed-img.landscape { aspect-ratio:4/3; }
-.feed-img.square { aspect-ratio:1; }
-.feed-pair { display:grid; grid-template-columns:1fr 1fr; gap:3px; margin-bottom:18px; }
-.feed-pair .feed-img { margin-bottom:0; }
-.feed-location {
-  font-family:"Jost",sans-serif; font-size:10px; font-weight:500;
-  letter-spacing:0.16em; text-transform:uppercase; color:var(--sage-mid);
-  display:block; margin-bottom:8px;
-}
-.feed-caption {
-  font-size:15px; line-height:1.85; color:var(--forest); margin-bottom:8px;
-}
-.feed-date {
-  font-family:"Jost",sans-serif; font-size:11px; color:rgba(142,152,143,0.7);
-}
-.feed-divider {
-  border:none; border-top:1px solid rgba(191,192,171,0.25); margin:72px 0;
-}
+.feed{max-width:700px;margin:0 auto;padding:80px 40px;}
+.entry{margin-bottom:72px;}
+.entry-location{font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage-mid);display:block;margin-bottom:10px;}
+.entry-year{font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(191,192,171,0.45);display:block;margin-bottom:16px;}
+.entry h2{font-family:'Gloock',serif;font-size:clamp(20px,2.5vw,28px);color:var(--bark);line-height:1.2;margin-bottom:16px;}
+.entry p{font-size:15px;line-height:1.95;color:var(--forest);margin-bottom:14px;}
+.entry-img{width:100%;margin-bottom:18px;display:block;}
+.entry-img.portrait{aspect-ratio:3/4;object-fit:cover;object-position:center;}
+.entry-img.landscape{aspect-ratio:4/3;object-fit:cover;object-position:center;}
+.entry-img.wide{aspect-ratio:16/9;object-fit:cover;object-position:center;}
+.img-pair{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:18px;}
+.img-pair img{width:100%;aspect-ratio:1;object-fit:cover;}
+.entry-divider{border:none;border-top:1px solid rgba(191,192,171,0.2);margin:64px 0;}
+.timeline-dot{width:6px;height:6px;background:var(--sand);border-radius:50%;display:inline-block;margin-right:10px;vertical-align:middle;}
+.coming-soon{background:var(--forest);padding:48px 40px;text-align:center;margin-bottom:72px;}
+.coming-soon p{font-family:'Gloock',serif;font-style:italic;font-size:22px;color:rgba(248,246,241,0.35);margin:0;}
 
-@media(max-width:768px) {
-  .feed { padding:60px 24px; }
-  .tj-hero { padding:0 6vw 48px; }
-}
-</style>
-<!-- Open Graph -->
-<meta property="og:title" content="Travel Journal — Montana Cindy · Mindful Earth">
-<meta property="og:description" content="A visual journal of places, retreats, and moments from Montana Cindy's travels hosting wellness experiences around the world.">
-<meta property="og:image" content="https://mindfulearth.eco/assets/sharelink.jpg">
-<meta property="og:url" content="https://mindfulearth.eco/pages/travel-journal/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Mindful Earth">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Travel Journal — Montana Cindy · Mindful Earth">
-<meta name="twitter:description" content="A visual journal of places, retreats, and moments from Montana Cindy's travels hosting wellness experiences around the world.">
-<meta name="twitter:image" content="https://mindfulearth.eco/assets/sharelink.jpg">
-<style>
-/* Mobile overflow safety */
 @media(max-width:768px){
-  html,body{overflow-x:hidden;max-width:100vw;}
-  section,div{max-width:100%;}
-  [style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr !important;}
-  [style*="grid-template-columns:repeat(2"],[style*="grid-template-columns: repeat(2"]{grid-template-columns:1fr !important;}
-  [style*="grid-template-columns:repeat(3"],[style*="grid-template-columns: repeat(3"]{grid-template-columns:1fr !important;}
-  [style*="grid-template-columns:repeat(4"],[style*="grid-template-columns: repeat(4"]{grid-template-columns:repeat(2,1fr) !important;}
+  .feed{padding:56px 24px;}
+  .tj-hero{padding:0 6vw 48px;}
+  .img-pair{grid-template-columns:1fr;}
 }
 </style>
 </head>
 <body>
-
 <div class="top-bar">
   <a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer">@mindfulearth.eco</a>
   <span class="top-bar-sep">·</span>
-  <a href="https://instagram.com/montanacindy_" target="_blank" rel="noopener noreferrer">@montanacindy_</a>
+  <a href="https://instagram.com/mindfulearth.events" target="_blank" rel="noopener noreferrer">@mindfulearth.events</a>
+  <span class="top-bar-sep">·</span>
+  <a href="https://instagram.com/mindfulearth.media" target="_blank" rel="noopener noreferrer">@mindfulearth.media</a>
 </div>
-
 <nav id="nav">
-  <a href="../../" class="nav-logo"><img src="../../assets/logo.png" alt="Mindful Earth" style="height:60px;width:auto;"></a>
+  <a href="../../" class="nav-logo">
+  <img src="../../assets/logo.png" alt="Mindful Earth" style="height:60px;width:auto;">
+</a>
   <ul class="nav-center">
-    <li><a href="../our-story/">About</a></li>
-    <li><a href="../experiences/">Experiences</a></li>
-    <li><a href="../journal/">Learn</a></li>
-    <li><a href="../photography/">Photography</a></li>
-    <li><a href="../montana/">Montana Cindy</a></li>
+    <li><a href="../../pages/our-story.html">About <span class="nav-arrow"><svg width="8" height="5" viewBox="0 0 8 5" fill="none" style="display:inline-block;vertical-align:middle;margin-left:2px;opacity:0.5;transition:transform 0.2s;"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <ul class="nav-dropdown">
+        <li><a href="../../pages/our-story.html">Our Story</a></li>
+        <li><a href="../../pages/team.html">The Team</a></li>
+        <li><a href="../../pages/eco-pledge.html">Our Eco Pledge</a></li>
+      </ul>
+    </li>
+    <li><a href="../../pages/community.html">Community <span class="nav-arrow"><svg width="8" height="5" viewBox="0 0 8 5" fill="none" style="display:inline-block;vertical-align:middle;margin-left:2px;opacity:0.5;transition:transform 0.2s;"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <ul class="nav-dropdown">
+        <li><a href="../../pages/community.html">The Community</a></li>
+        <li><a href="../../pages/practitioners.html">Practitioners</a></li>
+        <li><a href="../../pages/partnerships.html">Brand Partnerships</a></li>
+      </ul>
+    </li>
+    <li><a href="../../pages/experiences.html">Experiences <span class="nav-arrow"><svg width="8" height="5" viewBox="0 0 8 5" fill="none" style="display:inline-block;vertical-align:middle;margin-left:2px;opacity:0.5;transition:transform 0.2s;"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <ul class="nav-dropdown">
+        <li><a href="../../pages/experiences.html">All Experiences</a></li>
+        <li><a href="../../pages/upcoming.html">Upcoming</a></li>
+        <li><a href="../../pages/past-events.html">Past Events</a></li>
+      </ul>
+    </li>
+    <li><a href="../../pages/journal.html">Learn <span class="nav-arrow"><svg width="8" height="5" viewBox="0 0 8 5" fill="none" style="display:inline-block;vertical-align:middle;margin-left:2px;opacity:0.5;transition:transform 0.2s;"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <ul class="nav-dropdown">
+        <li><a href="../../pages/journal.html">The Journal</a></li>
+        <li><a href="../../pages/podcast.html">Podcast</a></li>
+        <li><a href="../../pages/courses.html">Courses</a></li>
+      </ul>
+    </li>
+    <li><a href="../../pages/event-planning.html">Services <span class="nav-arrow"><svg width="8" height="5" viewBox="0 0 8 5" fill="none" style="display:inline-block;vertical-align:middle;margin-left:2px;opacity:0.5;transition:transform 0.2s;"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <ul class="nav-dropdown">
+        <li><a href="../../pages/event-planning.html">Event Planning</a></li>
+        <li><a href="../../pages/media-marketing.html">Media &amp; Marketing</a></li>
+        <li><a href="../../pages/wellness-consulting.html">Wellness Business Consulting</a></li>
+        <li><a href="../../pages/corporate-wellness.html">Corporate Wellness</a></li>
+        <li><a href="../../pages/montana.html">Work with Montana</a></li>
+      </ul>
+    </li>
+    <li><a href="../../pages/give-back.html">Give Back <span class="nav-arrow"><svg width="8" height="5" viewBox="0 0 8 5" fill="none" style="display:inline-block;vertical-align:middle;margin-left:2px;opacity:0.5;transition:transform 0.2s;"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <ul class="nav-dropdown">
+        <li><a href="../../pages/give-back.html">Make a Difference</a></li>
+        <li><a href="../../pages/community-access-fund.html">Community Access Fund</a></li>
+      </ul>
+    </li>
   </ul>
-  <a href="https://cal.com/montana-king-mrfkvt/clarity-call" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Call</a>
+  <a href="https://calendly.com/mindfuleartheco/30min" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Call</a>
   <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
-<!-- HERO -->
 <section class="tj-hero" data-hero="true">
   <div>
-    <span class="eyebrow" style="color:rgba(191,192,171,0.65);">Montana Cindy</span>
-    <h1 style="font-size:clamp(38px,5vw,68px);color:var(--off-white);line-height:1.05;margin-bottom:14px;">A travel <em style="font-style:italic;color:var(--sand);">journal.</em></h1>
-    <p style="font-size:15px;color:rgba(239,232,220,0.7);max-width:460px;line-height:1.8;">Places, retreats, moments. An honest record of where the work has taken me and what I have found along the way.</p>
+    <span class="eyebrow" style="color:rgba(191,192,171,0.6);">Montana Cindy</span>
+    <h1 style="font-size:clamp(36px,5vw,64px);color:var(--off-white);line-height:1.05;margin-bottom:14px;">A travel<br><em style="font-style:italic;color:var(--sand);">journal.</em></h1>
+    <p style="font-size:15px;color:rgba(239,232,220,0.65);max-width:460px;line-height:1.8;">Six years of moving. The mountains, the van, the retreats, the grief, the sailing trip right after loss. And eventually, a partner in London and something that might finally be home.</p>
   </div>
 </section>
 
-<!-- INTRO -->
+<!-- STICKY SECTION NAV -->
+<nav style="position:sticky;top:58px;z-index:98;background:var(--forest);border-bottom:1px solid rgba(191,192,171,0.1);padding:0 6vw;overflow-x:auto;white-space:nowrap;scrollbar-width:none;" id="tjNav">
+  <style>#tjNav::-webkit-scrollbar{display:none;} .tj-nav-link{display:inline-block;font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(191,192,171,0.5);text-decoration:none;padding:14px 20px 12px;border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s;} .tj-nav-link:hover,.tj-nav-link.active{color:var(--sand);border-bottom-color:var(--sand);}</style>
+  <a class="tj-nav-link" href="#canmore">Canmore</a>
+  <a class="tj-nav-link" href="#van">The Van</a>
+  <a class="tj-nav-link" href="#westcoast">West Coast</a>
+  <a class="tj-nav-link" href="#grandma">Portugal &amp; Loss</a>
+  <a class="tj-nav-link" href="#grief">Sailing &amp; Grief</a>
+  <a class="tj-nav-link" href="#latinamerica">Latin America</a>
+  <a class="tj-nav-link" href="#london">London</a>
+</nav>
+
+<script>
+// Highlight active section on scroll
+window.addEventListener('scroll', function() {
+  var sections = ['canmore','van','westcoast','grandma','grief','latinamerica','london'];
+  var links = document.querySelectorAll('.tj-nav-link');
+  var current = '';
+  sections.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el && window.scrollY >= el.offsetTop - 120) current = id;
+  });
+  links.forEach(function(link) {
+    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+<!-- INTRO QUOTE -->
 <section style="background:var(--parchment);padding:64px 10vw;border-bottom:1px solid rgba(191,192,171,0.2);">
-  <div style="max-width:640px;margin:0 auto;text-align:center;">
-    <p style="font-family:'Gloock',serif;font-style:italic;font-size:clamp(18px,2vw,24px);color:var(--bark);line-height:1.6;margin-bottom:0;">"One of my biggest dreams is to have retreat venues in different countries. Places I have been to enough times to know — and love enough to want to share. This journal is the beginning of that map."</p>
-    <span style="font-family:'Jost',sans-serif;font-size:11px;color:var(--sage-mid);display:block;margin-top:14px;letter-spacing:0.08em;">— Montana Cindy</span>
+  <div style="max-width:620px;margin:0 auto;text-align:center;">
+    <p style="font-family:'Gloock',serif;font-style:italic;font-size:clamp(17px,2vw,22px);color:var(--bark);line-height:1.65;">"I had a dream about mountains. The next day, my friend tagged me in a photo of a pet-friendly cabin in Canmore, Alberta. A week later I had packed up my car and was driving across the country. I did not know at the time that I had just started the next six years of my life."</p>
+    <span style="font-family:'Jost',sans-serif;font-size:11px;color:var(--sage-mid);display:block;margin-top:14px;letter-spacing:0.08em;">— Montana</span>
   </div>
 </section>
 
 <!-- FEED -->
 <section style="background:var(--white);">
-  <div class="feed">
+<div class="feed">
 
-    <!-- ENTRY 1 — Nicaragua -->
-    <div class="feed-item">
-      <span class="feed-location">Nicaragua · February 2025</span>
-      <div class="feed-pair">
-        <div class="feed-img" style="background-image:url('../../images/nicaragua-hero.jpg');"></div>
-        <div class="feed-img" style="background-image:url('../../images/montana-retreat-1.jpg');"></div>
-      </div>
-      <p class="feed-caption">San Juan del Sur. The kind of place that gets into you. We arrived as strangers and left as something more — the particular closeness that only forms when people are willing to be real with each other for a week straight. There was surf and yoga and late dinners and something that felt like ceremony. I have been hosting retreats for years and this one reminded me exactly why I started.</p>
-      <span class="feed-date">Cedar Mindful Retreat · 7 days · Sold out</span>
-    </div>
-
-    <hr class="feed-divider">
-
-    <!-- ENTRY 2 — Canada -->
-    <div class="feed-item">
-      <span class="feed-location">Canmore, Alberta · Canada</span>
-      <div class="feed-img landscape" style="background-image:url('../../images/montana-travel-1.jpg');"></div>
-      <p class="feed-caption" style="margin-top:18px;">Home, in a different sense than London. The Rockies are where I learned to breathe again — literally. There is something about being small inside something that enormous that puts everything in perspective. I grew up with anxiety and mountains were always where it quietened. Canmore holds a lot of my history. I am still figuring out what to do with all of it.</p>
-      <span class="feed-date">Alberta, Canada</span>
-    </div>
-
-    <hr class="feed-divider">
-
-    <!-- ENTRY 3 — London -->
-    <div class="feed-item">
-      <span class="feed-location">London · 2025 — present</span>
-      <div class="feed-img square" style="background-image:url('../../images/montana-moment-1.jpg');"></div>
-      <p class="feed-caption" style="margin-top:18px;">I moved here not entirely knowing why — only that something needed to shift, and sometimes you have to change the backdrop before you can change anything else. London has been hard and rich and full in the way that cities that don't care about you can be. I have found pockets of stillness in it. I am still finding them. My dog helps.</p>
-      <span class="feed-date">North London</span>
-    </div>
-
-    <hr class="feed-divider">
-
-    <!-- ENTRY 4 — Ibiza coming soon -->
-    <div class="feed-item">
-      <span class="feed-location">Ibiza · Coming 2026</span>
-      <div style="background:var(--forest);padding:48px 32px;display:flex;align-items:center;justify-content:center;min-height:280px;margin-bottom:18px;">
-        <div style="text-align:center;">
-          <span style="font-family:'Gloock',serif;font-style:italic;font-size:28px;color:rgba(248,246,241,0.4);display:block;margin-bottom:12px;">coming soon</span>
-          <p style="font-size:13px;color:rgba(191,192,171,0.5);font-family:'Jost',sans-serif;letter-spacing:0.1em;text-transform:uppercase;">Ibiza 2026</p>
-        </div>
-      </div>
-      <p class="feed-caption">Next chapter. More to come.</p>
-      <span class="feed-date">Summer 2026</span>
-    </div>
-
-    <hr class="feed-divider">
-
-    <!-- CTA -->
-    <div style="text-align:center;padding:20px 0 40px;">
-      <p style="font-size:15px;color:var(--forest);line-height:1.8;margin-bottom:24px;">More entries coming — this journal grows with every trip. Follow along on Instagram for real-time updates.</p>
-      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-        <a href="https://instagram.com/montanacindy_" target="_blank" rel="noopener noreferrer" class="btn-forest">Follow on Instagram</a>
-        <a href="../photography/" class="btn-outline">View Photography Gallery</a>
-      </div>
-    </div>
-
+  <!-- ENTRY 1 — Canmore -->
+  <div class="entry">
+    <span id="canmore" class="entry-location" style="scroll-margin-top:100px;">Canmore, Alberta · Canada</span>
+    <span class="entry-year">2020</span>
+    <img src="../../images/montana-travel-1.jpg" alt="Canmore Alberta" class="entry-img landscape" onerror="this.style.display='none'">
+    <h2>The dream that started everything.</h2>
+    <p>I had never really travelled. Not properly. I had a life in Ontario — comfortable, familiar, a little small. And then I had a dream about mountains. Not a metaphor. An actual dream. I woke up and my friend had tagged me in a listing: a beautiful pet-friendly home in Canmore. The Rockies. I had never been.</p>
+    <p>I had just finished my yoga teacher training. Something in me was cracking open in the way that happens after a period of intensive learning — where you suddenly see your life from the outside and it looks different than it did before. I packed my car that week and drove. Dogs in the back. No real plan.</p>
+    <p>Canmore did something to me that I still cannot fully explain. The mountains are enormous in a way that is not just visual — you feel small inside them, and that smallness is somehow exactly what I needed. I had been anxious my whole life, always trying to make myself bigger than the fear. There, I just stopped trying. I was small. The mountains were enormous. Everything else sorted itself out.</p>
+    <p>I found myself there. That is the only honest way to say it.</p>
   </div>
+
+  <hr class="entry-divider">
+
+  <!-- ENTRY 2 — The Van -->
+  <div class="entry">
+    <span id="van" class="entry-location" style="scroll-margin-top:100px;">Ontario · East Coast Canada · The Road</span>
+    <span class="entry-year">2020 – 2021</span>
+    <h2>The van years.</h2>
+    <p>I came back from Canmore and bought a van. I do not know why that felt like the obvious next step, but it did. I converted it, badly at first and then better, and spent the next while living in it — first back in Ontario, then east to the Atlantic coast, then eventually west again to Vancouver Island.</p>
+    <p>There is a particular freedom that comes with owning nothing that can't fit in a van. A lightness. But also a particular loneliness, which nobody tells you about before you do it. You meet people everywhere and leave them everywhere. You are perpetually arriving somewhere and perpetually leaving it.</p>
+    <p>I loved it anyway. The east coast of Canada is genuinely one of the most beautiful places I have ever been — the light is different there, softer, the people are warmer in a way that feels old and genuine. I did not stay long enough.</p>
+  </div>
+
+  <hr class="entry-divider">
+
+  <!-- ENTRY 3 — Vancouver Island + Bowen Island -->
+  <div class="entry">
+    <span id="westcoast" class="entry-location" style="scroll-margin-top:100px;">Vancouver Island · Bowen Island · Tofino · BC</span>
+    <span class="entry-year">2021 – 2022</span>
+    <h2>The west coast, and my first retreat away from home.</h2>
+    <p>Vancouver Island felt like a different country. The rainforest, the ocean on both sides, the mountains in the distance. I lived in a trailer in Tofino for a few months — which sounds romantic and was also genuinely cold and occasionally chaotic. I fell in love with that coast in a way that has never fully left me.</p>
+    <p>The Bowen Island retreat was a turning point. I had been facilitating yoga and workshops at home, in familiar rooms with familiar people. Bowen was the first time I held space somewhere entirely new, with people I did not know, in a setting I had never been in before. It was terrifying in the best way. It worked. Something solidified in me — a knowing that this is what I am supposed to do, not just in safe conditions but properly, in the world.</p>
+    <p>I sold the van eventually. Not without grief. It had been my home for longer than I expected. But I had outgrown what it could hold.</p>
+  </div>
+
+  <hr class="entry-divider">
+
+  <!-- ENTRY 4 — Grandma + Nicaragua + Portugal -->
+  <div class="entry">
+    <span id="grandma" class="entry-location" style="scroll-margin-top:100px;">Ontario · Nicaragua · Costa Rica · Portugal</span>
+    <span class="entry-year">2022 – 2023</span>
+    <img src="../../images/nicaragua-hero.jpg" alt="Nicaragua" class="entry-img wide" onerror="this.style.display='none'">
+    <h2>The year everything changed.</h2>
+    <p>I came back to Ontario for a season to help care for my grandma. She was getting older and needed more support, and there was nowhere else I wanted to be. We had a particular closeness — the kind that does not need explanation. I would sit with her and feel like I was exactly where I was supposed to be, even as the rest of my life felt uncertain.</p>
+    <p>Between visits I kept moving. Nicaragua for the first retreat — the first time I flew somewhere to host, with a partner, for a group of women I had never met. It was the most alive I had felt in years. The retreat worked. The community formed. I understood then what I was building toward.</p>
+    <p>Costa Rica briefly. Then three months in Portugal — mostly Lisbon, wandering and writing and thinking. I got very clear in Portugal in a way that had been evading me for years. About what I wanted. About Mindful Earth. About the kind of life I was actually trying to build, rather than the one I had inherited the idea of.</p>
+    <p>I came home from Portugal with a kind of quiet certainty. I went straight to my grandma.</p>
+    <p>Three weeks later she died.</p>
+    <p>I had known it was coming and it undid me anyway. She was my anchor in a way I only fully understood after she was gone. The grief was enormous — is enormous, still. I lost myself in it in a way I had not lost myself in anything before. And then, because I did not know what else to do, I got on a plane to Greece.</p>
+  </div>
+
+  <hr class="entry-divider">
+
+  <!-- ENTRY 5 — Greece, Ireland, England, Training -->
+  <div class="entry">
+    <span id="grief" class="entry-location" style="scroll-margin-top:100px;">Greece · Ireland · England</span>
+    <span class="entry-year">2023</span>
+    <h2>The sailing trip, and learning to hold the grief.</h2>
+    <p>Greece was a sailing trip with friends. I went because I had said yes before my grandma died and I did not know how to unsay it, and also because something in me understood that sitting still with the grief was not yet something I could do. The sailing helped. The sea does something to grief — it gives it space, makes it less close, lets it exist alongside the wind and the light and the moving.</p>
+    <p>Ireland was quiet and green and I needed both of those things. England came after — first briefly, then again a month later for my holosomatic bodywork facilitator training. That training was another turning point. The work of it cracked something open that the grief had sealed. I came out of it different. More myself, not less, despite everything.</p>
+    <p>I went back to Canmore for a month after the training. Back to where it started. The mountains had the same effect they always have — they made me small in the best way. Then Banff for a month. I was trying to find my footing again. Slowly, I did.</p>
+  </div>
+
+  <hr class="entry-divider">
+
+  <!-- ENTRY 6 — Latin America loop -->
+  <div class="entry">
+    <span id="latinamerica" class="entry-location" style="scroll-margin-top:100px;">Colombia · Costa Rica · Nicaragua · El Salvador · Guatemala · Mexico</span>
+    <span class="entry-year">2023 – 2024</span>
+    <img src="../../images/nicaragua-2025-01.jpg" alt="Nicaragua retreat" class="entry-img wide" onerror="this.style.display='none'">
+    <h2>The Latin America loop, and falling in love with Ometepe.</h2>
+    <p>Colombia first. Medellín and then the coffee region — a country that gets under your skin in a way that is hard to prepare for. The warmth, the food, the particular combination of beauty and complexity that makes it unlike anywhere else I have been.</p>
+    <p>Costa Rica briefly, then Nicaragua for the second retreat. By then I knew what I was doing. The first one had been exhilarating and terrifying. The second had the ease of something that has found its form. The women came, the community formed, something genuine happened. I keep coming back to Nicaragua. I think I always will.</p>
+    <p>Ometepe island deserves its own paragraph. It is a volcanic island in the middle of Lake Nicaragua, and it is one of the most genuinely strange and beautiful places I have encountered. Something is different there — the air, the quality of the silence, the sense of being somewhere that has its own rules. I did not stay long enough. I will go back.</p>
+    <p>El Salvador, Guatemala, Mexico. Each one distinct. Each one generous in different ways. I was moving and learning and slowly, over those months, starting to feel like myself again after the grief. Not the same self. A different one — quieter, more certain about some things, more comfortable with uncertainty about others.</p>
+  </div>
+
+  <hr class="entry-divider">
+
+  <!-- ENTRY 7 — London -->
+  <div class="entry">
+    <span id="london" class="entry-location" style="scroll-margin-top:100px;">London, UK — and beyond</span>
+    <span class="entry-year">2024 – present</span>
+    <img src="../../images/montana-moment-1.jpg" alt="London" class="entry-img portrait" onerror="this.style.display='none'">
+    <h2>Landing in London. Still landing, honestly.</h2>
+    <p>I moved to the UK because my partner was here. That sounds simple. It was not simple. After six years of moving when I wanted and leaving when I needed and being accountable to no fixed address, choosing a city — choosing a person, choosing to stay — was one of the stranger things I have done.</p>
+    <p>London was a lot, initially. It is a lot. It is enormous and fast and not particularly interested in you, which can feel cold until you find the pockets of warmth inside it, and then it feels like something else entirely. I am still finding those pockets. My dog helps. He reminds me to walk in parks and notice things.</p>
+    <div class="img-pair" style="margin-bottom:20px;">
+      <img src="../../images/ibiza-2026-01.jpg" alt="Ibiza 2026" onerror="this.style.display='none'">
+      <img src="../../images/ibiza-2026-02.jpg" alt="Ibiza retreat 2026" onerror="this.style.display='none'">
+    </div>
+    <p>Since being here I have been to Paris, Amsterdam, Italy for a ski trip, Portugal again (Faro and Lagos, which I love), and most recently Ibiza — for the Sunshine Souls retreat, doing photography and content. That felt like the beginning of something. The retreat photographer version of the work, alongside the practitioner version. Both are mine.</p>
+    <p>I hope London can be the home base that finally gives me the stability to travel properly — not running, but choosing. Greece this summer, probably. The list is long. The energy is different now than it was in 2020 when I drove away from everything I knew. I know more about what I am looking for. I know more about what I need to come back to.</p>
+    <p>One of my biggest dreams is still to have retreat venues in different countries. Places I have visited enough times to love and love enough to want to share. I am working toward that, one retreat at a time. This journal is the map of how I got here. It is far from finished.</p>
+  </div>
+
+  <hr class="entry-divider">
+
+  <!-- COMING NEXT -->
+  <div class="entry">
+    <span class="entry-location">What's next</span>
+    <div class="coming-soon">
+      <p>Greece · More of Europe · Wherever the retreats take me.</p>
+    </div>
+    <p style="font-size:14px;color:var(--sage-mid);line-height:1.8;text-align:center;">Follow along on Instagram for real-time updates.</p>
+    <div style="display:flex;gap:16px;justify-content:center;margin-top:16px;flex-wrap:wrap;">
+      <a href="https://instagram.com/montanacindy_" target="_blank" rel="noopener noreferrer" class="btn-forest">@montanacindy_</a>
+      <a href="../photography/" class="btn-outline">Photography Gallery</a>
+    </div>
+  </div>
+
+</div>
 </section>
 
 <footer>
   <div class="footer-top">
-    <div class="footer-brand">
+    <div>
       <span class="footer-brand-name">Mindful Earth</span>
       <span class="footer-tagline">Return to Self, Community &amp; Nature</span>
+      <p class="footer-desc">A wellness ecosystem being built for practitioners and the communities they serve.</p>
     </div>
-    <div class="footer-col"><h4>Montana</h4><ul>
-      <li><a href="../montana/">Work with Montana</a></li>
-      <li><a href="../photography/">Photography</a></li>
-      <li><a href="../past-events/">Past Events</a></li>
+    <div class="footer-col"><h4>Journal</h4><ul>
+      <li><a href="../who-holds-space-for-you/">Who Holds Space For You?</a></li>
+      <li><a href="../what-happens-on-a-retreat/">What Happens on a Retreat</a></li>
+      <li><a href="../grow-your-business-with-events/">Grow With Events</a></li>
+      <li><a href="../reach-the-right-people/">Reach the Right People</a></li>
     </ul></div>
-    <div class="footer-col"><h4>Learn</h4><ul>
-      <li><a href="../workbooks/">All Guides</a></li>
-      <li><a href="../journal/">The Journal</a></li>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="../../pages/event-planning.html">Event Planning</a></li>
+      <li><a href="../../pages/media-marketing.html">Wellness Marketing</a></li>
+      <li><a href="../../pages/wellness-consulting.html">Consulting</a></li>
+      <li><a href="../../pages/montana.html">Work with Montana</a></li>
     </ul></div>
     <div class="footer-col"><h4>Connect</h4><ul>
-      <li><a href="../community/">The Community</a></li>
-      <li><a href="../contact/">Contact</a></li>
+      <li><a href="../../pages/community.html">The Community</a></li>
+      <li><a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer">@mindfulearth.eco</a></li>
+      <li><a href="../../pages/contact.html">Contact</a></li>
     </ul></div>
   </div>
+
+  <!-- FOLLOW US -->
+  <div style="border-top:1px solid rgba(191,192,171,0.12);padding-top:24px;margin-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+    <span style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage-mid);">Follow Us</span>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
+      <a href="https://instagram.com/mindfulearth.eco" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color 0.2s;" onmouseover="this.style.color='var(--off-white)'" onmouseout="this.style.color='var(--sage)'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        @mindfulearth.eco
+      </a>
+      <a href="https://instagram.com/montanacindy_" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color 0.2s;" onmouseover="this.style.color='var(--off-white)'" onmouseout="this.style.color='var(--sage)'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        @montanacindy_
+      </a>
+      <a href="https://www.facebook.com/mindfuleartheco" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;display:flex;align-items:center;gap:6px;" onmouseover="this.style.color='var(--off-white)'" onmouseout="this.style.color='var(--sage)'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        Facebook
+      </a>
+      <a href="https://linkedin.com/company/mindful-earth-eco" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;display:flex;align-items:center;gap:6px;" onmouseover="this.style.color='var(--off-white)'" onmouseout="this.style.color='var(--sage)'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://chat.whatsapp.com/GzOQyhpVlbS50fCpybsFGp" target="_blank" rel="noopener noreferrer" style="font-family:'Jost',sans-serif;font-size:12px;color:var(--sage);text-decoration:none;display:flex;align-items:center;gap:6px;" onmouseover="this.style.color='var(--off-white)'" onmouseout="this.style.color='var(--sage)'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        WhatsApp Community
+      </a>
+    </div>
+  </div>
   <div class="footer-bottom">
-    <span class="footer-copy">&copy; 2019&ndash;2026 Mindful Earth. All rights reserved.</span>
+    <div class="footer-legal">
+      <a href="../../pages/privacy.html">Privacy Policy</a>
+      <a href="../../pages/terms.html">Terms &amp; Conditions</a>
+      <a href="../../pages/contact.html">Contact</a>
+    </div>
+    <span class="footer-copy">&copy; 2019&ndash;2026 Mindful Earth &middot; Made with intention.</span>
   </div>
 </footer>
-
 <script>
-const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
-document.getElementById('hamburger').addEventListener('click',function(){
-  document.getElementById('mobile-menu')?.classList.toggle('open');
-  this.classList.toggle('open');
-});
+  const nav = document.getElementById('nav');
+  if(nav) window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+  const h = document.getElementById('hamburger');
+  if(h) h.addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('open'));
+  function acceptCookies() { localStorage.setItem('me_cookies','accepted'); const b = document.getElementById('cookieBanner'); if(b) b.classList.remove('visible'); }
+  function declineCookies() { localStorage.setItem('me_cookies','declined'); const b = document.getElementById('cookieBanner'); if(b) b.classList.remove('visible'); }
+  function showCookieBanner() { if(!localStorage.getItem('me_cookies')) { setTimeout(() => { const b = document.getElementById('cookieBanner'); if(b) b.classList.add('visible'); }, 1500); } }
+  showCookieBanner();
 </script>
+</body>
+</html>
 </body>
 </html>

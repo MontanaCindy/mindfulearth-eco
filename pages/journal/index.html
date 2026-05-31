@@ -2,28 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="Reflections, resources, and honest writing about wellness, practitioner life, retreats, and building something real.">
-<meta property="og:title" content="The Journal — Mindful Earth">
-<meta property="og:description" content="Reflections, resources, and honest writing about wellness, practitioner life, retreats, and building something real.">
+<meta name="description" content="Honest writing about building a wellness practice, hosting retreats, marketing authentically, and the inner work that holds it all together.">
+<meta property="og:title" content="The Journal — Wellness, Retreat Planning & Practitioner Life · Mindful Earth">>
+<meta property="og:description" content="Honest writing about building a wellness practice, hosting retreats, marketing authentically, and the inner work that holds it all together.">>
 <meta property="og:image" content="https://mindfulearth.eco/assets/sharelink.jpg">
 <meta property="og:url" content="https://mindfulearth.eco/pages/journal.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mindful Earth">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Journal — Mindful Earth">
-<meta name="twitter:description" content="Reflections, resources, and honest writing about wellness, practitioner life, retreats, and building something real.">
+<meta name="twitter:title" content="The Journal — Wellness, Retreat Planning & Practitioner Life · Mindful Earth">>
+<meta name="twitter:description" content="Honest writing about building a wellness practice, hosting retreats, marketing authentically, and the inner work that holds it all together.">>
 <meta name="twitter:image" content="https://mindfulearth.eco/assets/sharelink.jpg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Journal — Mindful Earth</title>
+<title>The Journal — Wellness, Retreat Planning & Practitioner Life · Mindful Earth</title>
 <link rel="stylesheet" href="../../assets/shared.css">
-<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon.svg" sizes="any">
 <link rel="apple-touch-icon" href="../../assets/favicon.svg">
 <meta name="theme-color" content="#4d554c">
 <style>
 
 </style>
-<meta property="og:title" content="The Journal — Mindful Earth">
-<meta property="og:description" content="A home for the practitioners, the seekers, the venues, and the creatives building something that matters in wellness — together.">
+<meta property="og:title" content="The Journal — Wellness, Retreat Planning & Practitioner Life · Mindful Earth">>
+<meta property="og:description" content="Honest writing about building a wellness practice, hosting retreats, marketing authentically, and the inner work that holds it all together.">>
 <meta property="og:image" content="https://mindfulearth.eco/assets/sharelink.jpg">
 <meta property="og:url" content="https://mindfulearth.eco/pages/journal.html">
 <meta property="og:type" content="website">
@@ -122,11 +123,14 @@
 .journal-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:28px; padding:72px 10vw; background:var(--off-white); }
 .journal-card { background:var(--white); border:1px solid rgba(191,192,171,0.3); display:flex; flex-direction:column; text-decoration:none; transition:border-color 0.2s; }
 .journal-card:hover { border-color:var(--sand); }
-.journal-card-img { aspect-ratio:16/9; background:var(--sage-light,#f0f1eb); background-size:cover; background-position:center; }
+.journal-card-img { aspect-ratio:4/3; background:var(--sage-light,#f0f1eb); background-size:cover; background-position:center; }
+@media(min-width:769px) { .journal-card-img { aspect-ratio:16/9; } }
 .journal-card-body { padding:28px 26px; flex:1; display:flex; flex-direction:column; }
 .journal-cat { font-family:'Jost',sans-serif; font-size:9px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--sand); display:block; margin-bottom:10px; }
 .journal-card h2 { font-family:'Gloock',serif; font-size:20px; color:var(--bark); line-height:1.3; margin-bottom:10px; }
 .journal-card p { font-size:13.5px; line-height:1.8; color:var(--forest); flex:1; margin-bottom:18px; }
+.journal-eyebrow { font-family:'Jost',sans-serif; font-size:9px; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--sage-mid); display:block; margin-bottom:10px; }
+.journal-read-more { font-family:'Jost',sans-serif; font-size:11px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--bark); border-bottom:1px solid var(--sage); padding-bottom:2px; display:inline-block; }
 .journal-read { font-family:'Jost',sans-serif; font-size:10px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--forest); border-bottom:1px solid var(--sage); padding-bottom:2px; width:fit-content; }
 @media(max-width:700px) { .journal-grid { grid-template-columns:1fr; padding:48px 6vw; } }
 </style>
@@ -138,6 +142,16 @@
 </section>
 
 <div class="journal-grid">
+
+  <a href="../../journal/the-long-way-home/" class="journal-card" style="border-top:3px solid var(--sand);">
+    <div class="journal-card-img" style="background-image:url('../../images/montana-hero.jpg');background-position:center top;"></div>
+    <div class="journal-card-body">
+      <span class="journal-eyebrow">The Founder Story</span>
+      <h2>The long way home.</h2>
+      <p>The real story behind Mindful Earth — the grief, the van, the business I walked away from, and the slow realisation that the inner work and the outer work are the same thing.</p>
+      <span class="journal-read-more">Read more →</span>
+    </div>
+  </a>
 
   <a href="../../journal/who-holds-space-for-you/" class="journal-card">
     <div class="journal-card-img" style="background-image:url('../../images/article-practitioner-loneliness.jpg');"></div>
